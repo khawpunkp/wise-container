@@ -1,5 +1,9 @@
 <template>
-   <RouterView />
+   <main>
+      <Navbar />
+      <RouterView />
+      <Footer />
+   </main>
 </template>
 
 <style scoped></style>

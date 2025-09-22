@@ -1,1 +1,29 @@
 @import 'tailwindcss';
+
+@theme {
+   --color-brand-blue: #002c7e;
+   --color-brand-orange: #f38e12;
+}
+
+@custom-variant mobile (@media (width < 600px));
+
+body {
+   font-family: 'IBM Plex Sans Thai', sans-serif;
+   color: black;
+   overflow: hidden;
+}
+
+#app {
+   background-color: white;
+   min-height: 100dvh;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+main {
+   min-height: 100dvh;
+   width: 100%;
+}
