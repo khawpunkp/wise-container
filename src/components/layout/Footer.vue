@@ -9,10 +9,12 @@ const socials = [
    { logo: instagram, link: 'https://www.instagram.com/wise.container' },
    { logo: tiktok, link: 'https://www.tiktok.com/@wise.container' },
 ];
+
+const { t } = useLang();
 </script>
 
 <template>
-   <div
+   <footer
       class="bg-brand-blue mobile:h-50 flex h-35 w-full flex-col items-center justify-center gap-4 text-white"
    >
       <div class="mobile:flex-col flex w-full max-w-6xl items-center justify-between gap-6">
@@ -26,7 +28,7 @@ const socials = [
                </div>
             </div>
             <Typography variant="CaptionR" class="mobile:hidden flex">
-               Copyright © 2025 WISE CONTAINER CO., LTD
+               {{ t('footer.copyright') }}
             </Typography>
          </div>
          <div class="flex items-center gap-6">
@@ -38,12 +40,12 @@ const socials = [
                rel="noopener noreferrer"
                class="flex items-center justify-center"
             >
-               <img :src="item.logo" class="size-8 object-contain" />
+               <img :src="item.logo" class="size-6 object-contain" />
             </a>
          </div>
          <Typography variant="CaptionR" class="mobile:flex hidden">
-            Copyright © 2025 WISE CONTAINER CO., LTD
+            {{ t('footer.copyright') }}
          </Typography>
       </div>
-   </div>
+   </footer>
 </template>
