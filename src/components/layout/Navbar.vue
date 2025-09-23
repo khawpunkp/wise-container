@@ -3,7 +3,7 @@ import logo from '@/assets/images/logo.png';
 import { PhCaretRight, PhList, PhX } from '@phosphor-icons/vue';
 import { AnimatePresence, motion } from 'motion-v';
 
-const { t, setLang, lang } = useLang();
+const { t } = useLang();
 
 const menuList = [
    { label: 'nav.home', href: '/' },
@@ -37,20 +37,8 @@ const menuOpen = ref(false);
 <template>
    <nav class="navbar">
       <div class="flex w-full max-w-6xl items-center justify-between">
-         <div class="flex items-center gap-3 text-white">
-            <img :src="logo" class="mobile:h-8 h-12" />
-            <div class="mobile:hidden flex flex-col">
-               <Typography variant="BodyB">บริษัท ไวซ์ คอนเทนเนอร์ จำกัด</Typography>
-               <div class="bg-brand-orange h-px" />
-               <Typography variant="BodyB" class="mt-0.5">WISE CONTAINER CO., LTD</Typography>
-            </div>
-            <div class="mobile:flex mobile:flex-col hidden">
-               <Typography variant="SubB">บริษัท ไวซ์ คอนเทนเนอร์ จำกัด</Typography>
-               <div class="bg-brand-orange h-px" />
-               <Typography variant="SubB" class="mt-0.5">WISE CONTAINER CO., LTD</Typography>
-            </div>
-         </div>
-
+         <LogoWithText class="mobile:hidden flex" />
+         <LogoWithText size="sm" class="mobile:flex hidden" />
          <div class="mobile:hidden flex items-center gap-4">
             <FlyoutDropdown v-for="(item, index) in menuList" :key="index" :item="item" />
             <LangSelect />
@@ -81,7 +69,7 @@ const menuOpen = ref(false);
                @click="menuOpen = false"
                className="px-6 hover:scale-105 transition-all duration-500 min-w-[100px] py-6 text-foreground-primary items-center flex justify-between"
             >
-               <Typography variant="TitleB">
+               <Typography variant="H6" weight="bold">
                   {{ t(item.label) }}
                </Typography>
                <div className="p-2">
@@ -100,7 +88,7 @@ const menuOpen = ref(false);
 @import '#main.css';
 
 .navbar {
-   @apply mobile:px-6 mobile:h-14 bg-brand-blue fixed top-0 z-50 flex h-20 w-full items-center justify-center px-8 transition-all duration-500 ease-out;
+   @apply mobile:px-6 mobile:h-16 bg-brand-blue fixed top-0 z-50 flex h-20 w-full items-center justify-center px-8 transition-all duration-500 ease-out;
 }
 
 .icon {

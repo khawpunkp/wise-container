@@ -11,6 +11,7 @@ declare module 'vue' {
     FlyoutDropdown: typeof import('./src/components/layout/FlyoutDropdown.vue')['default']
     Footer: typeof import('./src/components/layout/Footer.vue')['default']
     LangSelect: typeof import('./src/components/layout/LangSelect.vue')['default']
+    LogoWithText: typeof import('./src/components/layout/LogoWithText.vue')['default']
     Navbar: typeof import('./src/components/layout/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

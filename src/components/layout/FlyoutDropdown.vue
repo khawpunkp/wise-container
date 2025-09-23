@@ -16,7 +16,6 @@ const props = withDefaults(
    },
 );
 
-const route = useRoute();
 const { t } = useLang();
 const open = ref(false);
 const openChildIndex = ref<number | null>(null);
@@ -89,7 +88,7 @@ onUnmounted(() => {
          :to="buildTo(item)"
          class="relative flex items-center gap-2 px-4"
       >
-         <Typography variant="BodyB">{{ t(item.label) }}</Typography>
+         <Typography variant="Body1" weight="bold">{{ t(item.label) }}</Typography>
          <PhCaretDown
             v-if="item.children?.length"
             class="transition-transform duration-300"
@@ -97,7 +96,7 @@ onUnmounted(() => {
             weight="bold"
          />
          <div
-            class="bg-brand-orange absolute -bottom-1 left-1/2 h-1 w-9/10 translate-full -translate-x-1/2 rounded-full opacity-0 duration-300"
+            class="bg-brand-orange absolute -bottom-1 left-1/2 h-1 w-9/10 translate-full -translate-x-1/2 rounded-full opacity-0 duration-500"
             :class="[
                (item.href === '/' ? isExactActive : isActive) ? 'opacity-100' : 'opacity-0',
                open ? '!opacity-0' : '',
@@ -109,7 +108,7 @@ onUnmounted(() => {
       <Transition name="menu">
          <div
             v-if="open && item.children?.length"
-            class="absolute top-[calc(100%+4px)] left-0 z-50 w-56 rounded-xl border border-gray-200 bg-white p-1 shadow-lg ring-1 ring-black/5"
+            class="absolute top-[calc(100%+4px)] left-0 z-50 w-56 rounded-xl bg-white p-1 shadow-lg"
             role="menu"
          >
             <ul class="flex flex-col">
@@ -121,7 +120,7 @@ onUnmounted(() => {
                      class="block rounded-lg px-3 py-2.5 text-sm text-gray-800 hover:bg-gray-100"
                      @click="onSelect"
                   >
-                     <Typography variant="BodyR">{{ t(child.label) }}</Typography>
+                     <Typography variant="Body1">{{ t(child.label) }}</Typography>
                   </RouterLink>
 
                   <!-- Has children -->
@@ -138,7 +137,7 @@ onUnmounted(() => {
                         @click="onSelect"
                         aria-label="Open {{ child.label }}"
                      />
-                     <Typography variant="BodyR" class="pointer-events-none relative z-10">
+                     <Typography variant="Body1" class="pointer-events-none relative z-10">
                         {{ t(child.label) }}
                      </Typography>
 
@@ -149,7 +148,7 @@ onUnmounted(() => {
                      <Transition name="submenu">
                         <div
                            v-if="openChildIndex === i"
-                           class="absolute -top-1 left-[calc(100%+8px)] z-50 w-56 rounded-xl border border-gray-200 bg-white p-1 shadow-lg ring-1 ring-black/5"
+                           class="absolute -top-1 left-[calc(100%+8px)] z-50 w-56 rounded-xl bg-white p-1 shadow-lg"
                            role="menu"
                         >
                            <ul class="flex flex-col">
@@ -160,7 +159,7 @@ onUnmounted(() => {
                                     class="block rounded-lg px-3 py-2.5 text-sm whitespace-nowrap text-gray-800 hover:bg-gray-100"
                                     @click="onSelect"
                                  >
-                                    <Typography variant="BodyR">{{ t(grand.label) }}</Typography>
+                                    <Typography variant="Body1">{{ t(grand.label) }}</Typography>
                                  </RouterLink>
                               </li>
                            </ul>

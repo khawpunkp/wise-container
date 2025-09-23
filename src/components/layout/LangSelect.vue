@@ -9,7 +9,7 @@ const { setLang, lang } = useLang();
          :class="{ 'bg-brand-orange text-white': lang === 'th' }"
          @click="setLang('th')"
       >
-         <Typography variant="BodyB" class="mt-px">TH</Typography>
+         <Typography variant="Body1" weight="bold" class="mt-px">TH</Typography>
       </button>
       <p>|</p>
       <button
@@ -17,7 +17,7 @@ const { setLang, lang } = useLang();
          :class="{ 'bg-brand-orange text-white': lang === 'en' }"
          @click="setLang('en')"
       >
-         <Typography variant="BodyB" class="mt-px">EN</Typography>
+         <Typography variant="Body1" weight="bold" class="mt-px">EN</Typography>
       </button>
    </div>
 </template>
