@@ -17,25 +17,7 @@ export default defineConfig({
       }),
       vue(),
       AutoImport({
-         imports: [
-            'vue',
-            '@vueuse/core',
-            VueRouterAutoImports,
-            {
-               axios: [['default', 'axios']],
-               '@/api': [['default', 'Axios'], 'baseURL'],
-            },
-            {
-               from: 'axios',
-               type: true,
-               imports: ['AxiosResponse'],
-            },
-            {
-               from: '@/api',
-               type: true,
-               imports: ['ApiResponse'],
-            },
-         ],
+         imports: ['vue', '@vueuse/core', VueRouterAutoImports],
          dirs: ['src/lang/**', 'src/utils/**'],
          vueTemplate: true,
          dts: true,

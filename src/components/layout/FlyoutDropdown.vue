@@ -16,6 +16,7 @@ const props = withDefaults(
    },
 );
 
+const route = useRoute();
 const { t } = useLang();
 const open = ref(false);
 const openChildIndex = ref<number | null>(null);
@@ -68,12 +69,6 @@ const onSelect = () => {
    openChildIndex.value = null;
 };
 
-function toggleRoot() {
-   clearRootTimer();
-   open.value = !open.value;
-   if (!open.value) openChildIndex.value = null;
-}
-
 function buildTo(n: Node): RouteLocationRaw {
    return { path: n.href || '/', hash: n.ref ? `#${n.ref}` : '' };
 }
@@ -87,18 +82,28 @@ onUnmounted(() => {
 <template>
    <div class="relative text-white" @mouseenter="onEnterRoot" @mouseleave="onLeaveRoot">
       <!-- Header row: link + separate caret button (for touch) -->
-      <div class="relative flex items-center">
-         <!-- Parent: navigates on click -->
-         <RouterLink v-if="item.href" :to="buildTo(item)" class="flex items-center gap-2 px-4">
-            <Typography variant="BodyR">{{ t(item.label) }}</Typography>
-            <PhCaretDown
-               v-if="item.children?.length"
-               class="transition-transform duration-300"
-               :class="{ 'rotate-180': open }"
-               weight="bold"
-            />
-         </RouterLink>
-      </div>
+      <!-- Parent: navigates on click -->
+      <RouterLink
+         v-if="item.href"
+         v-slot="{ isActive, isExactActive }"
+         :to="buildTo(item)"
+         class="relative flex items-center gap-2 px-4"
+      >
+         <Typography variant="BodyB">{{ t(item.label) }}</Typography>
+         <PhCaretDown
+            v-if="item.children?.length"
+            class="transition-transform duration-300"
+            :class="{ 'rotate-180': open }"
+            weight="bold"
+         />
+         <div
+            class="bg-brand-orange absolute -bottom-1 left-1/2 h-1 w-9/10 translate-full -translate-x-1/2 rounded-full opacity-0 duration-300"
+            :class="[
+               (item.href === '/' ? isExactActive : isActive) ? 'opacity-100' : 'opacity-0',
+               open ? '!opacity-0' : '',
+            ]"
+         />
+      </RouterLink>
 
       <!-- Flyout (shows on hover, closes after delay) -->
       <Transition name="menu">
@@ -116,7 +121,7 @@ onUnmounted(() => {
                      class="block rounded-lg px-3 py-2.5 text-sm text-gray-800 hover:bg-gray-100"
                      @click="onSelect"
                   >
-                     {{ t(child.label) }}
+                     <Typography variant="BodyR">{{ t(child.label) }}</Typography>
                   </RouterLink>
 
                   <!-- Has children -->
@@ -133,7 +138,9 @@ onUnmounted(() => {
                         @click="onSelect"
                         aria-label="Open {{ child.label }}"
                      />
-                     <span class="pointer-events-none relative z-10">{{ t(child.label) }}</span>
+                     <Typography variant="BodyR" class="pointer-events-none relative z-10">
+                        {{ t(child.label) }}
+                     </Typography>
 
                      <!-- caret to hint submenu -->
                      <PhCaretRight />
@@ -153,7 +160,7 @@ onUnmounted(() => {
                                     class="block rounded-lg px-3 py-2.5 text-sm whitespace-nowrap text-gray-800 hover:bg-gray-100"
                                     @click="onSelect"
                                  >
-                                    {{ grand.label }}
+                                    <Typography variant="BodyR">{{ t(grand.label) }}</Typography>
                                  </RouterLink>
                               </li>
                            </ul>

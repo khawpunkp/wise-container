@@ -23,11 +23,6 @@ const menuList = [
          {
             label: 'productB',
             href: '/products',
-            children: [
-               { label: 'productB1', href: '/products', ref: 'productB1' },
-               { label: 'productB2', href: '/products', ref: 'productB2' },
-               { label: 'productB3', href: '/products', ref: 'productB3' },
-            ],
          },
       ],
    },
