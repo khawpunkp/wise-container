@@ -88,15 +88,15 @@ onUnmounted(() => {
          :to="buildTo(item)"
          class="relative flex items-center gap-2 px-4"
       >
-         <Typography variant="Body1" weight="bold">{{ t(item.label) }}</Typography>
+         <Typography variant="Body1" weight="bold" class="mt-0.5">{{ t(item.label) }}</Typography>
          <PhCaretDown
             v-if="item.children?.length"
             class="transition-transform duration-300"
-            :class="{ 'rotate-180': open }"
+            :class="{ '-rotate-180': open }"
             weight="bold"
          />
          <div
-            class="bg-brand-orange absolute -bottom-1 left-1/2 h-1 w-9/10 translate-full -translate-x-1/2 rounded-full opacity-0 duration-500"
+            class="bg-brand-orange absolute -bottom-0.5 left-1/2 h-1 w-9/10 translate-full -translate-x-1/2 rounded-full opacity-0 duration-500"
             :class="[
                (item.href === '/' ? isExactActive : isActive) ? 'opacity-100' : 'opacity-0',
                open ? '!opacity-0' : '',

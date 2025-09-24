@@ -1,9 +1,6 @@
 <script lang="ts" setup>
-import logo from '@/assets/images/logo.png';
-import { PhCaretRight, PhList, PhX } from '@phosphor-icons/vue';
+import { PhList, PhX } from '@phosphor-icons/vue';
 import { AnimatePresence, motion } from 'motion-v';
-
-const { t } = useLang();
 
 const menuList = [
    { label: 'nav.home', href: '/' },
@@ -35,7 +32,9 @@ const menuOpen = ref(false);
 </script>
 
 <template>
-   <nav class="navbar">
+   <nav
+      class="mobile:px-6 mobile:h-16 bg-brand-blue fixed top-0 z-50 flex h-20 w-full items-center justify-center px-8 transition-all duration-500 ease-out"
+   >
       <div class="flex w-full max-w-6xl items-center justify-between">
          <LogoWithText class="mobile:hidden flex" />
          <LogoWithText size="sm" class="mobile:flex hidden" />
@@ -61,21 +60,11 @@ const menuOpen = ref(false);
          :animate="{ x: 0 }"
          :exit="{ x: '100vw' }"
          :transition="{ duration: 0.5, ease: 'easeOut' }"
-         class="fixed top-0 left-0 z-10 mt-14 flex h-dvh w-full flex-col bg-white"
+         class="fixed top-0 left-0 z-10 mt-16 flex h-dvh w-full flex-col bg-white"
+         v-auto-animate
       >
          <template v-for="(item, index) in menuList" :key="index">
-            <RouterLink
-               :to="item.href"
-               @click="menuOpen = false"
-               className="px-6 hover:scale-105 transition-all duration-500 min-w-[100px] py-6 text-foreground-primary items-center flex justify-between"
-            >
-               <Typography variant="H6" weight="bold">
-                  {{ t(item.label) }}
-               </Typography>
-               <div className="p-2">
-                  <PhCaretRight :size="24" color="#0A0A0A" />
-               </div>
-            </RouterLink>
+            <MobileListMenu :item="item" @navigate="menuOpen = false" />
             <div className="w-full px-6">
                <div className="w-full h-px bg-brand-orange/30" />
             </div>
@@ -85,12 +74,6 @@ const menuOpen = ref(false);
 </template>
 
 <style scoped>
-@import '#main.css';
-
-.navbar {
-   @apply mobile:px-6 mobile:h-16 bg-brand-blue fixed top-0 z-50 flex h-20 w-full items-center justify-center px-8 transition-all duration-500 ease-out;
-}
-
 .icon {
    transition: opacity 250ms ease;
 }

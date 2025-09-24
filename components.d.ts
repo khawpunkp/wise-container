@@ -12,6 +12,8 @@ declare module 'vue' {
     Footer: typeof import('./src/components/layout/Footer.vue')['default']
     LangSelect: typeof import('./src/components/layout/LangSelect.vue')['default']
     LogoWithText: typeof import('./src/components/layout/LogoWithText.vue')['default']
+    MobileListMenu: typeof import('./src/components/layout/MobileListMenu.vue')['default']
+    Motion: typeof import('motion-v')['Motion']
     Navbar: typeof import('./src/components/layout/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
