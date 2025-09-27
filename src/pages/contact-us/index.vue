@@ -11,10 +11,19 @@ const data = [
       title: 'contact.yard1.title',
       name: 'contact.yard1.name',
       opening: 'contact.yard1.opening',
-      address: 'contact.yard1.address',
       map: 'contact.yard1.map',
-      email: 'wisecontainer9@gmail.com',
+      address: 'contact.yard1.address',
+      clickAddress: () => {
+         window.open('https://maps.app.goo.gl/gGtJfgrwB2kvpxVJ7', '_blank', 'noopener');
+      },
       tel: 'contact.yard1.tel',
+      clickTel: () => {
+         window.open(`tel:0944819722`);
+      },
+      email: 'wisecontainer9@gmail.com',
+      clickMail: () => {
+         window.open(`mailto:wisecontainer9@gmail.com`);
+      },
       line: '@wisecontainer',
       lineQr: qrCode,
       clickLine: () => {
@@ -25,10 +34,19 @@ const data = [
       title: 'contact.yard2.title',
       name: 'contact.yard2.name',
       opening: 'contact.yard2.opening',
-      address: 'contact.yard2.address',
       map: 'contact.yard2.map',
-      email: 'wisecontainer9@gmail.com',
+      address: 'contact.yard2.address',
+      clickAddress: () => {
+         window.open('https://maps.app.goo.gl/ykqUdxHUrbSjLBUNA', '_blank', 'noopener');
+      },
       tel: 'contact.yard2.tel',
+      clickTel: () => {
+         window.open(`tel:0633567001`);
+      },
+      email: 'wisecontainer9@gmail.com',
+      clickMail: () => {
+         window.open(`mailto:wisecontainer9@gmail.com`);
+      },
       line: '@wisecontainer',
       lineQr: qrCode,
       clickLine: () => {
@@ -84,7 +102,7 @@ const data = [
                      {{ t(item.opening) }}
                   </Typography>
                </Typography>
-               <div class="info-card" @click="item.clickLine">
+               <div class="info-card" @click="item.clickAddress">
                   <PhMapPin weight="fill" size="32" color="#f38e12" class="shrink-0" />
                   <div class="flex min-h-8 items-center">
                      <Typography>
@@ -93,13 +111,13 @@ const data = [
                   </div>
                </div>
 
-               <div class="info-card">
+               <div class="info-card" @click="item.clickTel">
                   <PhPhone weight="fill" size="32" color="#f38e12" class="shrink-0" />
                   <div class="flex min-h-8 items-center">
                      <Typography>{{ t(item.tel) }}</Typography>
                   </div>
                </div>
-               <div class="info-card">
+               <div class="info-card" @click="item.clickMail">
                   <PhEnvelope weight="fill" size="32" color="#f38e12" class="shrink-0" />
                   <div class="flex min-h-8 items-center">
                      <Typography>{{ item.email }}</Typography>
