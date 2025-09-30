@@ -1,0 +1,33 @@
+[
+   {
+      "label": "ตู้บ้านพักคนงาน",
+
+      "ref": "worker",
+      "children": [
+         { "label": "5 ห้อง 40 ฟุต", "ref": "worker-5-40" },
+         { "label": "4 ห้อง 40 ฟุต", "ref": "worker-5-40" },
+         { "label": "3 ห้อง 40 ฟุต", "ref": "worker-4-40" },
+         { "label": "2 ห้อง 40 ฟุต", "ref": "worker-3-40" },
+         { "label": "2 ห้อง 20 ฟุต", "ref": "worker-2-20" },
+         { "label": "1 ห้อง 20 ฟุต", "ref": "worker-1-20" }
+      ]
+   },
+   {
+      "label": "ตู้ออฟฟิศ",
+
+      "ref": "office",
+      "children": [
+         { "label": "5 ห้อง 40 ฟุต", "ref": "office-5-40" },
+         { "label": "4 ห้อง 40 ฟุต", "ref": "office-4-40" },
+         { "label": "3 ห้อง 40 ฟุต", "ref": "office-3-40" },
+         { "label": "2 ห้อง 40 ฟุต", "ref": "office-2-40" },
+         { "label": "2 ห้อง 20 ฟุต", "ref": "office-2-20" },
+         { "label": "1 ห้อง 20 ฟุต", "ref": "office-1-20" }
+      ]
+   },
+   {
+      "label": "ห้องน้ำ",
+
+      "ref": "toilet"
+   }
+]

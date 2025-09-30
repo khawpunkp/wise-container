@@ -17,14 +17,5 @@ withDefaults(defineProps<{ size?: 'lg' | 'sm' }>(), {
          </Typography>
       </div>
    </div>
-   <div v-else class="flex items-center gap-3 text-white">
-      <img :src="logo" class="h-8" />
-      <div class="flex flex-col">
-         <Typography variant="Caption" weight="bold">บริษัท ไวซ์ คอนเทนเนอร์ จำกัด</Typography>
-         <div class="bg-brand-orange h-px" />
-         <Typography variant="Caption" weight="bold" class="mt-0.5">
-            WISE CONTAINER CO., LTD
-         </Typography>
-      </div>
-   </div>
+   <img v-else :src="logo" class="h-8" />
 </template>

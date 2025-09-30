@@ -1,27 +1,14 @@
 <script lang="ts" setup>
 import { PhList, PhX } from '@phosphor-icons/vue';
 import { AnimatePresence, motion } from 'motion-v';
+import productList from '@/assets/product/product-list.json';
 
 const menuList = [
    { label: 'nav.home', href: '/' },
    {
       label: 'nav.products',
       href: '/products',
-      children: [
-         {
-            label: 'productA',
-            href: '/products',
-            children: [
-               { label: 'productA1', href: '/products', ref: 'productA1' },
-               { label: 'productA2', href: '/products', ref: 'productA2' },
-               { label: 'productA3', href: '/products', ref: 'productA3' },
-            ],
-         },
-         {
-            label: 'productB',
-            href: '/products',
-         },
-      ],
+      children: productList,
    },
    { label: 'nav.renting', href: '/renting' },
    { label: 'nav.works', href: '/works' },

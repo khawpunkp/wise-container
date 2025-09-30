@@ -69,7 +69,7 @@ const onSelect = () => {
 };
 
 function buildTo(n: Node): RouteLocationRaw {
-   return { path: n.href || '/', hash: n.ref ? `#${n.ref}` : '' };
+   return { path: props.item.href || '/', hash: n.ref ? `#${n.ref}` : '' };
 }
 
 onUnmounted(() => {
@@ -115,7 +115,7 @@ onUnmounted(() => {
                <li v-for="(child, i) in item.children" :key="child.label" class="relative">
                   <!-- Leaf -->
                   <RouterLink
-                     v-if="!child.children?.length && child.href"
+                     v-if="!child.children?.length"
                      :to="buildTo(child)"
                      class="block rounded-lg px-3 py-2.5 text-sm text-gray-800 hover:bg-gray-100"
                      @click="onSelect"
@@ -154,7 +154,6 @@ onUnmounted(() => {
                            <ul class="flex flex-col">
                               <li v-for="grand in child.children" :key="grand.label">
                                  <RouterLink
-                                    v-if="grand.href"
                                     :to="buildTo(grand)"
                                     class="block rounded-lg px-3 py-2.5 text-sm whitespace-nowrap text-gray-800 hover:bg-gray-100"
                                     @click="onSelect"

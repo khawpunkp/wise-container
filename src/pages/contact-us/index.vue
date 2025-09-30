@@ -31,15 +31,15 @@ const data = [
       },
    },
    {
-      title: 'contact.yard2.title',
-      name: 'contact.yard2.name',
-      opening: 'contact.yard2.opening',
-      map: 'contact.yard2.map',
-      address: 'contact.yard2.address',
+      title: 'contact.yard3.title',
+      name: 'contact.yard3.name',
+      opening: 'contact.yard3.opening',
+      map: 'contact.yard3.map',
+      address: 'contact.yard3.address',
       clickAddress: () => {
          window.open('https://maps.app.goo.gl/ykqUdxHUrbSjLBUNA', '_blank', 'noopener');
       },
-      tel: 'contact.yard2.tel',
+      tel: 'contact.yard3.tel',
       clickTel: () => {
          window.open(`tel:0633567001`);
       },
