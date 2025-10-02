@@ -58,7 +58,7 @@ const data = [
 
 <template>
    <div
-      class="bg-brand-orange/80 mobile:h-25 flex h-50 w-full items-center justify-center"
+      class="bg-brand-orange/80 mobile:aspect-[450/100] flex aspect-[1900/200] w-full items-center justify-center"
       :style="{
          backgroundImage: `url(${bg})`,
          backgroundRepeat: 'no-repeat',
