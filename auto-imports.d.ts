@@ -50,6 +50,7 @@ declare global {
   const markRaw: typeof import('vue')['markRaw']
   const messages: typeof import('./src/lang/translations')['messages']
   const nextTick: typeof import('vue')['nextTick']
+  const numberFormatter: typeof import('./src/utils/index')['numberFormatter']
   const onActivated: typeof import('vue')['onActivated']
   const onBeforeMount: typeof import('vue')['onBeforeMount']
   const onBeforeRouteLeave: typeof import('vue-router')['onBeforeRouteLeave']
@@ -356,6 +357,7 @@ declare module 'vue' {
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
     readonly messages: UnwrapRef<typeof import('./src/lang/translations')['messages']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
+    readonly numberFormatter: UnwrapRef<typeof import('./src/utils/index')['numberFormatter']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
     readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>
     readonly onBeforeRouteLeave: UnwrapRef<typeof import('vue-router')['onBeforeRouteLeave']>

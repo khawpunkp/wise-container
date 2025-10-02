@@ -1,33 +1,91 @@
 [
    {
-      "label": "ตู้บ้านพักคนงาน",
-
+      "label": "product.worker",
       "ref": "worker",
       "children": [
-         { "label": "5 ห้อง 40 ฟุต", "ref": "worker-5-40" },
-         { "label": "4 ห้อง 40 ฟุต", "ref": "worker-5-40" },
-         { "label": "3 ห้อง 40 ฟุต", "ref": "worker-4-40" },
-         { "label": "2 ห้อง 40 ฟุต", "ref": "worker-3-40" },
-         { "label": "2 ห้อง 20 ฟุต", "ref": "worker-2-20" },
-         { "label": "1 ห้อง 20 ฟุต", "ref": "worker-1-20" }
+         {
+            "label": "product.worker.5-40",
+            "ref": "worker-5-40",
+            "price": 125000,
+            "images": ["", "", "", ""]
+         },
+         {
+            "label": "product.worker.4-40",
+            "ref": "worker-4-40",
+            "price": 120000,
+            "images": ["", "", "", "", "", ""]
+         },
+         {
+            "label": "product.worker.3-40",
+            "ref": "worker-3-40",
+            "price": 115000,
+            "images": ["", ""]
+         },
+         {
+            "label": "product.worker.2-40",
+            "ref": "worker-2-40",
+            "price": 110000,
+            "images": ["", "", ""]
+         },
+         {
+            "label": "product.worker.2-20",
+            "ref": "worker-2-20",
+            "price": 85000,
+            "images": ["", "", "", ""]
+         },
+         {
+            "label": "product.worker.1-20",
+            "ref": "worker-1-20",
+            "price": 79000,
+            "images": ["", "", ""]
+         }
       ]
    },
    {
-      "label": "ตู้ออฟฟิศ",
-
+      "label": "product.office",
       "ref": "office",
       "children": [
-         { "label": "5 ห้อง 40 ฟุต", "ref": "office-5-40" },
-         { "label": "4 ห้อง 40 ฟุต", "ref": "office-4-40" },
-         { "label": "3 ห้อง 40 ฟุต", "ref": "office-3-40" },
-         { "label": "2 ห้อง 40 ฟุต", "ref": "office-2-40" },
-         { "label": "2 ห้อง 20 ฟุต", "ref": "office-2-20" },
-         { "label": "1 ห้อง 20 ฟุต", "ref": "office-1-20" }
+         {
+            "label": "product.office.5-40",
+            "ref": "office-5-40",
+            "price": 125000,
+            "images": ["", "", ""]
+         },
+         {
+            "label": "product.office.4-40",
+            "ref": "office-4-40",
+            "price": 120000,
+            "images": ["", "", "", ""]
+         },
+         {
+            "label": "product.office.3-40",
+            "ref": "office-3-40",
+            "price": 115000,
+            "images": ["", "", ""]
+         },
+         {
+            "label": "product.office.2-40",
+            "ref": "office-2-40",
+            "price": 110000,
+            "images": ["", "", "", "", "", ""]
+         },
+         {
+            "label": "product.office.2-20",
+            "ref": "office-2-20",
+            "price": 85000,
+            "images": ["", "", "", ""]
+         },
+         {
+            "label": "product.office.1-20",
+            "ref": "office-1-20",
+            "price": 79000,
+            "images": ["", "", "", ""]
+         }
       ]
    },
    {
-      "label": "ห้องน้ำ",
-
-      "ref": "toilet"
+      "label": "product.toilet",
+      "ref": "toilet",
+      "images": ["", "", "", "", "", "", "", ""]
    }
 ]

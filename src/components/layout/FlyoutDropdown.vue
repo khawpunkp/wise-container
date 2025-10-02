@@ -16,7 +16,7 @@ const props = withDefaults(
    },
 );
 
-const { t } = useLang();
+const { t, lang } = useLang();
 const open = ref(false);
 const openChildIndex = ref<number | null>(null);
 
@@ -108,7 +108,7 @@ onUnmounted(() => {
       <Transition name="menu">
          <div
             v-if="open && item.children?.length"
-            class="absolute top-[calc(100%+4px)] left-0 z-50 w-56 rounded-xl bg-white p-1 shadow-lg"
+            class="absolute top-[calc(100%+4px)] left-0 z-50 w-45 rounded-xl bg-white p-1 shadow-lg"
             role="menu"
          >
             <ul class="flex flex-col">
@@ -148,7 +148,7 @@ onUnmounted(() => {
                      <Transition name="submenu">
                         <div
                            v-if="openChildIndex === i"
-                           class="absolute -top-1 left-[calc(100%+8px)] z-50 w-56 rounded-xl bg-white p-1 shadow-lg"
+                           class="absolute -top-1 left-[calc(100%+8px)] z-50 w-65 rounded-xl bg-white p-1 shadow-lg"
                            role="menu"
                         >
                            <ul class="flex flex-col">

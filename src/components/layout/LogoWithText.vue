@@ -17,5 +17,5 @@ withDefaults(defineProps<{ size?: 'lg' | 'sm' }>(), {
          </Typography>
       </div>
    </div>
-   <img v-else :src="logo" class="h-8" />
+   <img v-else :src="logo" class="h-10" />
 </template>

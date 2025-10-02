@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import bg from '@/assets/images/header-bg.png';
+import bg from '@/assets/images/header-contact.png';
 import qrCode from '@/assets/images/qr.png';
 import line from '@/assets/images/socials/line.png';
 import { PhEnvelope, PhMapPin, PhPhone } from '@phosphor-icons/vue';
