@@ -41,7 +41,7 @@ const { t, lang } = useLang();
             v-for="(product, index) in itemCategory.children"
             :key="index"
             :id="product.ref"
-            class="flex w-full max-w-6xl flex-col gap-6"
+            class="mobile:gap-2 flex w-full max-w-6xl flex-col gap-4"
          >
             <Typography variant="H5" mobile-variant="H6" weight="medium">
                {{ t(product.label) }}
