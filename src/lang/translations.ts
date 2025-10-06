@@ -11,6 +11,12 @@ export const messages: Record<Lang, Record<string, string>> = {
 
       'footer.copyright': 'Copyright © 2025 WISE CONTAINER CO., LTD',
 
+      'home.company-name': 'WISE CONTAINER',
+      'home.detail1':
+         'With over 10 years of experience in buying, selling, renting, and repairing containers,\nour company has continuously expanded into logistics and transportation services.\nWe also operate container depots for agents and storage yards, open 24 hours a day.',
+      'home.detail2':
+         '"When it comes to containers, think only of WISE CONTAINER. \nWe give you more than just second-hand containers."',
+
       'product.worker': 'Container House',
       'product.worker.5-40': 'Container House 5 Rooms 40 ft',
       'product.worker.4-40': 'Container House 4 Rooms 40 ft',
@@ -52,6 +58,12 @@ export const messages: Record<Lang, Record<string, string>> = {
       'nav.contact': 'ติดต่อเรา',
 
       'footer.copyright': 'สงวนลิขสิทธิ์ © 2025 บริษัท ไวซ์ คอนเทนเนอร์ จำกัด',
+
+      'home.company-name': 'ไวซ์ คอนเทนเนอร์',
+      'home.detail1':
+         'ดำเนินกิจการซื้อ ขาย เช่า ซ่อม ตู้ คอนเทนเนอร์ มามากกว่า 10 ปี ด้วยประสบการณ์ที่ยาวนาน\nบริษัทฯ จึงพัฒนาดำเนินกิจการด้านโลจิสติกส์และการขนส่ง\nอีกทั้งยังมีลานคืนตู้เอเยนต์และลานฝากตู้คอนเทนเนอร์ที่เปิดให้บริการตลอด 24 ชม.',
+      'home.detail2':
+         '"นึกถึงตู้คอนเทนเนอร์บ้านพัก ต้องไวซ์คอนเทนเนอร์เท่านั้น\nเราให้คุณมากกว่าคำว่าตู้คอนเทนเนอร์มือสอง"',
 
       'product.worker': 'ตู้บ้านพักคนงาน',
       'product.worker.5-40': 'ตู้บ้านพักคนงาน 5 ห้อง 40 ฟุต',
