@@ -89,7 +89,7 @@ const clickLine = () => {
          </div>
          <div class="flex flex-col">
             <div class="service-card-container">
-               <div class="service-card mb-20">
+               <div class="service-card mb-21">
                   <div class="position-top flex gap-8">
                      <div class="icon-container size-20">
                         <PhHandCoins :size="40" weight="regular" />
@@ -105,7 +105,7 @@ const clickLine = () => {
                      {{ 'ซื้อ-ขาย-เช่า- ซ่อม\nตู้คอนเทนเนอร์' }}
                   </Typography>
                </div>
-               <div class="service-card mt-12.5">
+               <div class="service-card mt-12">
                   <div class="icon-container position-top">
                      <PhTruckTrailer :size="40" weight="regular" />
                   </div>
@@ -115,7 +115,7 @@ const clickLine = () => {
                      }}
                   </Typography>
                </div>
-               <div class="service-card mb-12.5">
+               <div class="service-card mb-12">
                   <div class="icon-container position-top">
                      <PhBlueprint :size="40" weight="regular" />
                   </div>
@@ -123,7 +123,7 @@ const clickLine = () => {
                      {{ 'รับออกแบบ-ผลิต-จำหน่าย\nตู้บ้านพักคอนเทนเนอร์\nและออฟฟิศสำนักงานประกอบ' }}
                   </Typography>
                </div>
-               <div class="service-card mt-20">
+               <div class="service-card mt-21">
                   <div class="icon-container position-top">
                      <PhClockUser :size="40" weight="regular" />
                   </div>
