@@ -2,7 +2,9 @@
 
 @theme {
    --color-brand-blue: #002c7e;
+   --color-brand-light-blue: #c9e0ff;
    --color-brand-orange: #f38e12;
+   --color-brand-light-orange: #fed0b9;
 }
 
 @custom-variant mobile (@media (width < 600px));

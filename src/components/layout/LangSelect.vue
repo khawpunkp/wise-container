@@ -3,9 +3,9 @@ const { setLang, lang } = useLang();
 </script>
 
 <template>
-   <div class="ml-2 flex h-fit items-center gap-0.5 rounded-sm bg-white p-0.5">
+   <div class="ml-2 flex h-fit items-center gap-0.5 rounded-sm bg-white p-1">
       <button
-         class="h-8 w-8 rounded transition-all duration-500"
+         class="h-8 w-8 cursor-pointer rounded transition-all duration-500"
          :class="{ 'bg-brand-orange text-white': lang === 'th' }"
          @click="setLang('th')"
       >
@@ -13,7 +13,7 @@ const { setLang, lang } = useLang();
       </button>
       <p>|</p>
       <button
-         class="h-8 w-8 rounded transition-all duration-500"
+         class="h-8 w-8 cursor-pointer rounded transition-all duration-500"
          :class="{ 'bg-brand-orange text-white': lang === 'en' }"
          @click="setLang('en')"
       >

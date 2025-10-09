@@ -17,7 +17,7 @@ const { t } = useLang();
    <footer
       class="bg-brand-blue mobile:h-50 flex h-35 w-full flex-col items-center justify-center gap-4 text-white"
    >
-      <div class="mobile:flex-col flex w-full max-w-6xl items-center justify-between gap-6">
+      <div class="mobile:flex-col flex w-full items-center justify-between gap-6 px-16">
          <div class="flex flex-col gap-2">
             <LogoWithText />
             <Typography variant="Caption" class="mobile:hidden flex">

@@ -82,26 +82,23 @@ onUnmounted(() => {
    <div class="relative text-white" @mouseenter="onEnterRoot" @mouseleave="onLeaveRoot">
       <!-- Header row: link + separate caret button (for touch) -->
       <!-- Parent: navigates on click -->
-      <RouterLink
-         v-if="item.href"
-         v-slot="{ isActive, isExactActive }"
-         :to="buildTo(item)"
-         class="relative flex items-center gap-2 px-4"
-      >
-         <Typography variant="Body1" weight="bold" class="mt-0.5">{{ t(item.label) }}</Typography>
-         <PhCaretDown
-            v-if="item.children?.length"
-            class="transition-transform duration-300"
-            :class="{ '-rotate-180': open }"
-            weight="bold"
-         />
+      <RouterLink v-if="item.href" v-slot="{ isActive, isExactActive }" :to="buildTo(item)">
          <div
-            class="bg-brand-orange absolute -bottom-0.5 left-1/2 h-1 w-9/10 translate-full -translate-x-1/2 rounded-full opacity-0 duration-500"
+            class="relative flex items-center gap-2 rounded-full px-6 py-2 transition-all duration-300"
             :class="[
-               (item.href === '/' ? isExactActive : isActive) ? 'opacity-100' : 'opacity-0',
-               open ? '!opacity-0' : '',
+               (item.href === '/' ? isExactActive : isActive) ? 'text-brand-orange bg-white' : '',
             ]"
-         />
+         >
+            <Typography variant="Body1" weight="bold" class="mt-0.5">
+               {{ t(item.label) }}
+            </Typography>
+            <PhCaretDown
+               v-if="item.children?.length"
+               class="transition-transform duration-300"
+               :class="{ '-rotate-180': open }"
+               weight="bold"
+            />
+         </div>
       </RouterLink>
 
       <!-- Flyout (shows on hover, closes after delay) -->

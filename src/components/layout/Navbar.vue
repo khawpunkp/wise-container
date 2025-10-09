@@ -3,6 +3,8 @@ import { PhList, PhX } from '@phosphor-icons/vue';
 import { AnimatePresence, motion } from 'motion-v';
 import productList from '@/assets/product/product-list.json';
 
+const route = useRoute();
+
 const menuList = [
    { label: 'nav.home', href: '/' },
    {
@@ -16,13 +18,21 @@ const menuList = [
 ];
 
 const menuOpen = ref(false);
+
+const scrolled = ref(false);
+const { y } = useWindowScroll();
+
+watchEffect(() => {
+   scrolled.value = y.value > 100;
+});
 </script>
 
 <template>
    <nav
-      class="mobile:px-6 mobile:h-16 bg-brand-blue fixed top-0 z-50 flex h-20 w-full items-center justify-center px-8 transition-all duration-500 ease-out"
+      class="mobile:px-6 mobile:h-16 bg-brand-blue fixed top-0 z-50 flex h-21 w-full items-center justify-center px-16 transition-all duration-500"
+      :class="[route.path === '/' && !scrolled ? 'bg-brand-blue/0' : 'bg-brand-blue']"
    >
-      <div class="flex w-full max-w-6xl items-center justify-between">
+      <div class="flex w-full items-center justify-between">
          <LogoWithText class="mobile:hidden flex" />
          <LogoWithText size="sm" class="mobile:flex hidden" />
          <div class="mobile:hidden flex items-center gap-4">

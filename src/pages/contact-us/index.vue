@@ -76,16 +76,16 @@ const data = [
       </Typography>
    </div>
    <div class="mobile:p-6 flex w-full flex-col items-center justify-center gap-16 px-8 py-16">
-      <div v-for="(item, index) in data" :key="index" class="flex w-full max-w-6xl flex-col gap-6">
+      <div v-for="(item, index) in data" :key="index" class="flex w-full max-w-7xl flex-col gap-6">
          <div class="flex gap-4">
             <div class="bg-brand-orange w-1 self-stretch rounded-full" />
-            <Typography variant="H4" mobile-variant="H5" weight="bold" class="text-brand-blue">
+            <Typography variant="H3" mobile-variant="H5" weight="bold" class="text-brand-blue">
                {{ t(item.title) }}
             </Typography>
          </div>
          <div class="mobile:flex-col flex w-full gap-6">
-            <div class="mobile:w-full w-6/10">
-               <div class="aspect-[5/4] overflow-hidden rounded-2xl">
+            <div class="mobile:w-full w-5/10">
+               <div class="h-full w-full overflow-hidden rounded-2xl">
                   <iframe
                      :src="t(item.map)"
                      width="100%"
@@ -95,10 +95,15 @@ const data = [
                   />
                </div>
             </div>
-            <div class="flex flex-1 flex-col items-start gap-4">
-               <Typography variant="H5" mobile-variant="H6" weight="medium">
+            <div class="flex flex-1 flex-col items-start">
+               <Typography variant="H4" mobile-variant="H6" weight="semibold">
                   {{ t(item.name) }}
-                  <Typography variant="Body1" mobile-variant="Body2" weight="medium">
+                  <Typography
+                     variant="Body1"
+                     mobile-variant="Body2"
+                     weight="medium"
+                     class="text-[#606D85]"
+                  >
                      {{ t(item.opening) }}
                   </Typography>
                </Typography>
@@ -123,19 +128,19 @@ const data = [
                      <Typography>{{ item.email }}</Typography>
                   </div>
                </div>
-               <div class="flex w-full justify-center">
-                  <img :src="qrCode" class="border-brand-blue size-40 rounded-2xl border-2" />
-               </div>
-               <div
-                  class="flex h-14 w-full cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] px-3 transition-all duration-300 hover:scale-102"
-                  @click="item.clickLine"
-               >
-                  <img :src="line" class="size-10" />
-                  <div class="flex min-h-8 items-center">
-                     <Typography weight="bold" class="text-white">
-                        {{ t('contact.line') }} {{ item.line }}
-                     </Typography>
+               <div class="flex w-full items-end gap-10">
+                  <div
+                     class="flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3 transition-all duration-300 hover:scale-102"
+                     @click="item.clickLine"
+                  >
+                     <img :src="line" class="size-10" />
+                     <div class="flex min-h-8 items-center">
+                        <Typography weight="bold" class="text-white">
+                           {{ t('contact.line') }} {{ item.line }}
+                        </Typography>
+                     </div>
                   </div>
+                  <img :src="qrCode" class="size-50 rounded-2xl border-2" />
                </div>
             </div>
          </div>
@@ -147,6 +152,6 @@ const data = [
 @import '#main.css';
 
 .info-card {
-   @apply mobile:pointer-events-auto pointer-events-none flex w-full items-start gap-3 rounded-2xl bg-black/5 p-3;
+   @apply mobile:pointer-events-auto pointer-events-none flex w-full items-start gap-3 py-3;
 }
 </style>
