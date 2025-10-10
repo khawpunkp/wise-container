@@ -37,9 +37,9 @@ const clickLine = () => {
 
 <template>
    <!-- Banner -->
-   <div class="relative flex h-dvh w-full flex-col items-center justify-center">
+   <div class="mobile:h-auto relative flex h-dvh w-full flex-col items-center justify-center">
       <div
-         class="flex min-h-160 w-full items-center justify-center"
+         class="mobile:p-6 flex aspect-square max-h-160 w-full items-center justify-center"
          :style="{
             backgroundImage: `url(${bannerBg})`,
             backgroundRepeat: 'no-repeat',
@@ -56,29 +56,31 @@ const clickLine = () => {
             </Typography>
          </div>
       </div>
-      <div class="flex w-full max-w-[100rem] flex-1 items-center justify-start">
+      <img
+         :src="logoText"
+         class="mobile:relative mobile:aspect-square mobile:size-full mobile:mt-6 mobile:p-0 pointer-events-none absolute right-0 bottom-0 size-180 shrink-0 object-contain p-20"
+      />
+      <div class="mobile:p-6 flex w-full max-w-[100rem] flex-1 items-center justify-start">
          <typography
             variant="H4"
-            mobile-variant="Body1"
+            mobile-variant="H5"
             weight="semibold"
             class="text-brand-blue text-center"
          >
             {{ t('home.detail2') }}
          </typography>
       </div>
-      <img
-         :src="logoText"
-         class="pointer-events-none absolute right-0 bottom-0 size-180 shrink-0"
-      />
    </div>
    <!-- Service -->
-   <div class="relative flex w-full items-center justify-center px-8 py-16">
-      <div class="flex w-full max-w-[100rem] flex-col items-center justify-center gap-24">
+   <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
+      <div
+         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-24"
+      >
          <div class="flex flex-col items-center gap-4">
-            <Typography variant="H3" weight="semibold" class="text-brand-blue">
+            <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
                สินค้าและบริการของเรา
             </Typography>
-            <RouterLink to="/products" class="w-fit">
+            <RouterLink to="/products" class="mobile:hidden w-fit">
                <div
                   class="bg-brand-orange relative flex w-fit items-center gap-2 rounded-full px-6 py-2 text-white"
                >
@@ -87,59 +89,86 @@ const clickLine = () => {
                </div>
             </RouterLink>
          </div>
-         <div class="flex flex-col">
-            <div class="service-card-container">
-               <div class="service-card mb-21">
-                  <div class="position-top flex gap-8">
-                     <div class="icon-container size-20">
-                        <PhHandCoins :size="40" weight="regular" />
-                     </div>
-                     <div class="icon-container size-20">
-                        <PhHandshake :size="40" weight="regular" />
-                     </div>
-                     <div class="icon-container size-20">
-                        <PhWrench :size="40" weight="regular" />
-                     </div>
+         <div class="service-card-container">
+            <div class="service-card mb-21">
+               <div class="position-top flex gap-8">
+                  <div class="icon-container size-20">
+                     <PhHandCoins class="mobile:size-8 size-10" weight="regular" />
                   </div>
-                  <Typography variant="H5" weight="semibold" class="text-brand-blue">
-                     {{ 'ซื้อ-ขาย-เช่า- ซ่อม\nตู้คอนเทนเนอร์' }}
-                  </Typography>
-               </div>
-               <div class="service-card mt-12">
-                  <div class="icon-container position-top">
-                     <PhTruckTrailer :size="40" weight="regular" />
+                  <div class="icon-container mobile:!hidden size-20">
+                     <PhHandshake class="size-10" weight="regular" />
                   </div>
-                  <Typography variant="H5" weight="semibold" class="text-brand-blue">
-                     {{
-                        'การให้บริการด้านการขนส่ง\nตู้คอนเทนเนอร์และรับคืน\nตู้เอเยนต์เพื่อไปบรรจุสินค้า'
-                     }}
-                  </Typography>
-               </div>
-               <div class="service-card mb-12">
-                  <div class="icon-container position-top">
-                     <PhBlueprint :size="40" weight="regular" />
+                  <div class="icon-container mobile:!hidden size-20">
+                     <PhWrench class="size-10" weight="regular" />
                   </div>
-                  <Typography variant="H5" weight="semibold" class="text-brand-blue">
-                     {{ 'รับออกแบบ-ผลิต-จำหน่าย\nตู้บ้านพักคอนเทนเนอร์\nและออฟฟิศสำนักงานประกอบ' }}
-                  </Typography>
                </div>
-               <div class="service-card mt-21">
-                  <div class="icon-container position-top">
-                     <PhClockUser :size="40" weight="regular" />
-                  </div>
-                  <Typography variant="H5" weight="semibold" class="text-brand-blue">
-                     {{ 'มีลานฝากตู้ที่เปิดให้บริการ\nตลอด 24 ชั่วโมง' }}
-                  </Typography>
+               <Typography
+                  variant="H5"
+                  mobile-variant="Body1"
+                  weight="semibold"
+                  class="text-brand-blue"
+               >
+                  {{ 'ซื้อ-ขาย-เช่า-ซ่อม\nตู้คอนเทนเนอร์' }}
+               </Typography>
+            </div>
+            <div class="service-card mt-12">
+               <div class="icon-container position-top">
+                  <PhTruckTrailer class="mobile:size-8 size-10" weight="regular" />
                </div>
+               <Typography
+                  variant="H5"
+                  mobile-variant="Body1"
+                  weight="semibold"
+                  class="text-brand-blue"
+               >
+                  {{
+                     'การให้บริการด้านการขนส่ง\nตู้คอนเทนเนอร์และรับคืน\nตู้เอเยนต์เพื่อไปบรรจุสินค้า'
+                  }}
+               </Typography>
+            </div>
+            <div class="service-card mb-12">
+               <div class="icon-container position-top">
+                  <PhBlueprint class="mobile:size-8 size-10" weight="regular" />
+               </div>
+               <Typography
+                  variant="H5"
+                  mobile-variant="Body1"
+                  weight="semibold"
+                  class="text-brand-blue"
+               >
+                  {{ 'รับออกแบบ-ผลิต-จำหน่าย\nตู้บ้านพักคอนเทนเนอร์\nและออฟฟิศสำนักงานประกอบ' }}
+               </Typography>
+            </div>
+            <div class="service-card mt-21">
+               <div class="icon-container position-top">
+                  <PhClockUser class="mobile:size-8 size-10" weight="regular" />
+               </div>
+               <Typography
+                  variant="H5"
+                  mobile-variant="Body1"
+                  weight="semibold"
+                  class="text-brand-blue"
+               >
+                  {{ 'มีลานฝากตู้ที่เปิดให้บริการ\nตลอด 24 ชั่วโมง' }}
+               </Typography>
             </div>
          </div>
+         <RouterLink to="/products" class="mobile:flex hidden w-full">
+            <div
+               class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
+            >
+               <Typography variant="Body2" weight="semibold">ดูสินค้าทั้งหมด</Typography>
+            </div>
+         </RouterLink>
       </div>
    </div>
    <!-- Vision -->
-   <div class="relative flex w-full items-center justify-center px-8 py-16">
-      <div class="flex w-full max-w-[100rem] items-center justify-center gap-16">
+   <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
+      <div
+         class="mobile:gap-6 flex w-full max-w-[100rem] flex-col items-center justify-center gap-16"
+      >
          <div
-            class="flex aspect-square w-full flex-col items-start justify-end rounded-4xl p-10 text-white"
+            class="mobile:p-6 flex aspect-square w-full flex-col items-start justify-end rounded-4xl p-10 text-white"
             :style="{
                backgroundImage: `url(${visionBg})`,
                backgroundRepeat: 'no-repeat',
@@ -147,8 +176,8 @@ const clickLine = () => {
                backgroundPosition: 'center bottom',
             }"
          >
-            <Typography variant="H4" weight="semibold">วิสัยทัศน์</Typography>
-            <Typography variant="H5" weight="medium">
+            <Typography variant="H4" mobile-variant="H5" weight="semibold">วิสัยทัศน์</Typography>
+            <Typography variant="H5" mobile-variant="Body2" weight="medium">
                {{
                   `เป็นผู้นำด้านโลจิสติกส์ด้วยระบบการจัดการงานที่รวดเร็ว
                ประหยัดต้นทุน อีกทั้งการออกแบบและผลิตตู้คอนเทนเนอร์
@@ -158,29 +187,46 @@ const clickLine = () => {
             </Typography>
          </div>
          <div class="flex w-full flex-col">
-            <div class="flex flex-col gap-4">
-               <Typography variant="H4" weight="semibold">พันธกิจ</Typography>
-               <Typography variant="H5" weight="medium" class="text-[#606D85]">
+            <div class="mobile:gap-0 flex flex-col gap-4">
+               <Typography variant="H4" mobile-variant="H5" weight="semibold">พันธกิจ</Typography>
+               <Typography
+                  variant="H5"
+                  mobile-variant="Body2"
+                  weight="medium"
+                  class="text-[#606D85]"
+               >
                   {{
-                     `พันธกิจของการจัดการโลจิสติกส์ คือ การวางแผนการดำเนินงานและประสาน การดำเนินงานในกิจกรรมต่างๆ ที่มุ่งบรรลุผลในด้านการตอบสนองความต้องการ ของลูกค้า โดยการนำเสนอบริการและคุณภาพในระดับที่เหนือกว่าด้วยต้นทุน การดำเนินที่สามารถแข่งขันได้อย่างมีประสิทธิภาพ`
+                     `พันธกิจของการจัดการโลจิสติกส์ คือ การวางแผนการดำเนินงานและประสาน การดำเนินงานในกิจกรรมต่าง ๆ ที่มุ่งบรรลุผลในด้านการตอบสนองความต้องการของลูกค้า โดยการนำเสนอบริการและคุณภาพในระดับที่เหนือกว่าด้วยต้นทุน การดำเนินที่สามารถแข่งขันได้อย่างมีประสิทธิภาพ`
                   }}
                </Typography>
             </div>
-            <Typography variant="H3" weight="semibold" class="text-brand-blue py-20 text-center">
+            <Typography
+               variant="H3"
+               mobile-variant="H5"
+               weight="semibold"
+               class="text-brand-blue mobile:p-0 mobile:mt-12 py-20 text-center"
+            >
                {{ '“บริการให้เช่า ออกแบบ ขนส่ง\nมีประกันหลังการขาย”' }}
             </Typography>
          </div>
       </div>
    </div>
    <!-- Our Works -->
-   <div class="relative flex w-full items-center justify-center px-8 py-16">
-      <div class="flex w-full max-w-[100rem] flex-col items-center justify-center gap-10">
+   <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
+      <div
+         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
+      >
          <div class="flex w-full flex-col">
             <div class="flex w-full items-start justify-between">
-               <Typography variant="H3" weight="semibold" class="text-brand-blue">
+               <Typography
+                  variant="H3"
+                  mobile-variant="H5"
+                  weight="semibold"
+                  class="text-brand-blue"
+               >
                   ผลงานของเรา
                </Typography>
-               <RouterLink to="/works" class="w-fit">
+               <RouterLink to="/works" class="mobile:hidden w-fit">
                   <div
                      class="bg-brand-orange relative flex w-fit items-center gap-2 rounded-full px-6 py-2 text-white"
                   >
@@ -192,83 +238,107 @@ const clickLine = () => {
                </RouterLink>
             </div>
             <Typography variant="Body1" mobile-variant="Body2" class="text-[#606D85]">
-               <!-- {{ t('contact.yard1.opening') }} -->
-               {{
-                  'บริษัท ไวซ์ คอนเทนเนอร์ จำกัด ดำเนินกิจการซื้อ ขาย เช่า ซ่อม ตู้ คอนเทนเนอร์ มามากกว่า 10 ปี ด้วยประสบการณ์ที่ยาวนาน\nจึงพัฒนาดำเนินกิจการด้านโลจิสติกส์และการขนส่ง อีกทั้งยังมีลานคืนตู้เอเยนต์และลานฝากตู้คอนเทนเนอร์ที่เปิดให้บริการตลอด 24 ชม.'
-               }}
+               บริษัท ไวซ์ คอนเทนเนอร์ จำกัด ดำเนินกิจการซื้อ ขาย เช่า ซ่อม ตู้ คอนเทนเนอร์
+               มามากกว่า 10 ปี ด้วยประสบการณ์ที่ยาวนาน
+               <br class="mobile:hidden" />
+               จึงพัฒนาดำเนินกิจการด้านโลจิสติกส์และการขนส่ง
+               อีกทั้งยังมีลานคืนตู้เอเยนต์และลานฝากตู้คอนเทนเนอร์ที่เปิดให้บริการตลอด 24 ชม.
             </Typography>
          </div>
-         <div class="grid w-full grid-cols-3 gap-10">
-            <RouterLink to="/works" class="flex flex-col items-end justify-end gap-6">
+         <div
+            class="mobile:overflow-y-auto scrollbar-none mobile:flex mobile:gap-4 grid w-full grid-cols-3 gap-10"
+         >
+            <RouterLink to="/works" class="relative flex flex-col items-end justify-end gap-6">
                <div
-                  class="bg-brand-blue/50 flex aspect-[4/3] w-full items-center justify-center rounded-2xl text-white"
+                  class="bg-brand-blue/50 mobile:min-w-65 flex aspect-square w-full items-center justify-center rounded-2xl text-white"
                >
                   <PhImageSquare :size="32" />
                </div>
-               <div class="text-brand-blue relative flex w-fit items-center gap-2">
-                  <Typography variant="H6" weight="semibold" class="mt-0.5">ผลงานที่ 1</Typography>
-                  <PhCaretRight :size="24" weight="bold" />
+               <div
+                  class="text-brand-blue mobile:absolute mobile:right-2 mobile:bottom-2 mobile:text-white flex w-fit items-center gap-2"
+               >
+                  <Typography variant="H6" mobile-variant="Body2" weight="semibold" class="mt-0.5">
+                     ผลงานที่ 1
+                  </Typography>
+                  <PhCaretRight class="mobile:size-4 size-6" weight="bold" />
                </div>
             </RouterLink>
-            <RouterLink to="/works" class="flex flex-col items-end justify-end gap-6">
+            <RouterLink to="/works" class="relative flex flex-col items-end justify-end gap-6">
                <div
-                  class="bg-brand-blue/50 flex aspect-square w-full items-center justify-center rounded-2xl text-white"
+                  class="bg-brand-blue/50 mobile:min-w-65 flex aspect-square w-full items-center justify-center rounded-2xl text-white"
                >
                   <PhImageSquare :size="32" />
                </div>
-               <div class="text-brand-blue relative flex w-fit items-center gap-2">
-                  <Typography variant="H6" weight="semibold" class="mt-0.5">ผลงานที่ 2</Typography>
-                  <PhCaretRight :size="24" weight="bold" />
+               <div
+                  class="text-brand-blue mobile:absolute mobile:right-2 mobile:bottom-2 mobile:text-white flex w-fit items-center gap-2"
+               >
+                  <Typography variant="H6" mobile-variant="Body2" weight="semibold" class="mt-0.5">
+                     ผลงานที่ 2
+                  </Typography>
+                  <PhCaretRight class="mobile:size-4 size-6" weight="bold" />
                </div>
             </RouterLink>
-            <RouterLink to="/works" class="flex flex-col items-end justify-end gap-6">
+            <RouterLink to="/works" class="relative flex flex-col items-end justify-end gap-6">
                <div
-                  class="bg-brand-blue/50 flex aspect-[12/11] w-full items-center justify-center rounded-2xl text-white"
+                  class="bg-brand-blue/50 mobile:min-w-65 flex aspect-square w-full items-center justify-center rounded-2xl text-white"
                >
                   <PhImageSquare :size="32" />
                </div>
-               <div class="text-brand-blue relative flex w-fit items-center gap-2">
-                  <Typography variant="H6" weight="semibold" class="mt-0.5">ผลงานที่ 3</Typography>
-                  <PhCaretRight :size="24" weight="bold" />
+               <div
+                  class="text-brand-blue mobile:absolute mobile:right-2 mobile:bottom-2 mobile:text-white flex w-fit items-center gap-2"
+               >
+                  <Typography variant="H6" mobile-variant="Body2" weight="semibold" class="mt-0.5">
+                     ผลงานที่ 3
+                  </Typography>
+                  <PhCaretRight class="mobile:size-4 size-6" weight="bold" />
                </div>
             </RouterLink>
          </div>
+         <RouterLink to="/products" class="mobile:flex hidden w-full">
+            <div
+               class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
+            >
+               <Typography variant="Body2" weight="semibold">ดูผลงานทั้งหมด</Typography>
+            </div>
+         </RouterLink>
       </div>
    </div>
    <!-- Review -->
    <div
-      class="bg-brand-light-blue relative flex min-h-[calc(100dvh-84px)] w-full items-center justify-center"
+      class="bg-brand-light-blue relative flex min-h-[calc(100dvh-84px)] w-full items-center justify-center p-6"
    >
-      <div class="flex w-full max-w-[100rem] flex-col items-center justify-center gap-10">
-         <Typography variant="H3" weight="semibold" class="text-brand-blue">
+      <div
+         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
+      >
+         <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
             รีวิวและการส่งมอบ
          </Typography>
-         <div class="flex w-full items-center justify-center gap-25">
-            <div class="flex flex-col gap-12">
+         <div class="mobile:flex-col mobile:gap-4 flex w-full items-center justify-center gap-25">
+            <div class="mobile:gap-4 flex flex-col gap-12">
                <div class="review-card">
-                  <Typography class="text-[28px]">
+                  <Typography class="mobile:text-[16px] text-[28px]">
                      {{
                         '#รีวิวส่งตู้ #Update หน้างานลูกค้าให้ดูค่า เช้าฝนตก สายๆฟ้าเริ่มโปร่ง\nทางแคบแค่ไหนก็ไม่เป็นผลเลยย ขนส่งเราเก่งอยู่แล้วว'
                      }}
                   </Typography>
                </div>
                <div class="flex flex-col gap-4">
-                  <div class="review-card ml-12">
-                     <Typography variant="H6">
+                  <div class="review-card mobile:ml-8 ml-12">
+                     <Typography variant="H6" mobile-variant="Body2">
                         {{
                            '#รีวิวที่พัก ส่งมอบเรียบร้อยอีกหนึ่งออเดอร์ #บ้านพักคนงานจากตู้คอนเทนเนอร์\n2 ตู้ และตู้เปล่า #ตู้คอนเทนเนอร์เก็บของ\nฝนตกไม่มีฝนต่อการขนส่งและติดตั้งค่า ขอบคุณลูกค้าหน้างาน จังหวัดนนทบุรีมากๆเลยนะคะ'
                         }}
                      </Typography>
                   </div>
-                  <div class="review-card ml-30">
-                     <Typography variant="H6">
+                  <div class="review-card mobile:ml-0 mobile:mr-8 ml-30">
+                     <Typography variant="H6" mobile-variant="Body2">
                         {{
                            '#ตู้คอนเทนเนอร์ บ้านพักคนงาน.. โอน 50% ที่เหลือ พร้อยยกตู้ขึ้นหางเลยค่า'
                         }}
                      </Typography>
                   </div>
                   <div class="review-card ml-12">
-                     <Typography variant="H6">
+                     <Typography variant="H6" mobile-variant="Body2">
                         {{
                            '#ตู้ใส่วัตถุมงคล Ep.1 ขนาด 20STD แบบประตูบานม้วน\n#Update หน้างานฉบับงานเร่งง !!'
                         }}
@@ -282,8 +352,8 @@ const clickLine = () => {
    </div>
    <!-- Contact -->
    <div class="mobile:p-6 flex w-full flex-col items-center justify-center gap-16 px-8 py-16">
-      <div class="mobile:flex-col flex w-full max-w-[100rem] gap-16">
-         <div class="mobile:w-full w-5/10">
+      <div class="mobile:flex-col mobile:gap-4 flex w-full max-w-[100rem] gap-16">
+         <div class="mobile:w-full mobile:aspect-square w-5/10">
             <div class="h-full w-full overflow-hidden rounded-2xl">
                <iframe
                   :src="t('contact.yard1.map')"
@@ -295,10 +365,14 @@ const clickLine = () => {
             </div>
          </div>
          <div class="flex flex-1 flex-col items-start">
-            <Typography variant="H3" weight="semibold" class="text-brand-blue mb-2">
+            <Typography
+               variant="H3"
+               mobile-variant="H5"
+               weight="semibold"
+               class="text-brand-blue mb-2"
+            >
                {{ t('contact.yard1.name') }}
                <Typography variant="Body1" mobile-variant="Body2" class="text-[#606D85]">
-                  <!-- {{ t('contact.yard1.opening') }} -->
                   มีสำนักงานใหญ่ตั้งอยู่ที่จังหวัดชลบุรี
                   ที่เปิดให้บริการด้านธุรกิจโลจิสติกส์แบบครบวงจร
                </Typography>
@@ -324,7 +398,9 @@ const clickLine = () => {
                   <Typography>{{ 'wisecontainer9@gmail.com' }}</Typography>
                </div>
             </div>
-            <div class="flex w-full items-end gap-16">
+            <div
+               class="mobile:gap-4 mobile:flex-col-reverse mobile:mt-2 mobile:items-center flex w-full items-end gap-16"
+            >
                <div
                   class="flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3 transition-all duration-300 hover:scale-102"
                   @click="clickLine"
@@ -347,21 +423,21 @@ const clickLine = () => {
 @import '#main.css';
 
 .service-card-container {
-   @apply flex h-full w-full items-center justify-center gap-10;
+   @apply mobile:flex-col mobile:gap-4 flex h-full w-full flex-1 items-center justify-center gap-10;
 }
 
 .service-card {
    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
 
-   @apply bg-brand-light-blue relative flex w-full min-w-92 flex-col items-center gap-6 rounded-4xl py-12 text-center;
+   @apply bg-brand-light-blue mobile:p-4 mobile:min-w-0 mobile:m-0 mobile:text-start mobile:justify-start mobile:rounded-2xl relative flex w-full min-w-92 items-center justify-center gap-4 rounded-4xl py-12 text-center;
 }
 
 .icon-container {
-   @apply border-brand-orange text-brand-orange flex size-20 items-center justify-center rounded-full border-[3px] bg-white;
+   @apply border-brand-orange text-brand-orange mobile:size-12 mobile:border-2 flex size-20 items-center justify-center rounded-full border-[3px] bg-white;
 }
 
 .position-top {
-   @apply absolute -top-12;
+   @apply mobile:relative mobile:top-0 absolute -top-12;
 }
 
 .card-shadow {
@@ -374,6 +450,6 @@ const clickLine = () => {
 }
 
 .info-card {
-   @apply mobile:pointer-events-auto pointer-events-none flex w-full items-start gap-3 py-3;
+   @apply mobile:pointer-events-auto mobile:py-2 pointer-events-none flex w-full items-start gap-3 py-3;
 }
 </style>
