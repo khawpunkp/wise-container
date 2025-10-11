@@ -87,7 +87,7 @@ const data = [
             <div class="mobile:w-full mobile:aspect-square w-5/10">
                <div class="h-full w-full overflow-hidden rounded-2xl">
                   <iframe
-                     :src="t('contact.yard1.map')"
+                     :src="t(item.map)"
                      width="100%"
                      height="100%"
                      loading="lazy"
