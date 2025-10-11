@@ -37,43 +37,45 @@ const { t, lang } = useLang();
                {{ t(itemCategory.label) }}
             </Typography>
          </div>
-         <div
-            v-for="(product, index) in itemCategory.children"
-            :key="index"
-            :id="product.ref"
-            class="mobile:gap-2 flex w-full max-w-6xl flex-col gap-4"
-         >
-            <Typography variant="H5" mobile-variant="H6" weight="medium">
-               {{ t(product.label) }}
-               <Typography variant="Body1" mobile-variant="Body2" weight="medium">
-                  <template v-if="lang === 'th'">
-                     {{ 'ราคา ' + numberFormatter(product.price) + ' บาท' }}
-                  </template>
-                  <template v-else>
-                     {{ 'THB ' + numberFormatter(product.price) }}
-                  </template>
+         <div class="flex flex-col gap-8">
+            <div
+               v-for="(product, index) in itemCategory.children"
+               :key="index"
+               :id="product.ref"
+               class="mobile:gap-2 flex w-full max-w-6xl flex-col gap-4"
+            >
+               <Typography variant="H4" mobile-variant="H6" weight="medium">
+                  {{ t(product.label) }}
+                  <Typography variant="Body1" mobile-variant="Body2" weight="medium">
+                     <template v-if="lang === 'th'">
+                        {{ 'ราคา ' + numberFormatter(product.price) + ' บาท' }}
+                     </template>
+                     <template v-else>
+                        {{ 'THB ' + numberFormatter(product.price) }}
+                     </template>
+                  </Typography>
                </Typography>
-            </Typography>
-            <div class="mobile:grid-cols-2 mobile:gap-4 grid grid-cols-4 gap-6">
+               <div class="mobile:grid-cols-2 mobile:gap-4 grid grid-cols-4 gap-6">
+                  <div
+                     v-for="(image, index) in product.images"
+                     :key="product.ref + index"
+                     class="bg-brand-blue/50 flex aspect-square items-center justify-center rounded-2xl text-white"
+                  >
+                     <PhImageSquare :size="32" />
+                  </div>
+               </div>
+            </div>
+            <div
+               v-if="itemCategory.images"
+               class="mobile:grid-cols-2 mobile:gap-4 grid grid-cols-4 gap-6"
+            >
                <div
-                  v-for="(image, index) in product.images"
-                  :key="product.ref + index"
+                  v-for="(image, index) in itemCategory.images"
+                  :key="itemCategory.ref + index"
                   class="bg-brand-blue/50 flex aspect-square items-center justify-center rounded-2xl text-white"
                >
                   <PhImageSquare :size="32" />
                </div>
-            </div>
-         </div>
-         <div
-            v-if="itemCategory.images"
-            class="mobile:grid-cols-2 mobile:gap-4 grid grid-cols-4 gap-6"
-         >
-            <div
-               v-for="(image, index) in itemCategory.images"
-               :key="itemCategory.ref + index"
-               class="bg-brand-blue/50 flex aspect-square items-center justify-center rounded-2xl text-white"
-            >
-               <PhImageSquare :size="32" />
             </div>
          </div>
       </div>
