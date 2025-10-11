@@ -11,11 +11,37 @@ export const messages: Record<Lang, Record<string, string>> = {
 
       'footer.copyright': 'Copyright © 2025 WISE CONTAINER CO., LTD',
 
-      'home.company-name': 'WISE CONTAINER',
-      'home.detail1':
+      'banner.company-name': 'WISE CONTAINER',
+      'banner.detail1':
          'With over 10 years of experience in buying, selling, renting, and repairing containers,\nour company has continuously expanded into logistics and transportation services.\nWe also operate container depots for agents and storage yards, open 24 hours a day.',
-      'home.detail2':
+      'banner.detail2':
          '"When it comes to containers, think only of WISE CONTAINER. \nWe give you more than just second-hand containers."',
+
+      'home.seemore': 'See More',
+
+      'services.title': 'Our Products and Services',
+      'services.trade': 'Buy - Sell - Rent - Repair\nshipping containers',
+      'services.transport': 'Container transport\nand agent container return\nfor cargo loading',
+      'services.build': 'Design - Manufacture - Sale\ncontainer houses\nand container offices',
+      'services.yard': '24-hour container yard\nservice available',
+      'services.seeall': 'See all products',
+
+      'vision.title': 'Vision',
+      'vision.desc':
+         'To be a leader in logistics through a fast and efficient management system, cost-effective operations.\nThe design and production of high-standard, quality containers — ensuring quick manufacturing and environmental friendliness.',
+      'mission.title': 'Mission',
+      'mission.desc':
+         'The mission of logistics management is to plan, operate, and coordinate various activities to effectively meet customer needs by delivering superior service and quality at competitive operational costs.',
+      'about.quote': '“Rental, Design, and Transportation Services\nwith After-Sales Warranty”',
+
+      'works.title': 'Our Works',
+      'works.desc1':
+         'Wise Container Co., Ltd. has been engaged in the buying, selling, renting, and repairing of shipping containers for over 10 years.',
+      'works.desc2':
+         'With extensive experience, the company has expanded into logistics and transportation services,\nas well as providing container return yards for agents and 24-hour container storage facilities.',
+      'works.seeall': 'See All Works',
+
+      'review.title': 'Reviews and Deliveries',
 
       'product.worker': 'Container House',
       'product.worker.5-40': 'Container House 5 Rooms 40 ft',
@@ -49,6 +75,8 @@ export const messages: Record<Lang, Record<string, string>> = {
          'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.676530183688!2d101.01059177586333!3d13.119666687209447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102c7006d4fc6bb%3A0xd6e0051fbe7fc930!2zSomewhere!5e0!3m2!1sen!2sth!4v1759229971361!5m2!1sen!2sth',
       'contact.yard3.tel': '063-356-7001 (Mr.Kim)',
       'contact.line': 'Contact via LINE ',
+      'contact.detail':
+         'Our headquarters is located in Chonburi Province,\nproviding comprehensive logistics services.',
    },
    th: {
       'nav.home': 'หน้าแรก',
@@ -59,11 +87,38 @@ export const messages: Record<Lang, Record<string, string>> = {
 
       'footer.copyright': 'สงวนลิขสิทธิ์ © 2025 บริษัท ไวซ์ คอนเทนเนอร์ จำกัด',
 
-      'home.company-name': 'ไวซ์ คอนเทนเนอร์',
-      'home.detail1':
+      'banner.company-name': 'ไวซ์ คอนเทนเนอร์',
+      'banner.detail1':
          'ดำเนินกิจการซื้อ ขาย เช่า ซ่อม ตู้ คอนเทนเนอร์ มามากกว่า 10 ปี ด้วยประสบการณ์ที่ยาวนาน\nบริษัทฯ จึงพัฒนาดำเนินกิจการด้านโลจิสติกส์และการขนส่ง\nอีกทั้งยังมีลานคืนตู้เอเยนต์และลานฝากตู้คอนเทนเนอร์ที่เปิดให้บริการตลอด 24 ชม.',
-      'home.detail2':
+      'banner.detail2':
          '"นึกถึงตู้คอนเทนเนอร์บ้านพัก ต้องไวซ์คอนเทนเนอร์เท่านั้น\nเราให้คุณมากกว่าคำว่าตู้คอนเทนเนอร์มือสอง"',
+
+      'home.seemore': 'ดูเพิ่มเติม',
+
+      'services.title': 'สินค้าและบริการของเรา',
+      'services.trade': 'ซื้อ-ขาย-เช่า-ซ่อม\nตู้คอนเทนเนอร์',
+      'services.transport':
+         'การให้บริการด้านการขนส่งตู้คอนเทนเนอร์\nและรับคืนตู้เอเยนต์เพื่อไปบรรจุสินค้า',
+      'services.build': 'รับออกแบบ-ผลิต-จำหน่าย\nตู้บ้านพักคอนเทนเนอร์\nและออฟฟิศสำนักงานประกอบ',
+      'services.yard': 'มีลานฝากตู้ที่เปิด\nให้บริการตลอด 24 ชั่วโมง',
+      'services.seeall': 'ดูสินค้าทั้งหมด',
+
+      'vision.title': 'วิสัยทัศน์',
+      'vision.desc':
+         'เป็นผู้นำด้านโลจิสติกส์ด้วยระบบการจัดการงานที่รวดเร็ว\nประหยัดต้นทุน อีกทั้งการออกแบบและผลิตตู้คอนเทนเนอร์\nด้วยมาตรฐานระดับสูง และมีสินค้าคุณภาพ\nการผลิตที่รวดเร็ว และเป็นมิตรต่อสิ่งแวดล้อม',
+      'mission.title': 'พันธกิจ',
+      'mission.desc':
+         'พันธกิจของการจัดการโลจิสติกส์ คือ การวางแผนการดำเนินงานและประสานการดำเนินงานในกิจกรรมต่าง ๆ ที่มุ่งบรรลุผลในด้านการตอบสนองความต้องการของลูกค้า โดยการนำเสนอบริการและคุณภาพในระดับที่เหนือกว่าด้วยต้นทุนการดำเนินที่สามารถแข่งขันได้อย่างมีประสิทธิภาพ',
+      'about.quote': '“บริการให้เช่า ออกแบบ ขนส่ง\nและมีประกันหลังการขาย”',
+
+      'works.title': 'ผลงานของเรา',
+      'works.desc1':
+         'บริษัท ไวซ์ คอนเทนเนอร์ จำกัด ดำเนินกิจการซื้อ ขาย เช่า ซ่อม ตู้คอนเทนเนอร์ มามากกว่า 10 ปี ด้วยประสบการณ์ที่ยาวนาน',
+      'works.desc2':
+         'จึงพัฒนาดำเนินกิจการด้านโลจิสติกส์และการขนส่ง อีกทั้งยังมีลานคืนตู้เอเยนต์และลานฝากตู้คอนเทนเนอร์ที่เปิดให้บริการตลอด 24 ชม.',
+      'works.seeall': 'ดูผลงานทั้งหมด',
+
+      'review.title': 'รีวิวและการส่งมอบ',
 
       'product.worker': 'ตู้บ้านพักคนงาน',
       'product.worker.5-40': 'ตู้บ้านพักคนงาน 5 ห้อง 40 ฟุต',
@@ -96,5 +151,7 @@ export const messages: Record<Lang, Record<string, string>> = {
          'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.676530183688!2d101.01059177586333!3d13.119666687209447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102c7006d4fc6bb%3A0xd6e0051fbe7fc930!2zSomewhere!5e0!3m2!1sen!2sth!4v1759229971361!5m2!1sen!2sth',
       'contact.yard3.tel': '063-356-7001 (คุณคิม)',
       'contact.line': 'ติดต่อผ่านไลน์ ',
+      'contact.detail':
+         'มีสำนักงานใหญ่ตั้งอยู่ที่จังหวัดชลบุรี\nที่เปิดให้บริการด้านธุรกิจโลจิสติกส์แบบครบวงจร ',
    },
 };

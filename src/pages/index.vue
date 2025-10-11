@@ -49,10 +49,10 @@ const clickLine = () => {
       >
          <div class="flex w-full max-w-[100rem] flex-col text-white">
             <Typography variant="H2" mobile-variant="H4" weight="bold" class="mobile:text-center">
-               {{ t('home.company-name') }}
+               {{ t('banner.company-name') }}
             </Typography>
             <Typography variant="H6" mobile-variant="Body2" class="mobile:text-center mt-0.5">
-               {{ t('home.detail1') }}
+               {{ t('banner.detail1') }}
             </Typography>
          </div>
       </div>
@@ -67,7 +67,7 @@ const clickLine = () => {
             weight="semibold"
             class="text-brand-blue text-center"
          >
-            {{ t('home.detail2') }}
+            {{ t('banner.detail2') }}
          </typography>
       </div>
    </div>
@@ -78,13 +78,15 @@ const clickLine = () => {
       >
          <div class="flex flex-col items-center gap-4">
             <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
-               สินค้าและบริการของเรา
+               {{ t('services.title') }}
             </Typography>
             <RouterLink to="/products" class="mobile:hidden w-fit">
                <div
                   class="bg-brand-orange relative flex w-fit items-center gap-2 rounded-full px-6 py-2 text-white"
                >
-                  <Typography variant="H6" weight="semibold" class="mt-0.5">ดูเพิ่มเติม</Typography>
+                  <Typography variant="H6" weight="semibold" class="mt-0.5">
+                     {{ t('home.seemore') }}
+                  </Typography>
                   <PhCaretRight :size="24" weight="bold" />
                </div>
             </RouterLink>
@@ -108,7 +110,7 @@ const clickLine = () => {
                   weight="semibold"
                   class="text-brand-blue"
                >
-                  {{ 'ซื้อ-ขาย-เช่า-ซ่อม\nตู้คอนเทนเนอร์' }}
+                  {{ t('services.trade') }}
                </Typography>
             </div>
             <div class="service-card mt-12">
@@ -121,9 +123,7 @@ const clickLine = () => {
                   weight="semibold"
                   class="text-brand-blue"
                >
-                  {{
-                     'การให้บริการด้านการขนส่ง\nตู้คอนเทนเนอร์และรับคืน\nตู้เอเยนต์เพื่อไปบรรจุสินค้า'
-                  }}
+                  {{ t('services.transport') }}
                </Typography>
             </div>
             <div class="service-card mb-12">
@@ -136,7 +136,7 @@ const clickLine = () => {
                   weight="semibold"
                   class="text-brand-blue"
                >
-                  {{ 'รับออกแบบ-ผลิต-จำหน่าย\nตู้บ้านพักคอนเทนเนอร์\nและออฟฟิศสำนักงานประกอบ' }}
+                  {{ t('services.build') }}
                </Typography>
             </div>
             <div class="service-card mt-21">
@@ -149,7 +149,7 @@ const clickLine = () => {
                   weight="semibold"
                   class="text-brand-blue"
                >
-                  {{ 'มีลานฝากตู้ที่เปิดให้บริการ\nตลอด 24 ชั่วโมง' }}
+                  {{ t('services.yard') }}
                </Typography>
             </div>
          </div>
@@ -157,7 +157,7 @@ const clickLine = () => {
             <div
                class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
             >
-               <Typography variant="Body2" weight="semibold">ดูสินค้าทั้งหมด</Typography>
+               <Typography variant="Body2" weight="semibold">{{ t('services.seeall') }}</Typography>
             </div>
          </RouterLink>
       </div>
@@ -165,7 +165,7 @@ const clickLine = () => {
    <!-- Vision -->
    <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
       <div
-         class="mobile:gap-6 flex w-full max-w-[100rem] flex-col items-center justify-center gap-16"
+         class="mobile:gap-6 mobile:flex-col flex w-full max-w-[100rem] items-center justify-center gap-16"
       >
          <div
             class="mobile:p-6 flex aspect-square w-full flex-col items-start justify-end rounded-4xl p-10 text-white"
@@ -176,28 +176,25 @@ const clickLine = () => {
                backgroundPosition: 'center bottom',
             }"
          >
-            <Typography variant="H4" mobile-variant="H5" weight="semibold">วิสัยทัศน์</Typography>
+            <Typography variant="H4" mobile-variant="H5" weight="semibold">
+               {{ t('vision.title') }}
+            </Typography>
             <Typography variant="H5" mobile-variant="Body2" weight="medium">
-               {{
-                  `เป็นผู้นำด้านโลจิสติกส์ด้วยระบบการจัดการงานที่รวดเร็ว
-               ประหยัดต้นทุน อีกทั้งการออกแบบและผลิตตู้คอนเทนเนอร์
-               ด้วยมาตรฐานระดับสูง และมีสินค้าคุณภาพ
-               การผลิตที่รวดเร็ว และเป็นมิตรต่อสิ่งแวดล้อม`
-               }}
+               {{ t('vision.desc') }}
             </Typography>
          </div>
          <div class="flex w-full flex-col">
             <div class="mobile:gap-0 flex flex-col gap-4">
-               <Typography variant="H4" mobile-variant="H5" weight="semibold">พันธกิจ</Typography>
+               <Typography variant="H4" mobile-variant="H5" weight="semibold">
+                  {{ t('mission.title') }}
+               </Typography>
                <Typography
                   variant="H5"
                   mobile-variant="Body2"
                   weight="medium"
                   class="text-[#606D85]"
                >
-                  {{
-                     `พันธกิจของการจัดการโลจิสติกส์ คือ การวางแผนการดำเนินงานและประสาน การดำเนินงานในกิจกรรมต่าง ๆ ที่มุ่งบรรลุผลในด้านการตอบสนองความต้องการของลูกค้า โดยการนำเสนอบริการและคุณภาพในระดับที่เหนือกว่าด้วยต้นทุน การดำเนินที่สามารถแข่งขันได้อย่างมีประสิทธิภาพ`
-                  }}
+                  {{ t('mission.desc') }}
                </Typography>
             </div>
             <Typography
@@ -206,7 +203,7 @@ const clickLine = () => {
                weight="semibold"
                class="text-brand-blue mobile:p-0 mobile:mt-12 py-20 text-center"
             >
-               {{ '“บริการให้เช่า ออกแบบ ขนส่ง\nมีประกันหลังการขาย”' }}
+               {{ t('about.quote') }}
             </Typography>
          </div>
       </div>
@@ -224,25 +221,24 @@ const clickLine = () => {
                   weight="semibold"
                   class="text-brand-blue"
                >
-                  ผลงานของเรา
+                  {{ t('works.title') }}
                </Typography>
                <RouterLink to="/works" class="mobile:hidden w-fit">
                   <div
                      class="bg-brand-orange relative flex w-fit items-center gap-2 rounded-full px-6 py-2 text-white"
                   >
                      <Typography variant="H6" weight="semibold" class="mt-0.5">
-                        ดูเพิ่มเติม
+                        {{ t('home.seemore') }}
                      </Typography>
                      <PhCaretRight :size="24" weight="bold" />
                   </div>
                </RouterLink>
             </div>
             <Typography variant="Body1" mobile-variant="Body2" class="text-[#606D85]">
-               บริษัท ไวซ์ คอนเทนเนอร์ จำกัด ดำเนินกิจการซื้อ ขาย เช่า ซ่อม ตู้ คอนเทนเนอร์
-               มามากกว่า 10 ปี ด้วยประสบการณ์ที่ยาวนาน
+               {{ t('works.desc1') }}
+
                <br class="mobile:hidden" />
-               จึงพัฒนาดำเนินกิจการด้านโลจิสติกส์และการขนส่ง
-               อีกทั้งยังมีลานคืนตู้เอเยนต์และลานฝากตู้คอนเทนเนอร์ที่เปิดให้บริการตลอด 24 ชม.
+               {{ t('works.desc2') }}
             </Typography>
          </div>
          <div
@@ -298,7 +294,7 @@ const clickLine = () => {
             <div
                class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
             >
-               <Typography variant="Body2" weight="semibold">ดูผลงานทั้งหมด</Typography>
+               <Typography variant="Body2" weight="semibold">{{ t('works.seeall') }}</Typography>
             </div>
          </RouterLink>
       </div>
@@ -311,7 +307,7 @@ const clickLine = () => {
          class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
       >
          <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
-            รีวิวและการส่งมอบ
+            {{ t('review.title') }}
          </Typography>
          <div class="mobile:flex-col mobile:gap-4 flex w-full items-center justify-center gap-25">
             <div class="mobile:gap-4 flex flex-col gap-12">
@@ -373,8 +369,7 @@ const clickLine = () => {
             >
                {{ t('contact.yard1.name') }}
                <Typography variant="Body1" mobile-variant="Body2" class="text-[#606D85]">
-                  มีสำนักงานใหญ่ตั้งอยู่ที่จังหวัดชลบุรี
-                  ที่เปิดให้บริการด้านธุรกิจโลจิสติกส์แบบครบวงจร
+                  {{ t('contact.detail') }}
                </Typography>
             </Typography>
             <div class="info-card" @click="clickAddress">
@@ -399,7 +394,7 @@ const clickLine = () => {
                </div>
             </div>
             <div
-               class="mobile:gap-4 mobile:flex-col-reverse mobile:mt-2 mobile:items-center flex w-full items-end gap-16"
+               class="mobile:gap-4 mobile:flex-col-reverse mobile:mt-2 mobile:items-center flex w-full items-end gap-10"
             >
                <div
                   class="flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3 transition-all duration-300 hover:scale-102"

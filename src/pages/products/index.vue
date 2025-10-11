@@ -33,7 +33,7 @@ const { t, lang } = useLang();
       >
          <div class="flex gap-4">
             <div class="bg-brand-orange w-1 self-stretch rounded-full" />
-            <Typography variant="H4" mobile-variant="H5" weight="bold" class="text-brand-blue">
+            <Typography variant="H3" mobile-variant="H5" weight="bold" class="text-brand-blue">
                {{ t(itemCategory.label) }}
             </Typography>
          </div>

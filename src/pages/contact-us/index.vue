@@ -84,10 +84,10 @@ const data = [
             </Typography>
          </div>
          <div class="mobile:flex-col flex w-full gap-6">
-            <div class="mobile:w-full w-5/10">
+            <div class="mobile:w-full mobile:aspect-square w-5/10">
                <div class="h-full w-full overflow-hidden rounded-2xl">
                   <iframe
-                     :src="t(item.map)"
+                     :src="t('contact.yard1.map')"
                      width="100%"
                      height="100%"
                      loading="lazy"
@@ -128,7 +128,9 @@ const data = [
                      <Typography>{{ item.email }}</Typography>
                   </div>
                </div>
-               <div class="flex w-full items-end gap-10">
+               <div
+                  class="mobile:gap-4 mobile:flex-col-reverse mobile:mt-2 mobile:items-center flex w-full items-end gap-10"
+               >
                   <div
                      class="flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3 transition-all duration-300 hover:scale-102"
                      @click="item.clickLine"
