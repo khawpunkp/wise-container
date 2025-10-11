@@ -7,8 +7,8 @@ const route = useRoute();
       <Navbar />
       <div
          class="mobile:min-h-[calc(100vh-200px)] flex min-h-[calc(100vh-140px)] w-full flex-col items-center"
-         :class="{ 'mobile:pt-16 pt-21': route.path !== '/' }"
       >
+         <div v-if="route.path !== '/'" class="mobile:h-16 bg-brand-blue/50 h-21 w-full" />
          <RouterView />
       </div>
       <Footer />
