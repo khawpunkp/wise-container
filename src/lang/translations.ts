@@ -75,8 +75,6 @@ export const messages: Record<Lang, Record<string, string>> = {
          'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.676530183688!2d101.01059177586333!3d13.119666687209447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102c7006d4fc6bb%3A0xd6e0051fbe7fc930!2zSomewhere!5e0!3m2!1sen!2sth!4v1759229971361!5m2!1sen!2sth',
       'contact.yard3.tel': '063-356-7001 (Mr.Kim)',
       'contact.line': 'Contact via LINE ',
-      'contact.detail':
-         'Our headquarters is located in Chonburi Province,\nproviding comprehensive logistics services.',
    },
    th: {
       'nav.home': 'หน้าแรก',
@@ -154,7 +152,5 @@ export const messages: Record<Lang, Record<string, string>> = {
          'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.676530183688!2d101.01059177586333!3d13.119666687209447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102c7006d4fc6bb%3A0xd6e0051fbe7fc930!2zSomewhere!5e0!3m2!1sth!2sth!4v1759229971361!5m2!1sth!2sth',
       'contact.yard3.tel': '063-356-7001 (คุณคิม)',
       'contact.line': 'ติดต่อผ่านไลน์ ',
-      'contact.detail':
-         'มีสำนักงานใหญ่ตั้งอยู่ที่จังหวัดชลบุรี\nที่เปิดให้บริการด้านธุรกิจโลจิสติกส์แบบครบวงจร ',
    },
 };

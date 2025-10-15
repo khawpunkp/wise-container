@@ -27,7 +27,7 @@ import {
    PhListChecks,
 } from '@phosphor-icons/vue';
 
-const { t } = useLang();
+const { t, lang } = useLang();
 
 const clickAddress = () => {
    window.open('https://maps.app.goo.gl/gGtJfgrwB2kvpxVJ7', '_blank', 'noopener');
@@ -448,8 +448,21 @@ const clickLine = () => {
                class="text-brand-blue mb-2"
             >
                {{ t('contact.yard1.name') }}
-               <Typography variant="Body1" mobile-variant="Body2" class="text-[#606D85]">
-                  {{ t('contact.detail') }}
+               <Typography
+                  variant="Body1"
+                  mobile-variant="Body2"
+                  class="break-words text-[#606D85]"
+               >
+                  <template v-if="lang === 'th'">
+                     มีสำนักงานใหญ่ตั้งอยู่ที่จังหวัดชลบุรี
+                     <br class="mobile:flex hidden" />
+                     ที่เปิดให้บริการด้านธุรกิจโลจิสติกส์แบบครบวงจร
+                  </template>
+                  <template v-else>
+                     Our headquarters is located in Chonburi Province,
+                     <br class="mobile:flex hidden" />
+                     providing comprehensive logistics services.
+                  </template>
                </Typography>
             </Typography>
             <div class="info-card" @click="clickAddress">
