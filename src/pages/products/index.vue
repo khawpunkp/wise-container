@@ -7,12 +7,9 @@ const { t, lang } = useLang();
 
 <template>
    <div
-      class="bg-brand-orange/80 mobile:aspect-[450/100] flex aspect-[1900/200] w-full items-center justify-center"
+      class="bg-brand-orange/80 mobile:aspect-[450/100] flex aspect-[1900/200] w-full items-center justify-center bg-cover bg-bottom bg-no-repeat"
       :style="{
          backgroundImage: `url(${bg})`,
-         backgroundRepeat: 'no-repeat',
-         backgroundSize: 'cover',
-         backgroundPosition: 'center bottom',
       }"
    >
       <Typography
