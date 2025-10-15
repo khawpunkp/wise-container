@@ -3,20 +3,28 @@ import logoText from '@/assets/images/home/logo-text.png';
 import bannerBg from '@/assets/images/home/banner-bg.png';
 import visionBg from '@/assets/images/home/vision-bg.png';
 import review from '@/assets/images/home/review.png';
+import trade from '@/assets/images/home/service/trade.png';
+import transport from '@/assets/images/home/service/transport.png';
+import design from '@/assets/images/home/service/design.png';
+import yard from '@/assets/images/home/service/yard.png';
+import freezone from '@/assets/images/home/service/freezone.png';
+import freight from '@/assets/images/home/service/freight.png';
+import customs from '@/assets/images/home/service/customs.png';
 import qrCode from '@/assets/images/qr.png';
 import line from '@/assets/images/socials/line.png';
 import {
    PhBlueprint,
    PhCaretRight,
    PhClockUser,
-   PhHandCoins,
    PhHandshake,
    PhTruckTrailer,
-   PhWrench,
    PhEnvelope,
    PhMapPin,
    PhPhone,
    PhImageSquare,
+   PhGlobeHemisphereWest,
+   PhWarehouse,
+   PhListChecks,
 } from '@phosphor-icons/vue';
 
 const { t } = useLang();
@@ -39,12 +47,9 @@ const clickLine = () => {
    <!-- Banner -->
    <div class="mobile:h-auto relative flex h-dvh w-full flex-col items-center justify-center">
       <div
-         class="mobile:p-6 flex aspect-square max-h-160 w-full items-center justify-center"
+         class="mobile:p-6 flex aspect-square max-h-160 w-full items-center justify-center bg-cover bg-bottom bg-no-repeat"
          :style="{
             backgroundImage: `url(${bannerBg})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center bottom',
          }"
       >
          <div class="flex w-full max-w-[100rem] flex-col text-white">
@@ -74,7 +79,7 @@ const clickLine = () => {
    <!-- Service -->
    <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
       <div
-         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-24"
+         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
       >
          <div class="flex flex-col items-center gap-4">
             <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
@@ -92,64 +97,132 @@ const clickLine = () => {
             </RouterLink>
          </div>
          <div class="service-card-container">
-            <div class="service-card mb-21">
-               <div class="position-top flex gap-8">
-                  <div class="icon-container size-20">
-                     <PhHandCoins class="mobile:size-8 size-10" weight="regular" />
-                  </div>
-                  <div class="icon-container mobile:!hidden size-20">
-                     <PhHandshake class="size-10" weight="regular" />
-                  </div>
-                  <div class="icon-container mobile:!hidden size-20">
-                     <PhWrench class="size-10" weight="regular" />
-                  </div>
+            <div
+               class="service-card"
+               :style="{
+                  backgroundImage: `url(${trade})`,
+               }"
+            >
+               <div class="icon-container">
+                  <PhHandshake class="mobile:size-8 size-10" weight="regular" />
                </div>
                <Typography
                   variant="H5"
                   mobile-variant="Body1"
                   weight="semibold"
-                  class="text-brand-blue"
+                  class="text-white text-shadow-black/50 text-shadow-md"
                >
                   {{ t('services.trade') }}
                </Typography>
             </div>
-            <div class="service-card mt-12">
-               <div class="icon-container position-top">
+            <div
+               class="service-card"
+               :style="{
+                  backgroundImage: `url(${transport})`,
+               }"
+            >
+               <div class="icon-container">
                   <PhTruckTrailer class="mobile:size-8 size-10" weight="regular" />
                </div>
                <Typography
                   variant="H5"
                   mobile-variant="Body1"
                   weight="semibold"
-                  class="text-brand-blue"
+                  class="text-white text-shadow-black/50 text-shadow-md"
                >
                   {{ t('services.transport') }}
                </Typography>
             </div>
-            <div class="service-card mb-12">
-               <div class="icon-container position-top">
+            <div
+               class="service-card"
+               :style="{
+                  backgroundImage: `url(${design})`,
+               }"
+            >
+               <div class="icon-container">
                   <PhBlueprint class="mobile:size-8 size-10" weight="regular" />
                </div>
                <Typography
                   variant="H5"
                   mobile-variant="Body1"
                   weight="semibold"
-                  class="text-brand-blue"
+                  class="text-white text-shadow-black/50 text-shadow-md"
                >
-                  {{ t('services.build') }}
+                  {{ t('services.design') }}
                </Typography>
             </div>
-            <div class="service-card mt-21">
-               <div class="icon-container position-top">
+            <div
+               class="service-card"
+               :style="{
+                  backgroundImage: `url(${yard})`,
+               }"
+            >
+               <div class="icon-container">
                   <PhClockUser class="mobile:size-8 size-10" weight="regular" />
                </div>
                <Typography
                   variant="H5"
                   mobile-variant="Body1"
                   weight="semibold"
-                  class="text-brand-blue"
+                  class="text-white text-shadow-black/50 text-shadow-md"
                >
                   {{ t('services.yard') }}
+               </Typography>
+            </div>
+         </div>
+         <div class="service-card-container">
+            <div
+               class="service-card"
+               :style="{
+                  backgroundImage: `url(${freight})`,
+               }"
+            >
+               <div class="icon-container">
+                  <PhGlobeHemisphereWest class="mobile:size-8 size-10" weight="regular" />
+               </div>
+               <Typography
+                  variant="H5"
+                  mobile-variant="Body1"
+                  weight="semibold"
+                  class="text-white text-shadow-black/50 text-shadow-md"
+               >
+                  {{ t('services.freight') }}
+               </Typography>
+            </div>
+            <div
+               class="service-card"
+               :style="{
+                  backgroundImage: `url(${freezone})`,
+               }"
+            >
+               <div class="icon-container">
+                  <PhWarehouse class="mobile:size-8 size-10" weight="regular" />
+               </div>
+               <Typography
+                  variant="H5"
+                  mobile-variant="Body1"
+                  weight="semibold"
+                  class="text-white text-shadow-black/50 text-shadow-md"
+               >
+                  {{ t('services.freezone') }}
+               </Typography>
+            </div>
+            <div
+               class="service-card"
+               :style="{
+                  backgroundImage: `url(${customs})`,
+               }"
+            >
+               <div class="icon-container">
+                  <PhListChecks class="mobile:size-8 size-10" weight="regular" />
+               </div>
+               <Typography
+                  variant="H5"
+                  mobile-variant="Body1"
+                  weight="semibold"
+                  class="text-white text-shadow-black/50 text-shadow-md"
+               >
+                  {{ t('services.customs') }}
                </Typography>
             </div>
          </div>
@@ -168,18 +241,25 @@ const clickLine = () => {
          class="mobile:gap-6 mobile:flex-col flex w-full max-w-[100rem] items-center justify-center gap-16"
       >
          <div
-            class="mobile:p-6 flex aspect-square w-full flex-col items-start justify-end rounded-4xl p-10 text-white"
+            class="mobile:p-6 flex aspect-square w-full flex-col items-start justify-end rounded-4xl bg-cover bg-center bg-no-repeat p-10 text-white"
             :style="{
                backgroundImage: `url(${visionBg})`,
-               backgroundRepeat: 'no-repeat',
-               backgroundSize: 'cover',
-               backgroundPosition: 'center bottom',
             }"
          >
-            <Typography variant="H4" mobile-variant="H5" weight="semibold">
+            <Typography
+               variant="H4"
+               mobile-variant="H5"
+               weight="semibold"
+               class="text-shadow-black/50 text-shadow-md"
+            >
                {{ t('vision.title') }}
             </Typography>
-            <Typography variant="H5" mobile-variant="Body2" weight="medium">
+            <Typography
+               variant="H5"
+               mobile-variant="Body2"
+               weight="medium"
+               class="text-shadow-black/50 text-shadow-md"
+            >
                {{ t('vision.desc') }}
             </Typography>
          </div>
@@ -424,11 +504,11 @@ const clickLine = () => {
 .service-card {
    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
 
-   @apply bg-brand-light-blue mobile:p-4 mobile:min-w-0 mobile:m-0 mobile:text-start mobile:justify-start mobile:rounded-2xl relative flex w-full min-w-92 items-center justify-center gap-4 rounded-4xl py-12 text-center;
+   @apply bg-brand-blue mobile:p-4 mobile:flex-row mobile:min-w-0 mobile:m-0 mobile:text-start mobile:justify-start mobile:rounded-2xl mobile:aspect-auto relative flex aspect-[4/3] w-92 flex-col items-center justify-center gap-4 rounded-4xl bg-cover bg-center bg-no-repeat p-6 text-center;
 }
 
 .icon-container {
-   @apply border-brand-orange text-brand-orange mobile:size-12 mobile:border-2 flex size-20 items-center justify-center rounded-full border-[3px] bg-white;
+   @apply border-brand-blue text-brand-blue mobile:size-16 mobile:border-2 flex size-20 shrink-0 items-center justify-center rounded-full border-[3px] bg-white;
 }
 
 .position-top {

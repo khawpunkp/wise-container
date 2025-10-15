@@ -22,7 +22,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'services.title': 'Our Products and Services',
       'services.trade': 'Buy - Sell - Rent - Repair\nshipping containers',
       'services.transport': 'Container transport\nand agent container return\nfor cargo loading',
-      'services.build': 'Design - Manufacture - Sale\ncontainer houses\nand container offices',
+      'services.design': 'Design - Manufacture - Sale\ncontainer houses\nand container offices',
       'services.yard': '24-hour container yard\nservice available',
       'services.seeall': 'See all products',
 
@@ -97,10 +97,13 @@ export const messages: Record<Lang, Record<string, string>> = {
 
       'services.title': 'สินค้าและบริการของเรา',
       'services.trade': 'ซื้อ-ขาย-เช่า-ซ่อม\nตู้คอนเทนเนอร์',
-      'services.transport':
-         'การให้บริการด้านการขนส่ง\nตู้คอนเทนเนอร์และรับคืน\nตู้เอเยนต์เพื่อไปบรรจุสินค้า',
-      'services.build': 'รับออกแบบ-ผลิต-จำหน่าย\nตู้บ้านพักคอนเทนเนอร์\nและออฟฟิศสำนักงานประกอบ',
+      'services.transport': 'ให้บริการด้านการขนส่ง\nตู้คอนเทนเนอร์',
+      'services.design': 'รับออกแบบ-ผลิต-จำหน่าย\nตู้ประเภทต่าง ๆ',
       'services.yard': 'มีลานฝากตู้ที่เปิด\nให้บริการตลอด 24 ชั่วโมง',
+      'services.freight': 'บริการขนส่งสินค้า\nระหว่างประเทศครบวงจร',
+      'services.freezone': 'พื้นที่เขตปลอดอากรสำหรับ\nสินค้าก่อนนำเข้า-ส่งออก',
+      'services.customs': ' ให้บริการด้านพิธีการศุลกากร\nอย่างมืออาชีพ',
+
       'services.seeall': 'ดูสินค้าทั้งหมด',
 
       'vision.title': 'วิสัยทัศน์',
