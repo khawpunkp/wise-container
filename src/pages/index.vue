@@ -28,19 +28,6 @@ import {
 } from '@phosphor-icons/vue';
 
 const { t, lang } = useLang();
-
-const clickAddress = () => {
-   window.open('https://maps.app.goo.gl/gGtJfgrwB2kvpxVJ7', '_blank', 'noopener');
-};
-const clickTel = () => {
-   window.open(`tel:0944819722`);
-};
-const clickMail = () => {
-   window.open(`mailto:wisecontainer9@gmail.com`);
-};
-const clickLine = () => {
-   window.open(`https://line.me/ti/p/%40wisecontainer`, '_blank', 'noopener');
-};
 </script>
 
 <template>
@@ -152,7 +139,7 @@ const clickLine = () => {
                </Typography>
             </div>
             <div
-               class="service-card"
+               class="service-card mobile:!bg-top"
                :style="{
                   backgroundImage: `url(${yard})`,
                }"
@@ -172,7 +159,7 @@ const clickLine = () => {
          </div>
          <div class="service-card-container">
             <div
-               class="service-card"
+               class="service-card mobile:!bg-top"
                :style="{
                   backgroundImage: `url(${freight})`,
                }"
@@ -432,7 +419,7 @@ const clickLine = () => {
          <div class="mobile:w-full mobile:aspect-square w-5/10">
             <div class="h-full w-full overflow-hidden rounded-2xl">
                <iframe
-                  :src="t('contact.yard1.map')"
+                  :src="t('contact.yard0.map')"
                   width="100%"
                   height="100%"
                   loading="lazy"
@@ -447,7 +434,7 @@ const clickLine = () => {
                weight="semibold"
                class="text-brand-blue mb-2"
             >
-               {{ t('contact.yard1.name') }}
+               {{ t('contact.yard0.name') }}
                <Typography
                   variant="Body1"
                   mobile-variant="Body2"
@@ -465,32 +452,32 @@ const clickLine = () => {
                   </template>
                </Typography>
             </Typography>
-            <div class="info-card" @click="clickAddress">
+            <div class="info-card">
                <PhMapPin weight="fill" size="28" color="#f38e12" class="shrink-0" />
                <div class="flex min-h-8 items-center">
                   <Typography>
-                     {{ t('contact.yard1.address') }}
+                     {{ t('contact.yard0.address') }}
                   </Typography>
                </div>
             </div>
 
-            <div class="info-card" @click="clickTel">
+            <div class="info-card">
                <PhPhone weight="fill" size="28" color="#f38e12" class="shrink-0" />
                <div class="flex min-h-8 items-center">
-                  <Typography>{{ t('contact.yard1.tel') }}</Typography>
+                  <Typography>{{ '094-481-9722' }}</Typography>
                </div>
             </div>
-            <div class="info-card" @click="clickMail">
+            <div class="info-card">
                <PhEnvelope weight="fill" size="28" color="#f38e12" class="shrink-0" />
                <div class="flex min-h-8 items-center">
-                  <Typography>{{ 'wisecontainer9@gmail.com' }}</Typography>
+                  <Typography>{{ 'info@wisecontainers.com' }}</Typography>
                </div>
             </div>
             <div
                class="mobile:gap-4 mobile:flex-col-reverse mobile:mt-2 mobile:items-center flex w-full items-end gap-10"
             >
                <div
-                  class="flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3 transition-all duration-300 hover:scale-102"
+                  class="mobile:w-full flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3 transition-all duration-300 hover:scale-102"
                   @click="clickLine"
                >
                   <img :src="line" class="size-10" />
@@ -517,7 +504,7 @@ const clickLine = () => {
 .service-card {
    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
 
-   @apply bg-brand-blue mobile:p-4 mobile:flex-row mobile:min-w-0 mobile:m-0 mobile:text-start mobile:justify-start mobile:rounded-2xl mobile:aspect-auto relative flex aspect-[4/3] w-92 flex-col items-center justify-center gap-4 rounded-4xl bg-cover bg-center bg-no-repeat p-6 text-center;
+   @apply bg-brand-blue mobile:p-4 mobile:flex-row mobile:min-w-0 mobile:m-0 mobile:text-start mobile:justify-start mobile:w-full mobile:rounded-2xl mobile:aspect-auto relative flex aspect-[4/3] w-92 flex-col items-center justify-center gap-4 rounded-4xl bg-cover bg-center bg-no-repeat p-6 text-center;
 }
 
 .icon-container {

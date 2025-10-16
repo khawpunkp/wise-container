@@ -8,50 +8,47 @@ const { t } = useLang();
 
 const data = [
    {
+      title: 'contact.yard0.title',
+      name: 'contact.yard0.name',
+      map: 'contact.yard0.map',
+      mapUrl: 'https://maps.app.goo.gl/gGtJfgrwB2kvpxVJ7',
+      address: 'contact.yard0.address',
+      opening: 'contact.opening.normal',
+      tel: ['094-481-9722'],
+   },
+   {
       title: 'contact.yard1.title',
       name: 'contact.yard1.name',
-      opening: 'contact.yard1.opening',
       map: 'contact.yard1.map',
+      mapUrl: 'https://maps.app.goo.gl/K6tYFM4Nv96qJaTk7',
       address: 'contact.yard1.address',
-      clickAddress: () => {
-         window.open('https://maps.app.goo.gl/gGtJfgrwB2kvpxVJ7', '_blank', 'noopener');
-      },
-      tel: 'contact.yard1.tel',
-      clickTel: () => {
-         window.open(`tel:0944819722`);
-      },
-      email: 'wisecontainer9@gmail.com',
-      clickMail: () => {
-         window.open(`mailto:wisecontainer9@gmail.com`);
-      },
-      line: '@wisecontainer',
-      lineQr: qrCode,
-      clickLine: () => {
-         window.open(`https://line.me/ti/p/%40wisecontainer`, '_blank', 'noopener');
-      },
+      opening: 'contact.opening.normal',
+   },
+   {
+      title: 'contact.yard2.title',
+      name: 'contact.yard2.name',
+      map: 'contact.yard2.map',
+      mapUrl: 'https://maps.app.goo.gl/WExHmeBMLkrBqTU6A',
+      address: 'contact.yard2.address',
+      opening: 'contact.opening.normal',
+      tel: ['094-481-9722', '082-283-2152'],
    },
    {
       title: 'contact.yard3.title',
       name: 'contact.yard3.name',
-      opening: 'contact.yard3.opening',
       map: 'contact.yard3.map',
+      mapUrl: 'https://maps.app.goo.gl/uCPzXubFiERqHam76',
       address: 'contact.yard3.address',
-      clickAddress: () => {
-         window.open('https://maps.app.goo.gl/ykqUdxHUrbSjLBUNA', '_blank', 'noopener');
-      },
-      tel: 'contact.yard3.tel',
-      clickTel: () => {
-         window.open(`tel:0633567001`);
-      },
-      email: 'wisecontainer9@gmail.com',
-      clickMail: () => {
-         window.open(`mailto:wisecontainer9@gmail.com`);
-      },
-      line: '@wisecontainer',
-      lineQr: qrCode,
-      clickLine: () => {
-         window.open(`https://line.me/ti/p/%40wisecontainer`, '_blank', 'noopener');
-      },
+      opening: 'contact.opening.24',
+      tel: ['094-481-9722', '061-174-0622'],
+   },
+   {
+      title: 'contact.yard4.title',
+      name: 'contact.yard4.name',
+      map: 'contact.yard4.map',
+      mapUrl: 'https://maps.app.goo.gl/4CMTGX4GZrp4CnJy6',
+      address: 'contact.yard4.address',
+      opening: 'contact.opening.24',
    },
 ];
 </script>
@@ -81,7 +78,7 @@ const data = [
             </Typography>
          </div>
          <div class="mobile:flex-col flex w-full gap-6">
-            <div class="mobile:w-full mobile:aspect-square w-5/10">
+            <div class="mobile:w-full mobile:aspect-square aspect-[4/3] w-5/10">
                <div class="h-full w-full overflow-hidden rounded-2xl">
                   <iframe
                      :src="t(item.map)"
@@ -92,37 +89,39 @@ const data = [
                   />
                </div>
             </div>
-            <div class="flex flex-1 flex-col items-start">
-               <Typography variant="H4" mobile-variant="H6" weight="semibold">
-                  {{ t(item.name) }}
-                  <Typography
-                     variant="Body1"
-                     mobile-variant="Body2"
-                     weight="medium"
-                     class="text-[#606D85]"
-                  >
-                     {{ t(item.opening) }}
-                  </Typography>
-               </Typography>
-               <div class="info-card" @click="item.clickAddress">
-                  <PhMapPin weight="fill" size="32" color="#f38e12" class="shrink-0" />
-                  <div class="flex min-h-8 items-center">
-                     <Typography>
-                        {{ t(item.address) }}
+            <div class="justify-betweent flex flex-1 flex-col">
+               <div class="flex flex-1 flex-col items-start">
+                  <Typography variant="H4" mobile-variant="H6" weight="semibold">
+                     {{ t(item.name) }}
+                     <Typography
+                        variant="Body1"
+                        mobile-variant="Body2"
+                        weight="medium"
+                        class="text-[#606D85]"
+                     >
+                        {{ t(item.opening) }}
                      </Typography>
+                  </Typography>
+                  <div class="info-card">
+                     <PhMapPin weight="fill" size="32" color="#f38e12" class="shrink-0" />
+                     <div class="flex min-h-8 items-center">
+                        <Typography>
+                           {{ t(item.address) }}
+                        </Typography>
+                     </div>
                   </div>
-               </div>
 
-               <div class="info-card" @click="item.clickTel">
-                  <PhPhone weight="fill" size="32" color="#f38e12" class="shrink-0" />
-                  <div class="flex min-h-8 items-center">
-                     <Typography>{{ t(item.tel) }}</Typography>
+                  <div v-for="(tel, index) in item.tel" :key="index" class="info-card">
+                     <PhPhone weight="fill" size="32" color="#f38e12" class="shrink-0" />
+                     <div class="flex min-h-8 items-center">
+                        <Typography>{{ tel }}</Typography>
+                     </div>
                   </div>
-               </div>
-               <div class="info-card" @click="item.clickMail">
-                  <PhEnvelope weight="fill" size="32" color="#f38e12" class="shrink-0" />
-                  <div class="flex min-h-8 items-center">
-                     <Typography>{{ item.email }}</Typography>
+                  <div class="info-card">
+                     <PhEnvelope weight="fill" size="32" color="#f38e12" class="shrink-0" />
+                     <div class="flex min-h-8 items-center">
+                        <Typography>{{ 'info@wisecontainers.com' }}</Typography>
+                     </div>
                   </div>
                </div>
                <div
@@ -130,12 +129,12 @@ const data = [
                >
                   <div
                      class="flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3 transition-all duration-300 hover:scale-102"
-                     @click="item.clickLine"
+                     @click="clickLine"
                   >
                      <img :src="line" class="size-10" />
                      <div class="flex min-h-8 items-center">
                         <Typography weight="bold" class="text-white">
-                           {{ t('contact.line') }} {{ item.line }}
+                           {{ t('contact.line') }} {{ '@wisecontainer' }}
                         </Typography>
                      </div>
                   </div>

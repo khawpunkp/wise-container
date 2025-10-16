@@ -10,3 +10,19 @@ export const numberFormatter = (value: number | string | undefined | null) => {
    const num = Number(value);
    return new Intl.NumberFormat('en-US').format(num);
 };
+
+export const openNewTab = (url: string) => {
+   window.open(url, '_blank', 'noopener');
+};
+
+export const clickTel = (tel: string) => {
+   window.open(`tel:${tel}`);
+};
+
+export const clickMail = (mail: string) => {
+   window.open(`mailto:${mail}`);
+};
+
+export const clickLine = () => {
+   window.open(`https://line.me/ti/p/%40wisecontainer`, '_blank', 'noopener');
+};
