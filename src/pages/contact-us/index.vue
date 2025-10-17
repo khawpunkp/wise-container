@@ -77,7 +77,7 @@ const data = [
                {{ t(item.title) }}
             </Typography>
          </div>
-         <div class="mobile:flex-col flex w-full gap-6">
+         <div class="mobile:flex-col mobile:min-h-0 flex min-h-125 w-full gap-6">
             <div class="mobile:w-full mobile:aspect-square aspect-[4/3] w-5/10">
                <div class="h-full w-full overflow-hidden rounded-2xl">
                   <iframe

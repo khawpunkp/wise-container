@@ -409,7 +409,7 @@ const { t, lang } = useLang();
                   </div>
                </div>
             </div>
-            <img :src="review" class="card-shadow max-h-150 shrink-0 rounded-4xl" />
+            <img :src="review" class="max-h-150 shrink-0 rounded-4xl shadow-md" />
          </div>
       </div>
    </div>
@@ -434,7 +434,8 @@ const { t, lang } = useLang();
                weight="semibold"
                class="text-brand-blue mb-2"
             >
-               {{ t('contact.yard0.name') }}
+               <template v-if="lang === 'th'">บริษัท ไวซ์ คอนเทนเนอร์ จำกัด</template>
+               <template v-else>WISE CONTAINER CO., LTD</template>
                <Typography
                   variant="Body1"
                   mobile-variant="Body2"
@@ -446,7 +447,7 @@ const { t, lang } = useLang();
                      ที่เปิดให้บริการด้านธุรกิจโลจิสติกส์แบบครบวงจร
                   </template>
                   <template v-else>
-                     Our headquarters is located in Chonburi Province,
+                     Our head office is located in Chonburi Province,
                      <br class="mobile:flex hidden" />
                      providing comprehensive logistics services.
                   </template>
@@ -504,7 +505,7 @@ const { t, lang } = useLang();
 .service-card {
    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
 
-   @apply bg-brand-blue mobile:p-4 mobile:flex-row mobile:min-w-0 mobile:m-0 mobile:text-start mobile:justify-start mobile:w-full mobile:rounded-2xl mobile:aspect-auto relative flex aspect-[4/3] w-92 flex-col items-center justify-center gap-4 rounded-4xl bg-cover bg-center bg-no-repeat p-6 text-center;
+   @apply bg-brand-blue mobile:p-4 mobile:flex-row mobile:min-w-0 mobile:m-0 mobile:text-start mobile:justify-start mobile:w-full mobile:rounded-2xl mobile:aspect-auto relative flex aspect-[3/2] w-95 flex-col items-center justify-center gap-4 rounded-4xl bg-cover bg-center bg-no-repeat p-6 text-center;
 }
 
 .icon-container {
@@ -515,13 +516,8 @@ const { t, lang } = useLang();
    @apply mobile:relative mobile:top-0 absolute -top-12;
 }
 
-.card-shadow {
-   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
-}
-
 .review-card {
-   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
-   @apply w-fit rounded-2xl bg-white px-6 py-4 text-[#606D85];
+   @apply w-fit rounded-2xl bg-white px-6 py-4 text-[#606D85] shadow-md;
 }
 
 .info-card {
