@@ -223,60 +223,7 @@ const { t, lang } = useLang();
          </RouterLink>
       </div>
    </div>
-   <!-- Vision -->
-   <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
-      <div
-         class="mobile:gap-6 mobile:flex-col flex w-full max-w-[100rem] items-center justify-center gap-16"
-      >
-         <div
-            class="mobile:p-6 flex aspect-square w-full flex-col items-start justify-end rounded-4xl bg-cover bg-center bg-no-repeat p-10 text-white"
-            :style="{
-               backgroundImage: `url(${visionBg})`,
-            }"
-         >
-            <Typography
-               variant="H4"
-               mobile-variant="H5"
-               weight="semibold"
-               class="text-shadow-black/50 text-shadow-md"
-            >
-               {{ t('vision.title') }}
-            </Typography>
-            <Typography
-               variant="H5"
-               mobile-variant="Body2"
-               weight="medium"
-               class="text-shadow-black/50 text-shadow-md"
-            >
-               {{ t('vision.desc') }}
-            </Typography>
-         </div>
-         <div class="flex w-full flex-col">
-            <div class="mobile:gap-0 flex flex-col gap-4">
-               <Typography variant="H4" mobile-variant="H5" weight="semibold">
-                  {{ t('mission.title') }}
-               </Typography>
-               <Typography
-                  variant="H5"
-                  mobile-variant="Body2"
-                  weight="medium"
-                  class="text-[#606D85]"
-               >
-                  {{ t('mission.desc') }}
-               </Typography>
-            </div>
-            <Typography
-               variant="H3"
-               mobile-variant="H5"
-               weight="semibold"
-               class="text-brand-blue mobile:p-0 mobile:mt-12 py-20 text-center"
-            >
-               {{ t('about.quote') }}
-            </Typography>
-         </div>
-      </div>
-   </div>
-   <!-- Our Works -->
+   <!-- Products -->
    <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
       <div
          class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
@@ -341,50 +288,56 @@ const { t, lang } = useLang();
          </RouterLink>
       </div>
    </div>
-   <!-- Review -->
-   <div
-      class="bg-brand-light-blue relative flex min-h-[calc(100dvh-84px)] w-full items-center justify-center p-6"
-   >
+   <!-- Vision -->
+   <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
       <div
-         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
+         class="mobile:gap-6 mobile:flex-col flex w-full max-w-[100rem] items-center justify-center gap-16"
       >
-         <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
-            {{ t('review.title') }}
-         </Typography>
-         <div class="mobile:flex-col mobile:gap-4 flex w-full items-center justify-center gap-25">
-            <div class="mobile:gap-4 flex flex-col gap-12">
-               <div class="review-card">
-                  <Typography class="mobile:text-[16px] text-[28px]">
-                     {{
-                        '#รีวิวส่งตู้ #Update หน้างานลูกค้าให้ดูค่า เช้าฝนตก สายๆฟ้าเริ่มโปร่ง\nทางแคบแค่ไหนก็ไม่เป็นผลเลยย ขนส่งเราเก่งอยู่แล้วว'
-                     }}
-                  </Typography>
-               </div>
-               <div class="flex flex-col gap-4">
-                  <div class="review-card mobile:ml-8 ml-12">
-                     <Typography variant="H6" mobile-variant="Body2">
-                        {{
-                           '#รีวิวที่พัก ส่งมอบเรียบร้อยอีกหนึ่งออเดอร์ #บ้านพักคนงานจากตู้คอนเทนเนอร์\n2 ตู้ และตู้เปล่า #ตู้คอนเทนเนอร์เก็บของ\nฝนตกไม่มีฝนต่อการขนส่งและติดตั้งค่า ขอบคุณลูกค้าหน้างาน จังหวัดนนทบุรีมากๆเลยนะคะ'
-                        }}
-                     </Typography>
-                  </div>
-                  <div class="review-card mobile:ml-0 mobile:mr-8 ml-30">
-                     <Typography variant="H6" mobile-variant="Body2">
-                        {{
-                           '#ตู้คอนเทนเนอร์ บ้านพักคนงาน.. โอน 50% ที่เหลือ พร้อยยกตู้ขึ้นหางเลยค่า'
-                        }}
-                     </Typography>
-                  </div>
-                  <div class="review-card ml-12">
-                     <Typography variant="H6" mobile-variant="Body2">
-                        {{
-                           '#ตู้ใส่วัตถุมงคล Ep.1 ขนาด 20STD แบบประตูบานม้วน\n#Update หน้างานฉบับงานเร่งง !!'
-                        }}
-                     </Typography>
-                  </div>
-               </div>
+         <div
+            class="mobile:p-6 flex aspect-square w-full flex-col items-start justify-end rounded-4xl bg-cover bg-center bg-no-repeat p-10 text-white"
+            :style="{
+               backgroundImage: `url(${visionBg})`,
+            }"
+         >
+            <Typography
+               variant="H4"
+               mobile-variant="H5"
+               weight="semibold"
+               class="text-shadow-black/50 text-shadow-md"
+            >
+               {{ t('vision.title') }}
+            </Typography>
+            <Typography
+               variant="H5"
+               mobile-variant="Body2"
+               weight="medium"
+               class="text-shadow-black/50 text-shadow-md"
+            >
+               {{ t('vision.desc') }}
+            </Typography>
+         </div>
+         <div class="flex w-full flex-col">
+            <div class="mobile:gap-0 flex flex-col gap-4">
+               <Typography variant="H4" mobile-variant="H5" weight="semibold">
+                  {{ t('mission.title') }}
+               </Typography>
+               <Typography
+                  variant="H5"
+                  mobile-variant="Body2"
+                  weight="medium"
+                  class="text-[#606D85]"
+               >
+                  {{ t('mission.desc') }}
+               </Typography>
             </div>
-            <img :src="review" class="max-h-150 shrink-0 rounded-4xl shadow-md" />
+            <Typography
+               variant="H3"
+               mobile-variant="H5"
+               weight="semibold"
+               class="text-brand-blue mobile:p-0 mobile:mt-12 py-20 text-center"
+            >
+               {{ t('about.quote') }}
+            </Typography>
          </div>
       </div>
    </div>
@@ -477,6 +430,53 @@ const { t, lang } = useLang();
                <Typography variant="Body2" weight="semibold">{{ t('works.seeall') }}</Typography>
             </div>
          </RouterLink>
+      </div>
+   </div>
+   <!-- Review -->
+   <div
+      class="bg-brand-light-blue relative flex min-h-[calc(100dvh-84px)] w-full items-center justify-center p-6"
+   >
+      <div
+         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
+      >
+         <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
+            {{ t('review.title') }}
+         </Typography>
+         <div class="mobile:flex-col mobile:gap-4 flex w-full items-center justify-center gap-25">
+            <div class="mobile:gap-4 flex flex-col gap-12">
+               <div class="review-card">
+                  <Typography class="mobile:text-[16px] text-[28px]">
+                     {{
+                        '#รีวิวส่งตู้ #Update หน้างานลูกค้าให้ดูค่า เช้าฝนตก สายๆฟ้าเริ่มโปร่ง\nทางแคบแค่ไหนก็ไม่เป็นผลเลยย ขนส่งเราเก่งอยู่แล้วว'
+                     }}
+                  </Typography>
+               </div>
+               <div class="flex flex-col gap-4">
+                  <div class="review-card mobile:ml-8 ml-12">
+                     <Typography variant="H6" mobile-variant="Body2">
+                        {{
+                           '#รีวิวที่พัก ส่งมอบเรียบร้อยอีกหนึ่งออเดอร์ #บ้านพักคนงานจากตู้คอนเทนเนอร์\n2 ตู้ และตู้เปล่า #ตู้คอนเทนเนอร์เก็บของ\nฝนตกไม่มีฝนต่อการขนส่งและติดตั้งค่า ขอบคุณลูกค้าหน้างาน จังหวัดนนทบุรีมากๆเลยนะคะ'
+                        }}
+                     </Typography>
+                  </div>
+                  <div class="review-card mobile:ml-0 mobile:mr-8 ml-30">
+                     <Typography variant="H6" mobile-variant="Body2">
+                        {{
+                           '#ตู้คอนเทนเนอร์ บ้านพักคนงาน.. โอน 50% ที่เหลือ พร้อยยกตู้ขึ้นหางเลยค่า'
+                        }}
+                     </Typography>
+                  </div>
+                  <div class="review-card ml-12">
+                     <Typography variant="H6" mobile-variant="Body2">
+                        {{
+                           '#ตู้ใส่วัตถุมงคล Ep.1 ขนาด 20STD แบบประตูบานม้วน\n#Update หน้างานฉบับงานเร่งง !!'
+                        }}
+                     </Typography>
+                  </div>
+               </div>
+            </div>
+            <img :src="review" class="max-h-150 shrink-0 rounded-4xl shadow-md" />
+         </div>
       </div>
    </div>
    <!-- Contact -->
