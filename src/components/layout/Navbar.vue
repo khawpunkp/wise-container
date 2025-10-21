@@ -12,7 +12,7 @@ const menuList = [
       href: '/products',
       children: productList,
    },
-   { label: 'nav.renting', href: '/renting' },
+   { label: 'nav.services', href: '/service' },
    { label: 'nav.works', href: '/works' },
    { label: 'nav.contact', href: '/contact-us' },
 ];

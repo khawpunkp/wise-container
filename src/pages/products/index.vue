@@ -18,7 +18,7 @@ const { t, lang } = useLang();
          weight="bold"
          class="text-white text-shadow-lg/20"
       >
-         {{ t('nav.products') }}
+         {{ t('products.title') }}
       </Typography>
    </div>
    <div class="mobile:p-6 flex w-full flex-1 flex-col items-center justify-start gap-16 px-8 py-16">

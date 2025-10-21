@@ -26,6 +26,7 @@ import {
    PhWarehouse,
    PhListChecks,
 } from '@phosphor-icons/vue';
+import productList from '@/assets/product/product-list.json';
 
 const { t, lang } = useLang();
 </script>
@@ -72,7 +73,7 @@ const { t, lang } = useLang();
             <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
                {{ t('services.title') }}
             </Typography>
-            <RouterLink to="/products" class="mobile:hidden w-fit">
+            <RouterLink to="/service" class="mobile:hidden w-fit">
                <div
                   class="bg-brand-orange relative flex w-fit items-center gap-2 rounded-full px-6 py-2 text-white"
                >
@@ -213,7 +214,7 @@ const { t, lang } = useLang();
                </Typography>
             </div>
          </div>
-         <RouterLink to="/products" class="mobile:flex hidden w-full">
+         <RouterLink to="/service" class="mobile:flex hidden w-full">
             <div
                class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
             >
@@ -272,6 +273,118 @@ const { t, lang } = useLang();
             >
                {{ t('about.quote') }}
             </Typography>
+         </div>
+      </div>
+   </div>
+   <!-- Our Works -->
+   <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
+      <div
+         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
+      >
+         <div class="flex w-full flex-col">
+            <div class="flex w-full items-start justify-between">
+               <Typography
+                  variant="H3"
+                  mobile-variant="H5"
+                  weight="semibold"
+                  class="text-brand-blue"
+               >
+                  {{ t('products.title') }}
+               </Typography>
+               <RouterLink to="/products" class="mobile:hidden w-fit">
+                  <div
+                     class="bg-brand-orange relative flex w-fit items-center gap-2 rounded-full px-6 py-2 text-white"
+                  >
+                     <Typography variant="H6" weight="semibold" class="mt-0.5">
+                        {{ t('home.seemore') }}
+                     </Typography>
+                     <PhCaretRight :size="24" weight="bold" />
+                  </div>
+               </RouterLink>
+            </div>
+            <Typography variant="Body1" mobile-variant="Body2" class="text-[#606D85]">
+               {{ t('products.desc1') }}
+               <br class="mobile:hidden" />
+               {{ t('products.desc2') }}
+            </Typography>
+         </div>
+         <div
+            class="mobile:overflow-y-auto scrollbar-none mobile:flex mobile:gap-4 grid w-full grid-cols-3 gap-10"
+         >
+            <RouterLink
+               v-for="(item, index) in productList"
+               :key="index"
+               :to="{ path: '/products', hash: `#${item.ref}` }"
+               class="relative flex flex-col items-end justify-end gap-6"
+            >
+               <div
+                  class="bg-brand-blue/50 mobile:min-w-65 flex aspect-square w-full items-center justify-center rounded-2xl text-white"
+               >
+                  <PhImageSquare :size="32" />
+               </div>
+               <div
+                  class="text-brand-blue mobile:absolute mobile:right-2 mobile:bottom-2 mobile:text-white flex w-fit items-center gap-2"
+               >
+                  <Typography variant="H6" mobile-variant="Body2" weight="semibold" class="mt-0.5">
+                     {{ t(item.label) }}
+                  </Typography>
+                  <PhCaretRight class="mobile:size-4 size-6" weight="bold" />
+               </div>
+            </RouterLink>
+         </div>
+         <RouterLink to="/products" class="mobile:flex hidden w-full">
+            <div
+               class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
+            >
+               <Typography variant="Body2" weight="semibold">{{ t('works.seeall') }}</Typography>
+            </div>
+         </RouterLink>
+      </div>
+   </div>
+   <!-- Review -->
+   <div
+      class="bg-brand-light-blue relative flex min-h-[calc(100dvh-84px)] w-full items-center justify-center p-6"
+   >
+      <div
+         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
+      >
+         <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
+            {{ t('review.title') }}
+         </Typography>
+         <div class="mobile:flex-col mobile:gap-4 flex w-full items-center justify-center gap-25">
+            <div class="mobile:gap-4 flex flex-col gap-12">
+               <div class="review-card">
+                  <Typography class="mobile:text-[16px] text-[28px]">
+                     {{
+                        '#รีวิวส่งตู้ #Update หน้างานลูกค้าให้ดูค่า เช้าฝนตก สายๆฟ้าเริ่มโปร่ง\nทางแคบแค่ไหนก็ไม่เป็นผลเลยย ขนส่งเราเก่งอยู่แล้วว'
+                     }}
+                  </Typography>
+               </div>
+               <div class="flex flex-col gap-4">
+                  <div class="review-card mobile:ml-8 ml-12">
+                     <Typography variant="H6" mobile-variant="Body2">
+                        {{
+                           '#รีวิวที่พัก ส่งมอบเรียบร้อยอีกหนึ่งออเดอร์ #บ้านพักคนงานจากตู้คอนเทนเนอร์\n2 ตู้ และตู้เปล่า #ตู้คอนเทนเนอร์เก็บของ\nฝนตกไม่มีฝนต่อการขนส่งและติดตั้งค่า ขอบคุณลูกค้าหน้างาน จังหวัดนนทบุรีมากๆเลยนะคะ'
+                        }}
+                     </Typography>
+                  </div>
+                  <div class="review-card mobile:ml-0 mobile:mr-8 ml-30">
+                     <Typography variant="H6" mobile-variant="Body2">
+                        {{
+                           '#ตู้คอนเทนเนอร์ บ้านพักคนงาน.. โอน 50% ที่เหลือ พร้อยยกตู้ขึ้นหางเลยค่า'
+                        }}
+                     </Typography>
+                  </div>
+                  <div class="review-card ml-12">
+                     <Typography variant="H6" mobile-variant="Body2">
+                        {{
+                           '#ตู้ใส่วัตถุมงคล Ep.1 ขนาด 20STD แบบประตูบานม้วน\n#Update หน้างานฉบับงานเร่งง !!'
+                        }}
+                     </Typography>
+                  </div>
+               </div>
+            </div>
+            <img :src="review" class="max-h-150 shrink-0 rounded-4xl shadow-md" />
          </div>
       </div>
    </div>
@@ -364,53 +477,6 @@ const { t, lang } = useLang();
                <Typography variant="Body2" weight="semibold">{{ t('works.seeall') }}</Typography>
             </div>
          </RouterLink>
-      </div>
-   </div>
-   <!-- Review -->
-   <div
-      class="bg-brand-light-blue relative flex min-h-[calc(100dvh-84px)] w-full items-center justify-center p-6"
-   >
-      <div
-         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
-      >
-         <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
-            {{ t('review.title') }}
-         </Typography>
-         <div class="mobile:flex-col mobile:gap-4 flex w-full items-center justify-center gap-25">
-            <div class="mobile:gap-4 flex flex-col gap-12">
-               <div class="review-card">
-                  <Typography class="mobile:text-[16px] text-[28px]">
-                     {{
-                        '#รีวิวส่งตู้ #Update หน้างานลูกค้าให้ดูค่า เช้าฝนตก สายๆฟ้าเริ่มโปร่ง\nทางแคบแค่ไหนก็ไม่เป็นผลเลยย ขนส่งเราเก่งอยู่แล้วว'
-                     }}
-                  </Typography>
-               </div>
-               <div class="flex flex-col gap-4">
-                  <div class="review-card mobile:ml-8 ml-12">
-                     <Typography variant="H6" mobile-variant="Body2">
-                        {{
-                           '#รีวิวที่พัก ส่งมอบเรียบร้อยอีกหนึ่งออเดอร์ #บ้านพักคนงานจากตู้คอนเทนเนอร์\n2 ตู้ และตู้เปล่า #ตู้คอนเทนเนอร์เก็บของ\nฝนตกไม่มีฝนต่อการขนส่งและติดตั้งค่า ขอบคุณลูกค้าหน้างาน จังหวัดนนทบุรีมากๆเลยนะคะ'
-                        }}
-                     </Typography>
-                  </div>
-                  <div class="review-card mobile:ml-0 mobile:mr-8 ml-30">
-                     <Typography variant="H6" mobile-variant="Body2">
-                        {{
-                           '#ตู้คอนเทนเนอร์ บ้านพักคนงาน.. โอน 50% ที่เหลือ พร้อยยกตู้ขึ้นหางเลยค่า'
-                        }}
-                     </Typography>
-                  </div>
-                  <div class="review-card ml-12">
-                     <Typography variant="H6" mobile-variant="Body2">
-                        {{
-                           '#ตู้ใส่วัตถุมงคล Ep.1 ขนาด 20STD แบบประตูบานม้วน\n#Update หน้างานฉบับงานเร่งง !!'
-                        }}
-                     </Typography>
-                  </div>
-               </div>
-            </div>
-            <img :src="review" class="max-h-150 shrink-0 rounded-4xl shadow-md" />
-         </div>
       </div>
    </div>
    <!-- Contact -->

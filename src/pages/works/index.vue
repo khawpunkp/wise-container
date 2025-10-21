@@ -16,7 +16,7 @@ const { t } = useLang();
          weight="bold"
          class="text-white text-shadow-lg/20"
       >
-         {{ t('nav.works') }}
+         {{ t('works.title') }}
       </Typography>
    </div>
 </template>

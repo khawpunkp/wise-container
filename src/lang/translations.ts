@@ -5,7 +5,7 @@ export const messages: Record<Lang, Record<string, string>> = {
    en: {
       'nav.home': 'Home',
       'nav.products': 'Products',
-      'nav.renting': 'Renting',
+      'nav.services': 'Services',
       'nav.works': 'Works',
       'nav.contact': 'Contact Us',
 
@@ -13,13 +13,13 @@ export const messages: Record<Lang, Record<string, string>> = {
 
       'banner.company-name': 'WISE CONTAINER',
       'banner.detail1':
-         'With over 10 years of experience in buying, selling, renting, and repairing containers,\nour company has continuously expanded into logistics and transportation services.\nWe also operate container depots for agents and storage yards, open 24 hours a day.',
+         'With over 10 years of experience in buying, selling, renting, and repairing containers,\nour company has continuously expanded into    and transportation services.\nWe also providing 24-hour container storage facilities.',
       'banner.detail2':
          '"When it comes to containers, think only of WISE CONTAINER. \nWe give you more than just second-hand containers."',
 
       'home.seemore': 'See More',
 
-      'services.title': 'Our Products and Services',
+      'services.title': 'Our Services',
       'services.trade': 'Buy-Sell-Rent-Repair\nContainer Units',
       'services.transport': 'Container Transportation\nand Logistics Services',
       'services.design': 'Design-Build-Supply\nCustomized Container Units',
@@ -27,7 +27,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'services.freight': 'Comprehensive International\nFreight Forwarding Solutions',
       'services.freezone': 'Free Zone Facilities for Goods\nBefore Import or Export',
       'services.customs': 'Professional Customs\nClearance Assistance',
-      'services.seeall': 'See all products',
+      'services.seeall': 'See All Services',
 
       'vision.title': 'Vision',
       'vision.desc':
@@ -37,11 +37,15 @@ export const messages: Record<Lang, Record<string, string>> = {
          'The mission of logistics management is to plan, operate, and coordinate various activities to effectively meet customer needs by delivering superior service and quality at competitive operational costs.',
       'about.quote': '“Rental, Design, and Transportation Services\nwith After-Sales Warranty”',
 
+      'products.title': 'Our Products',
+      'products.desc1':
+         'WISE CONTAINER offers a variety of container products —Ccontainer houses, Container offices, and Restroom',
+      'products.desc2': 'designed for functionality, durability, and comfort.',
+      'products.seeall': 'See All Products',
+
       'works.title': 'Our Works',
-      'works.desc1':
-         'Wise Container Co., Ltd. has been engaged in the buying, selling, renting, and repairing of shipping containers for over 10 years.',
-      'works.desc2':
-         'With extensive experience, the company has expanded into logistics and transportation services,\nas well as providing container return yards for agents and 24-hour container storage facilities.',
+      'works.desc1': 'Showcasing our container design, installation, and transportation works',
+      'works.desc2': 'trusted by clients across diverse projects nationwide',
       'works.seeall': 'See All Works',
 
       'review.title': 'Reviews and Deliveries',
@@ -60,7 +64,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'product.office.2-40': 'Container Office 2 Rooms 40 ft',
       'product.office.2-20': 'Container Office 2 Rooms 20 ft',
       'product.office.1-20': 'Container Office 1 Room 20 ft',
-      'product.toilet': 'Toilet',
+      'product.toilet': 'Restroom',
 
       'contact.yard0.title': 'Head Office',
       'contact.yard0.name': 'WISE CONTAINER CO., LTD.\n(Head Office)',
@@ -103,7 +107,7 @@ export const messages: Record<Lang, Record<string, string>> = {
    th: {
       'nav.home': 'หน้าแรก',
       'nav.products': 'สินค้า',
-      'nav.renting': 'เช่า',
+      'nav.services': 'บริการ',
       'nav.works': 'ผลงาน',
       'nav.contact': 'ติดต่อเรา',
 
@@ -111,13 +115,13 @@ export const messages: Record<Lang, Record<string, string>> = {
 
       'banner.company-name': 'ไวซ์ คอนเทนเนอร์',
       'banner.detail1':
-         'ดำเนินกิจการซื้อ ขาย เช่า ซ่อม ตู้ คอนเทนเนอร์ มามากกว่า 10 ปี ด้วยประสบการณ์ที่ยาวนาน\nบริษัทฯ จึงพัฒนาดำเนินกิจการด้านโลจิสติกส์และการขนส่ง\nอีกทั้งยังมีลานคืนตู้เอเยนต์และลานฝากตู้คอนเทนเนอร์ที่เปิดให้บริการตลอด 24 ชม.',
+         'ดำเนินกิจการซื้อ ขาย เช่า ซ่อม ตู้ คอนเทนเนอร์ มามากกว่า 10 ปี\nด้วยประสบการณ์ที่ยาวนานทางเราจึงพัฒนาดำเนินกิจการด้านโลจิสติกส์และการขนส่ง\nอีกทั้งยังมีลานฝากตู้คอนเทนเนอร์ที่เปิดให้บริการตลอด 24 ชม.',
       'banner.detail2':
          '"นึกถึงตู้คอนเทนเนอร์บ้านพัก ต้องไวซ์คอนเทนเนอร์เท่านั้น\nเราให้คุณมากกว่าคำว่าตู้คอนเทนเนอร์มือสอง"',
 
       'home.seemore': 'ดูเพิ่มเติม',
 
-      'services.title': 'สินค้าและบริการของเรา',
+      'services.title': 'บริการของเรา',
       'services.trade': 'ซื้อ-ขาย-เช่า-ซ่อม\nตู้คอนเทนเนอร์',
       'services.transport': 'ให้บริการด้านการขนส่ง\nตู้คอนเทนเนอร์',
       'services.design': 'รับออกแบบ-ผลิต-จำหน่าย\nตู้ประเภทต่าง ๆ',
@@ -126,7 +130,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'services.freezone': 'พื้นที่เขตปลอดอากรสำหรับ\nสินค้าก่อนนำเข้า-ส่งออก',
       'services.customs': ' ให้บริการด้านพิธีการศุลกากร\nอย่างมืออาชีพ',
 
-      'services.seeall': 'ดูสินค้าทั้งหมด',
+      'services.seeall': 'ดูบริการทั้งหมด',
 
       'vision.title': 'วิสัยทัศน์',
       'vision.desc':
@@ -136,11 +140,15 @@ export const messages: Record<Lang, Record<string, string>> = {
          'พันธกิจของการจัดการโลจิสติกส์ คือ การวางแผนการดำเนินงานและประสานการดำเนินงานในกิจกรรมต่าง ๆ ที่มุ่งบรรลุผลในด้านการตอบสนองความต้องการของลูกค้า โดยการนำเสนอบริการและคุณภาพในระดับที่เหนือกว่าด้วยต้นทุนการดำเนินที่สามารถแข่งขันได้อย่างมีประสิทธิภาพ',
       'about.quote': '“บริการให้เช่า ออกแบบ ขนส่ง\nและมีประกันหลังการขาย”',
 
+      'products.title': 'สินค้าของเรา',
+      'products.desc1':
+         'ไวซ์ คอนเทนเนอร์ นำเสนอตู้คอนเทนเนอร์หลากหลายรูปแบบ ทั้งตู้บ้านพักคนงาน ตู้ออฟฟิศ และตู้ห้องน้ำ',
+      'products.desc2': 'พร้อมดีไซน์และฟังก์ชันที่ตอบโจทย์ทุกการใช้งาน',
+      'products.seeall': 'ดูสินค้าทั้งหมด',
+
       'works.title': 'ผลงานของเรา',
-      'works.desc1':
-         'บริษัท ไวซ์ คอนเทนเนอร์ จำกัด ดำเนินกิจการซื้อ ขาย เช่า ซ่อม ตู้คอนเทนเนอร์ มามากกว่า 10 ปี ด้วยประสบการณ์ที่ยาวนาน',
-      'works.desc2':
-         'จึงพัฒนาดำเนินกิจการด้านโลจิสติกส์และการขนส่ง อีกทั้งยังมีลานคืนตู้เอเยนต์และลานฝากตู้คอนเทนเนอร์ที่เปิดให้บริการตลอด 24 ชม.',
+      'works.desc1': 'รวมผลงานการออกแบบ ติดตั้ง และขนส่งตู้คอนเทนเนอร์จากไวซ์ คอนเทนเนอร์',
+      'works.desc2': 'ที่ได้รับความไว้วางใจจากลูกค้าหลากหลายโครงการทั่วประเทศ',
       'works.seeall': 'ดูผลงานทั้งหมด',
 
       'review.title': 'รีวิวและการส่งมอบ',
