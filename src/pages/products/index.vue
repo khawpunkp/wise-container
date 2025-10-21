@@ -21,7 +21,9 @@ const { t, lang } = useLang();
          {{ t('products.title') }}
       </Typography>
    </div>
-   <div class="mobile:p-6 flex w-full flex-1 flex-col items-center justify-start gap-16 px-8 py-16">
+   <div
+      class="mobile:p-6 mobile:gap-10 flex w-full flex-1 flex-col items-center justify-start gap-16 px-8 py-16"
+   >
       <div
          v-for="(itemCategory, index) in productList"
          :key="index"
@@ -34,7 +36,7 @@ const { t, lang } = useLang();
                {{ t(itemCategory.label) }}
             </Typography>
          </div>
-         <div class="flex flex-col gap-8">
+         <div class="flex flex-col gap-6">
             <div
                v-for="(product, index) in itemCategory.children"
                :key="index"
