@@ -1,13 +1,5 @@
 <script setup lang="ts">
 import bg from '@/assets/images/header-renting.png';
-import review from '@/assets/images/home/review.png';
-import trade from '@/assets/images/home/service/trade.png';
-import transport from '@/assets/images/home/service/transport.png';
-import design from '@/assets/images/home/service/design.png';
-import yard from '@/assets/images/home/service/yard.png';
-import freezone from '@/assets/images/home/service/freezone.png';
-import freight from '@/assets/images/home/service/freight.png';
-import customs from '@/assets/images/home/service/customs.png';
 import { PhImageSquare } from '@phosphor-icons/vue';
 
 const { t } = useLang();
@@ -40,11 +32,11 @@ const { t } = useLang();
             </Typography>
          </div>
          <div class="mobile:flex-col mobile:gap-4 flex gap-10">
-            <div
-               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full flex aspect-square w-150 shrink-0 items-center justify-center rounded-2xl text-white"
-            >
-               <PhImageSquare :size="32" />
-            </div>
+            <img
+               src="/images/services/repair.png"
+               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full aspect-square w-150 shrink-0 rounded-2xl"
+            />
+
             <Typography variant="H6" mobile-variant="Body1">
                {{
                   'Wafer chocolate gummies cheesecake lemon drops powder sesame snaps cake chocolate. Pastry lemon drops pie oat cake jelly-o jelly chocolate bar gingerbread. Jelly-o cake chocolate macaroon shortbread donut icing biscuit pie.\n\nCake tootsie roll croissant toffee liquorice. Danish sesame snaps biscuit macaroon cake lemon drops. Wafer tootsie roll dessert cotton candy cake pudding muffin. Jelly icing halvah candy canes cupcake toffee halvah cake.'
@@ -60,11 +52,10 @@ const { t } = useLang();
             </Typography>
          </div>
          <div class="mobile:flex-col mobile:gap-4 flex gap-10">
-            <div
-               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full flex aspect-square w-150 shrink-0 items-center justify-center rounded-2xl text-white"
-            >
-               <PhImageSquare :size="32" />
-            </div>
+            <img
+               src="/images/services/transport.png"
+               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full aspect-square w-150 shrink-0 rounded-2xl"
+            />
             <Typography variant="H6" mobile-variant="Body1">
                {{
                   'Wafer chocolate gummies cheesecake lemon drops powder sesame snaps cake chocolate. Pastry lemon drops pie oat cake jelly-o jelly chocolate bar gingerbread. Jelly-o cake chocolate macaroon shortbread donut icing biscuit pie.\n\nCake tootsie roll croissant toffee liquorice. Danish sesame snaps biscuit macaroon cake lemon drops. Wafer tootsie roll dessert cotton candy cake pudding muffin. Jelly icing halvah candy canes cupcake toffee halvah cake.'
@@ -80,11 +71,10 @@ const { t } = useLang();
             </Typography>
          </div>
          <div class="mobile:flex-col mobile:gap-4 flex gap-10">
-            <div
-               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full flex aspect-square w-150 shrink-0 items-center justify-center rounded-2xl text-white"
-            >
-               <PhImageSquare :size="32" />
-            </div>
+            <img
+               src="/images/services/design.png"
+               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full aspect-square w-150 shrink-0 rounded-2xl"
+            />
             <Typography variant="H6" mobile-variant="Body1">
                {{
                   'Wafer chocolate gummies cheesecake lemon drops powder sesame snaps cake chocolate. Pastry lemon drops pie oat cake jelly-o jelly chocolate bar gingerbread. Jelly-o cake chocolate macaroon shortbread donut icing biscuit pie.\n\nCake tootsie roll croissant toffee liquorice. Danish sesame snaps biscuit macaroon cake lemon drops. Wafer tootsie roll dessert cotton candy cake pudding muffin. Jelly icing halvah candy canes cupcake toffee halvah cake.'
@@ -100,11 +90,10 @@ const { t } = useLang();
             </Typography>
          </div>
          <div class="mobile:flex-col mobile:gap-4 flex gap-10">
-            <div
-               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full flex aspect-square w-150 shrink-0 items-center justify-center rounded-2xl text-white"
-            >
-               <PhImageSquare :size="32" />
-            </div>
+            <img
+               src="/images/services/yard.png"
+               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full aspect-square w-150 shrink-0 rounded-2xl"
+            />
             <Typography variant="H6" mobile-variant="Body1">
                {{
                   'Wafer chocolate gummies cheesecake lemon drops powder sesame snaps cake chocolate. Pastry lemon drops pie oat cake jelly-o jelly chocolate bar gingerbread. Jelly-o cake chocolate macaroon shortbread donut icing biscuit pie.\n\nCake tootsie roll croissant toffee liquorice. Danish sesame snaps biscuit macaroon cake lemon drops. Wafer tootsie roll dessert cotton candy cake pudding muffin. Jelly icing halvah candy canes cupcake toffee halvah cake.'
@@ -120,11 +109,10 @@ const { t } = useLang();
             </Typography>
          </div>
          <div class="mobile:flex-col mobile:gap-4 flex gap-10">
-            <div
-               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full flex aspect-square w-150 shrink-0 items-center justify-center rounded-2xl text-white"
-            >
-               <PhImageSquare :size="32" />
-            </div>
+            <img
+               src="/images/services/freight.png"
+               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full aspect-square w-150 shrink-0 rounded-2xl"
+            />
             <Typography variant="H6" mobile-variant="Body1">
                {{
                   'Wafer chocolate gummies cheesecake lemon drops powder sesame snaps cake chocolate. Pastry lemon drops pie oat cake jelly-o jelly chocolate bar gingerbread. Jelly-o cake chocolate macaroon shortbread donut icing biscuit pie.\n\nCake tootsie roll croissant toffee liquorice. Danish sesame snaps biscuit macaroon cake lemon drops. Wafer tootsie roll dessert cotton candy cake pudding muffin. Jelly icing halvah candy canes cupcake toffee halvah cake.'
@@ -140,11 +128,10 @@ const { t } = useLang();
             </Typography>
          </div>
          <div class="mobile:flex-col mobile:gap-4 flex gap-10">
-            <div
-               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full flex aspect-square w-150 shrink-0 items-center justify-center rounded-2xl text-white"
-            >
-               <PhImageSquare :size="32" />
-            </div>
+            <img
+               src="/images/services/freezone.png"
+               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full aspect-square w-150 shrink-0 rounded-2xl"
+            />
             <Typography variant="H6" mobile-variant="Body1">
                {{
                   'Wafer chocolate gummies cheesecake lemon drops powder sesame snaps cake chocolate. Pastry lemon drops pie oat cake jelly-o jelly chocolate bar gingerbread. Jelly-o cake chocolate macaroon shortbread donut icing biscuit pie.\n\nCake tootsie roll croissant toffee liquorice. Danish sesame snaps biscuit macaroon cake lemon drops. Wafer tootsie roll dessert cotton candy cake pudding muffin. Jelly icing halvah candy canes cupcake toffee halvah cake.'
@@ -160,11 +147,10 @@ const { t } = useLang();
             </Typography>
          </div>
          <div class="mobile:flex-col mobile:gap-4 flex gap-10">
-            <div
-               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full flex aspect-square w-150 shrink-0 items-center justify-center rounded-2xl text-white"
-            >
-               <PhImageSquare :size="32" />
-            </div>
+            <img
+               src="/images/services/customs.png"
+               class="bg-brand-blue/50 mobile:min-w-0 mobile:w-full aspect-square w-150 shrink-0 rounded-2xl"
+            />
             <Typography variant="H6" mobile-variant="Body1">
                {{
                   'Wafer chocolate gummies cheesecake lemon drops powder sesame snaps cake chocolate. Pastry lemon drops pie oat cake jelly-o jelly chocolate bar gingerbread. Jelly-o cake chocolate macaroon shortbread donut icing biscuit pie.\n\nCake tootsie roll croissant toffee liquorice. Danish sesame snaps biscuit macaroon cake lemon drops. Wafer tootsie roll dessert cotton candy cake pudding muffin. Jelly icing halvah candy canes cupcake toffee halvah cake.'

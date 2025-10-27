@@ -73,7 +73,7 @@ const { t, lang } = useLang();
             <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
                {{ t('services.title') }}
             </Typography>
-            <RouterLink to="/service" class="mobile:hidden w-fit">
+            <RouterLink to="/services" class="mobile:hidden w-fit">
                <div
                   class="bg-brand-orange relative flex w-fit items-center gap-2 rounded-full px-6 py-2 text-white"
                >
@@ -214,7 +214,7 @@ const { t, lang } = useLang();
                </Typography>
             </div>
          </div>
-         <RouterLink to="/service" class="mobile:flex hidden w-full">
+         <RouterLink to="/services" class="mobile:flex hidden w-full">
             <div
                class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
             >
