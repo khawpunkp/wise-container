@@ -11,45 +11,47 @@ export const messages: Record<Lang, Record<string, string>> = {
 
       'footer.copyright': 'Copyright © 2025 WISE CONTAINER CO., LTD',
 
-      'banner.company-name': 'WISE CONTAINER',
-      'banner.detail1':
+      'home.banner.company-name': 'WISE CONTAINER',
+      'home.banner.detail1':
          'With over 10 years of experience in buying, selling, renting, and repairing containers,\nour company has continuously expanded into    and transportation services.\nWe also providing 24-hour container storage facilities.',
-      'banner.detail2':
+      'home.banner.detail2':
          '"When it comes to containers, think only of WISE CONTAINER. \nWe give you more than just second-hand containers."',
 
       'home.seemore': 'See More',
 
-      'services.title': 'Our Services',
-      'services.trade': 'Buy-Sell-Rent-Repair\nContainer Units',
-      'services.transport': 'Container Transportation\nand Logistics Services',
-      'services.design': 'Design-Build-Supply\nCustomized Container Units',
-      'services.yard': '24-Hour Container Yard\nService Available',
-      'services.freight': 'Comprehensive International\nFreight Forwarding Solutions',
-      'services.freezone': 'Free Zone Facilities for Goods\nBefore Import or Export',
-      'services.customs': 'Professional Customs\nClearance Assistance',
-      'services.seeall': 'See All Services',
+      'home.services.title': 'Our Services',
+      'home.services.trade': 'Buy-Sell-Rent-Repair\nContainer Units',
+      'home.services.transport': 'Container Transportation\nand Logistics Services',
+      'home.services.design': 'Design-Build-Supply\nCustomized Container Units',
+      'home.services.yard': '24-Hour Container Yard\nService Available',
+      'home.services.freight': 'Comprehensive International\nFreight Services',
+      'home.services.freezone': 'Free Zone Facilities for\nImport & Export Goods',
+      'home.services.customs': 'Professional Customs\nClearance Assistance',
+      'home.services.seeall': 'See All Services',
 
-      'vision.title': 'Vision',
-      'vision.desc':
+      'home.vision.title': 'Vision',
+      'home.vision.desc':
          'To be a leader in logistics through a fast and efficient management system, cost-effective operations.\nThe design and production of high-standard, quality containers — ensuring quick manufacturing and environmental friendliness.',
-      'mission.title': 'Mission',
-      'mission.desc':
+      'home.mission.title': 'Mission',
+      'home.mission.desc':
          'The mission of logistics management is to plan, operate, and coordinate various activities to effectively meet customer needs by delivering superior service and quality at competitive operational costs.',
-      'about.quote': '“Rental, Design, and Transportation Services\nwith After-Sales Warranty”',
+      'home.about.quote':
+         '“Rental, Design, and Transportation Services\nwith After-Sales Warranty”',
+
+      'home.products.title': 'Our Products',
+      'home.products.desc1':
+         'WISE CONTAINER offers a variety of container products —Ccontainer houses, Container offices, and Restroom',
+      'home.products.desc2': 'designed for functionality, durability, and comfort.',
+      'home.products.seeall': 'See All Products',
+
+      'home.works.title': 'Our Works',
+      'home.works.desc1': 'Showcasing our container design, installation, and transportation works',
+      'home.works.desc2': 'trusted by clients across diverse projects nationwide',
+      'home.works.seeall': 'See All Works',
+
+      'home.review.title': 'Reviews and Deliveries',
 
       'products.title': 'Our Products',
-      'products.desc1':
-         'WISE CONTAINER offers a variety of container products —Ccontainer houses, Container offices, and Restroom',
-      'products.desc2': 'designed for functionality, durability, and comfort.',
-      'products.seeall': 'See All Products',
-
-      'works.title': 'Our Works',
-      'works.desc1': 'Showcasing our container design, installation, and transportation works',
-      'works.desc2': 'trusted by clients across diverse projects nationwide',
-      'works.seeall': 'See All Works',
-
-      'review.title': 'Reviews and Deliveries',
-
       'product.worker': 'Container House',
       'product.worker.5-40': 'Container House 5 Rooms 40 ft',
       'product.worker.4-40': 'Container House 4 Rooms 40 ft',
@@ -65,6 +67,31 @@ export const messages: Record<Lang, Record<string, string>> = {
       'product.office.2-20': 'Container Office 2 Rooms 20 ft',
       'product.office.1-20': 'Container Office 1 Room 20 ft',
       'product.toilet': 'Restroom',
+
+      'services.title': 'Our Services',
+      'services.trade.title': 'Buy-Sell-Rent-Repair Container Units',
+      'services.transport.title': 'Container Transportation and Logistics Services',
+      'services.design.title': 'Design-Build-Supply Customized Container Units',
+      'services.yard.title': '24-Hour Container Yard Service Available',
+      'services.freight.title': 'Comprehensive International Freight Services',
+      'services.freezone.title': 'Free Zone Facilities for Import & Export Goods',
+      'services.customs.title': 'Professional Customs Clearance Assistance',
+      'services.trade.desc':
+         'We offer a full range of container services — including sales, rental (short or long term), and professional maintenance and repair.\n\nWise Container provides high-quality containers in various sizes and types, suitable for every purpose such as cargo transport, storage, or custom modifications.',
+      'services.transport.desc':
+         'We provide reliable and efficient container transport services using modern trucks and equipment to ensure safe and timely delivery.\n\nOur experienced logistics team oversees every step of the process — from pickup to destination — ensuring smooth and professional operations.',
+      'services.design.desc':
+         'We specialize in designing and fabricating customized containers — from office units and worker housing to portable toilets and mobile shops.\n\nEach container is built with premium materials and safety standards to ensure durability, functionality, and aesthetic appeal.',
+      'services.yard.desc':
+         'Our spacious container yard operates 24 hours a day with full security monitoring, capable of handling large volumes of containers.\n\nWe offer both short-term and long-term storage, along with professional lifting and handling services for your convenience and peace of mind.',
+      'services.freight.desc':
+         'Wise Container offers end-to-end international freight services covering sea, land, and air transportation.\n\nWe ensure your goods are delivered safely and efficiently through global-standard logistics management that optimizes both time and cost.',
+      'services.freezone.desc':
+         'Our Free Zone area provides secure storage for goods prior to import or export, helping businesses manage costs and customs duties efficiently.\n\nThe facility is equipped with high-standard management systems and offers smooth cross-border cargo handling.',
+      'services.customs.desc':
+         'Our experienced customs specialists handle all import, export, and documentation procedures with precision and professionalism.\n\nWe focus on accuracy, speed, and transparency to ensure a smooth customs process for your shipments.',
+
+      'works.title': 'Our Works',
 
       'contact.yard0.title': 'Head Office',
       'contact.yard0.name': 'WISE CONTAINER CO., LTD.\n(Head Office)',
@@ -113,46 +140,47 @@ export const messages: Record<Lang, Record<string, string>> = {
 
       'footer.copyright': 'สงวนลิขสิทธิ์ © 2025 บริษัท ไวซ์ คอนเทนเนอร์ จำกัด',
 
-      'banner.company-name': 'ไวซ์ คอนเทนเนอร์',
-      'banner.detail1':
+      'home.banner.company-name': 'ไวซ์ คอนเทนเนอร์',
+      'home.banner.detail1':
          'ดำเนินกิจการซื้อ ขาย เช่า ซ่อม ตู้ คอนเทนเนอร์ มามากกว่า 10 ปี\nด้วยประสบการณ์ที่ยาวนานทางเราจึงพัฒนาดำเนินกิจการด้านโลจิสติกส์และการขนส่ง\nอีกทั้งยังมีลานฝากตู้คอนเทนเนอร์ที่เปิดให้บริการตลอด 24 ชม.',
-      'banner.detail2':
+      'home.banner.detail2':
          '"นึกถึงตู้คอนเทนเนอร์บ้านพัก ต้องไวซ์คอนเทนเนอร์เท่านั้น\nเราให้คุณมากกว่าคำว่าตู้คอนเทนเนอร์มือสอง"',
 
       'home.seemore': 'ดูเพิ่มเติม',
 
-      'services.title': 'บริการของเรา',
-      'services.trade': 'ซื้อ-ขาย-เช่า-ซ่อม\nตู้คอนเทนเนอร์',
-      'services.transport': 'ให้บริการด้านการขนส่ง\nตู้คอนเทนเนอร์',
-      'services.design': 'รับออกแบบ-ผลิต-จำหน่าย\nตู้ประเภทต่าง ๆ',
-      'services.yard': 'มีลานฝากตู้ที่เปิด\nให้บริการตลอด 24 ชั่วโมง',
-      'services.freight': 'บริการขนส่งสินค้า\nระหว่างประเทศครบวงจร',
-      'services.freezone': 'พื้นที่เขตปลอดอากรสำหรับ\nสินค้าก่อนนำเข้า-ส่งออก',
-      'services.customs': ' ให้บริการด้านพิธีการศุลกากร\nอย่างมืออาชีพ',
+      'home.services.title': 'บริการของเรา',
+      'home.services.trade': 'ซื้อ-ขาย-เช่า-ซ่อม\nตู้คอนเทนเนอร์',
+      'home.services.transport': 'ให้บริการด้านการขนส่ง\nตู้คอนเทนเนอร์',
+      'home.services.design': 'รับออกแบบ-ผลิต-จำหน่าย\nตู้ประเภทต่าง ๆ',
+      'home.services.yard': 'มีลานฝากตู้ที่เปิด\nให้บริการตลอด 24 ชั่วโมง',
+      'home.services.freight': 'บริการขนส่งสินค้า\nระหว่างประเทศครบวงจร',
+      'home.services.freezone': 'พื้นที่เขตปลอดอากรสำหรับ\nสินค้าก่อนนำเข้า-ส่งออก',
+      'home.services.customs': 'ให้บริการด้านพิธีการศุลกากร\nอย่างมืออาชีพ',
 
-      'services.seeall': 'ดูบริการทั้งหมด',
+      'home.services.seeall': 'ดูบริการทั้งหมด',
 
-      'vision.title': 'วิสัยทัศน์',
-      'vision.desc':
+      'home.vision.title': 'วิสัยทัศน์',
+      'home.vision.desc':
          'เป็นผู้นำด้านโลจิสติกส์ด้วยระบบการจัดการงานที่รวดเร็ว\nประหยัดต้นทุน อีกทั้งการออกแบบและผลิตตู้คอนเทนเนอร์\nด้วยมาตรฐานระดับสูง และมีสินค้าคุณภาพ\nการผลิตที่รวดเร็ว และเป็นมิตรต่อสิ่งแวดล้อม',
-      'mission.title': 'พันธกิจ',
-      'mission.desc':
+      'home.mission.title': 'พันธกิจ',
+      'home.mission.desc':
          'พันธกิจของการจัดการโลจิสติกส์ คือ การวางแผนการดำเนินงานและประสานการดำเนินงานในกิจกรรมต่าง ๆ ที่มุ่งบรรลุผลในด้านการตอบสนองความต้องการของลูกค้า โดยการนำเสนอบริการและคุณภาพในระดับที่เหนือกว่าด้วยต้นทุนการดำเนินที่สามารถแข่งขันได้อย่างมีประสิทธิภาพ',
-      'about.quote': '“บริการให้เช่า ออกแบบ ขนส่ง\nและมีประกันหลังการขาย”',
+      'home.about.quote': '“บริการให้เช่า ออกแบบ ขนส่ง\nและมีประกันหลังการขาย”',
+
+      'home.products.title': 'สินค้าของเรา',
+      'home.products.desc1':
+         'ไวซ์ คอนเทนเนอร์ นำเสนอตู้คอนเทนเนอร์หลากหลายรูปแบบ ทั้งตู้บ้านพักคนงาน ตู้ออฟฟิศ และตู้ห้องน้ำ',
+      'home.products.desc2': 'พร้อมดีไซน์และฟังก์ชันที่ตอบโจทย์ทุกการใช้งาน',
+      'home.products.seeall': 'ดูสินค้าทั้งหมด',
+
+      'home.works.title': 'ผลงานของเรา',
+      'home.works.desc1': 'รวมผลงานการออกแบบ ติดตั้ง และขนส่งตู้คอนเทนเนอร์จากไวซ์ คอนเทนเนอร์',
+      'home.works.desc2': 'ที่ได้รับความไว้วางใจจากลูกค้าหลากหลายโครงการทั่วประเทศ',
+      'home.works.seeall': 'ดูผลงานทั้งหมด',
+
+      'home.review.title': 'รีวิวและการส่งมอบ',
 
       'products.title': 'สินค้าของเรา',
-      'products.desc1':
-         'ไวซ์ คอนเทนเนอร์ นำเสนอตู้คอนเทนเนอร์หลากหลายรูปแบบ ทั้งตู้บ้านพักคนงาน ตู้ออฟฟิศ และตู้ห้องน้ำ',
-      'products.desc2': 'พร้อมดีไซน์และฟังก์ชันที่ตอบโจทย์ทุกการใช้งาน',
-      'products.seeall': 'ดูสินค้าทั้งหมด',
-
-      'works.title': 'ผลงานของเรา',
-      'works.desc1': 'รวมผลงานการออกแบบ ติดตั้ง และขนส่งตู้คอนเทนเนอร์จากไวซ์ คอนเทนเนอร์',
-      'works.desc2': 'ที่ได้รับความไว้วางใจจากลูกค้าหลากหลายโครงการทั่วประเทศ',
-      'works.seeall': 'ดูผลงานทั้งหมด',
-
-      'review.title': 'รีวิวและการส่งมอบ',
-
       'product.worker': 'ตู้บ้านพักคนงาน',
       'product.worker.5-40': 'ตู้บ้านพักคนงาน 5 ห้อง 40 ฟุต',
       'product.worker.4-40': 'ตู้บ้านพักคนงาน 4 ห้อง 40 ฟุต',
@@ -168,6 +196,31 @@ export const messages: Record<Lang, Record<string, string>> = {
       'product.office.2-20': 'ตู้ออฟฟิศ 2 ห้อง 20 ฟุต',
       'product.office.1-20': 'ตู้ออฟฟิศ 1 ห้อง 20 ฟุต',
       'product.toilet': 'ห้องน้ำ',
+
+      'services.title': 'บริการของเรา',
+      'services.trade.title': 'ซื้อ-ขาย-เช่า-ซ่อม ตู้คอนเทนเนอร์',
+      'services.transport.title': 'ให้บริการด้านการขนส่งตู้คอนเทนเนอร์',
+      'services.design.title': 'รับออกแบบ-ผลิต-จำหน่าย ตู้ประเภทต่าง ๆ',
+      'services.yard.title': 'มีลานฝากตู้ที่เปิดให้บริการตลอด 24 ชั่วโมง',
+      'services.freight.title': 'บริการขนส่งสินค้าระหว่างประเทศครบวงจร',
+      'services.freezone.title': 'พื้นที่เขตปลอดอากรสำหรับสินค้าก่อนนำเข้า-ส่งออก',
+      'services.customs.title': 'ให้บริการด้านพิธีการศุลกากรอย่างมืออาชีพ',
+      'services.trade.desc':
+         'เรามีบริการครบวงจรด้านตู้คอนเทนเนอร์ ไม่ว่าจะเป็นการซื้อ-ขาย ให้เช่าระยะสั้นหรือระยะยาว รวมถึงบริการซ่อมบำรุงโดยทีมช่างผู้เชี่ยวชาญ เพื่อให้ตู้ของคุณพร้อมใช้งานอยู่เสมอ\n\nไวซ์ คอนเทนเนอร์คัดสรรตู้คุณภาพดี หลากหลายขนาดและประเภท เพื่อรองรับทุกการใช้งานของธุรกิจ ไม่ว่าจะใช้ขนส่งสินค้า เก็บของ หรือดัดแปลงเป็นออฟฟิศและที่พัก',
+      'services.transport.desc':
+         'เรามีระบบขนส่งที่ได้มาตรฐาน พร้อมรถบรรทุกและอุปกรณ์ครบครัน เพื่อรองรับการเคลื่อนย้ายตู้คอนเทนเนอร์ทุกประเภทอย่างปลอดภัยและตรงเวลา\n\nทีมงานของเราดูแลทุกขั้นตอนตั้งแต่ต้นทางถึงปลายทาง ด้วยประสบการณ์และความชำนาญในงานโลจิสติกส์ เพื่อให้การขนส่งของคุณเป็นไปอย่างราบรื่น',
+      'services.design.desc':
+         'ไวซ์ คอนเทนเนอร์รับออกแบบและผลิตตู้คอนเทนเนอร์ตามความต้องการ ไม่ว่าจะเป็นตู้สำนักงาน บ้านพักคนงาน ห้องน้ำเคลื่อนที่ หรือร้านค้าแบบโมบาย\n\nเราผลิตด้วยวัสดุคุณภาพดีและมาตรฐานความปลอดภัยสูง พร้อมทีมออกแบบที่ให้คำปรึกษาได้ครบวงจร เพื่อให้ได้ผลงานที่ทั้งสวยงามและใช้งานได้จริง',
+      'services.yard.desc':
+         'เรามีพื้นที่ลานฝากตู้ขนาดใหญ่ รองรับการจัดเก็บตู้คอนเทนเนอร์ได้จำนวนมาก โดยมีระบบรักษาความปลอดภัยและการดูแลอย่างใกล้ชิดตลอด 24 ชั่วโมง\n\nลูกค้าสามารถฝากตู้ได้ทั้งระยะสั้นและระยะยาว พร้อมบริการยก-วางตู้โดยทีมงานมืออาชีพ เพื่อความสะดวกและสบายใจในทุกการจัดเก็บ',
+      'services.freight.desc':
+         'ไวซ์ คอนเทนเนอร์ให้บริการขนส่งสินค้าระหว่างประเทศอย่างครบวงจร ครอบคลุมทั้งทางเรือ ทางบก และทางอากาศ\n\nเราดำเนินการทุกขั้นตอนด้วยมาตรฐานสากล เพื่อให้การขนส่งระหว่างประเทศของคุณปลอดภัย รวดเร็ว และมีต้นทุนที่คุ้มค่า',
+      'services.freezone.desc':
+         'เรามีพื้นที่เขตปลอดอากร (Free Zone) สำหรับเก็บสินค้าก่อนดำเนินการนำเข้า-ส่งออก เหมาะสำหรับธุรกิจที่ต้องการบริหารต้นทุนและภาษีอย่างมีประสิทธิภาพ\n\nพื้นที่ของเรามีระบบจัดการมาตรฐานสูง ปลอดภัย และสามารถรองรับการเคลื่อนย้ายสินค้าข้ามประเทศได้อย่างสะดวก',
+      'services.customs.desc':
+         'เรามีทีมงานผู้เชี่ยวชาญด้านพิธีการศุลกากรที่พร้อมดูแลและให้คำปรึกษาในทุกขั้นตอน ทั้งการนำเข้า ส่งออก และการดำเนินเอกสารต่าง ๆ\n\nไวซ์ คอนเทนเนอร์มุ่งเน้นความถูกต้อง รวดเร็ว และโปร่งใส เพื่อให้การดำเนินงานของคุณเป็นไปอย่างราบรื่นไร้ปัญหา',
+
+      'works.title': 'ผลงานของเรา',
 
       'contact.yard0.title': 'สำนักงานใหญ่',
       'contact.yard0.name': 'บริษัท ไวซ์ คอนเทนเนอร์ จำกัด\n(สำนักงานใหญ่)',

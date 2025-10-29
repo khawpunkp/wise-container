@@ -42,10 +42,10 @@ const { t, lang } = useLang();
       >
          <div class="flex w-full max-w-[100rem] flex-col text-white">
             <Typography variant="H2" mobile-variant="H4" weight="bold" class="mobile:text-center">
-               {{ t('banner.company-name') }}
+               {{ t('home.banner.company-name') }}
             </Typography>
             <Typography variant="H6" mobile-variant="Body2" class="mobile:text-center mt-0.5">
-               {{ t('banner.detail1') }}
+               {{ t('home.banner.detail1') }}
             </Typography>
          </div>
       </div>
@@ -60,7 +60,7 @@ const { t, lang } = useLang();
             weight="semibold"
             class="text-brand-blue text-center"
          >
-            {{ t('banner.detail2') }}
+            {{ t('home.banner.detail2') }}
          </typography>
       </div>
    </div>
@@ -71,7 +71,7 @@ const { t, lang } = useLang();
       >
          <div class="flex flex-col items-center gap-4">
             <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
-               {{ t('services.title') }}
+               {{ t('home.services.title') }}
             </Typography>
             <RouterLink to="/services" class="mobile:hidden w-fit">
                <div
@@ -100,7 +100,7 @@ const { t, lang } = useLang();
                   weight="semibold"
                   class="text-white text-shadow-black/50 text-shadow-md"
                >
-                  {{ t('services.trade') }}
+                  {{ t('home.services.trade') }}
                </Typography>
             </div>
             <div
@@ -118,7 +118,7 @@ const { t, lang } = useLang();
                   weight="semibold"
                   class="text-white text-shadow-black/50 text-shadow-md"
                >
-                  {{ t('services.transport') }}
+                  {{ t('home.services.transport') }}
                </Typography>
             </div>
             <div
@@ -136,7 +136,7 @@ const { t, lang } = useLang();
                   weight="semibold"
                   class="text-white text-shadow-black/50 text-shadow-md"
                >
-                  {{ t('services.design') }}
+                  {{ t('home.services.design') }}
                </Typography>
             </div>
             <div
@@ -154,7 +154,7 @@ const { t, lang } = useLang();
                   weight="semibold"
                   class="text-white text-shadow-black/50 text-shadow-md"
                >
-                  {{ t('services.yard') }}
+                  {{ t('home.services.yard') }}
                </Typography>
             </div>
          </div>
@@ -174,7 +174,7 @@ const { t, lang } = useLang();
                   weight="semibold"
                   class="text-white text-shadow-black/50 text-shadow-md"
                >
-                  {{ t('services.freight') }}
+                  {{ t('home.services.freight') }}
                </Typography>
             </div>
             <div
@@ -192,7 +192,7 @@ const { t, lang } = useLang();
                   weight="semibold"
                   class="text-white text-shadow-black/50 text-shadow-md"
                >
-                  {{ t('services.freezone') }}
+                  {{ t('home.services.freezone') }}
                </Typography>
             </div>
             <div
@@ -210,7 +210,7 @@ const { t, lang } = useLang();
                   weight="semibold"
                   class="text-white text-shadow-black/50 text-shadow-md"
                >
-                  {{ t('services.customs') }}
+                  {{ t('home.services.customs') }}
                </Typography>
             </div>
          </div>
@@ -218,7 +218,9 @@ const { t, lang } = useLang();
             <div
                class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
             >
-               <Typography variant="Body2" weight="semibold">{{ t('services.seeall') }}</Typography>
+               <Typography variant="Body2" weight="semibold">
+                  {{ t('home.services.seeall') }}
+               </Typography>
             </div>
          </RouterLink>
       </div>
@@ -236,7 +238,7 @@ const { t, lang } = useLang();
                   weight="semibold"
                   class="text-brand-blue"
                >
-                  {{ t('products.title') }}
+                  {{ t('home.products.title') }}
                </Typography>
                <RouterLink to="/products" class="mobile:hidden w-fit">
                   <div
@@ -250,9 +252,9 @@ const { t, lang } = useLang();
                </RouterLink>
             </div>
             <Typography variant="Body1" mobile-variant="Body2" class="text-[#606D85]">
-               {{ t('products.desc1') }}
+               {{ t('home.products.desc1') }}
                <br class="mobile:hidden" />
-               {{ t('products.desc2') }}
+               {{ t('home.products.desc2') }}
             </Typography>
          </div>
          <div
@@ -283,7 +285,9 @@ const { t, lang } = useLang();
             <div
                class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
             >
-               <Typography variant="Body2" weight="semibold">{{ t('works.seeall') }}</Typography>
+               <Typography variant="Body2" weight="semibold">
+                  {{ t('home.works.seeall') }}
+               </Typography>
             </div>
          </RouterLink>
       </div>
@@ -305,7 +309,7 @@ const { t, lang } = useLang();
                weight="semibold"
                class="text-shadow-black/50 text-shadow-md"
             >
-               {{ t('vision.title') }}
+               {{ t('home.vision.title') }}
             </Typography>
             <Typography
                variant="H5"
@@ -313,13 +317,13 @@ const { t, lang } = useLang();
                weight="medium"
                class="text-shadow-black/50 text-shadow-md"
             >
-               {{ t('vision.desc') }}
+               {{ t('home.vision.desc') }}
             </Typography>
          </div>
          <div class="flex w-full flex-col">
             <div class="mobile:gap-0 flex flex-col gap-4">
                <Typography variant="H4" mobile-variant="H5" weight="semibold">
-                  {{ t('mission.title') }}
+                  {{ t('home.mission.title') }}
                </Typography>
                <Typography
                   variant="H5"
@@ -327,7 +331,7 @@ const { t, lang } = useLang();
                   weight="medium"
                   class="text-[#606D85]"
                >
-                  {{ t('mission.desc') }}
+                  {{ t('home.mission.desc') }}
                </Typography>
             </div>
             <Typography
@@ -336,7 +340,7 @@ const { t, lang } = useLang();
                weight="semibold"
                class="text-brand-blue mobile:p-0 mobile:mt-12 py-20 text-center"
             >
-               {{ t('about.quote') }}
+               {{ t('home.about.quote') }}
             </Typography>
          </div>
       </div>
@@ -354,7 +358,7 @@ const { t, lang } = useLang();
                   weight="semibold"
                   class="text-brand-blue"
                >
-                  {{ t('works.title') }}
+                  {{ t('home.works.title') }}
                </Typography>
                <RouterLink to="/works" class="mobile:hidden w-fit">
                   <div
@@ -368,10 +372,10 @@ const { t, lang } = useLang();
                </RouterLink>
             </div>
             <Typography variant="Body1" mobile-variant="Body2" class="text-[#606D85]">
-               {{ t('works.desc1') }}
+               {{ t('home.works.desc1') }}
 
                <br class="mobile:hidden" />
-               {{ t('works.desc2') }}
+               {{ t('home.works.desc2') }}
             </Typography>
          </div>
          <div
@@ -427,7 +431,9 @@ const { t, lang } = useLang();
             <div
                class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
             >
-               <Typography variant="Body2" weight="semibold">{{ t('works.seeall') }}</Typography>
+               <Typography variant="Body2" weight="semibold">
+                  {{ t('home.works.seeall') }}
+               </Typography>
             </div>
          </RouterLink>
       </div>
@@ -440,7 +446,7 @@ const { t, lang } = useLang();
          class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
       >
          <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
-            {{ t('review.title') }}
+            {{ t('home.review.title') }}
          </Typography>
          <div class="mobile:flex-col mobile:gap-4 flex w-full items-center justify-center gap-25">
             <div class="mobile:gap-4 flex flex-col gap-12">
