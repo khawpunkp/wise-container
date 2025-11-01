@@ -27,8 +27,29 @@ import {
    PhListChecks,
 } from '@phosphor-icons/vue';
 import productList from '@/assets/product/product-list.json';
+import { motion, stagger } from 'motion-v';
 
 const { t, lang } = useLang();
+
+const opacityVariant = {
+   visible: { opacity: 1 },
+   hidden: { opacity: 0 },
+};
+
+const positionYVariant = {
+   visible: { opacity: 1, scale: 1, y: 0 },
+   hidden: { opacity: 0, scale: 1, y: 50 },
+};
+
+const servicesList = [
+   { bg: trade, icon: PhHandshake, desc: 'home.services.trade' },
+   { bg: transport, icon: PhTruckTrailer, desc: 'home.services.transport' },
+   { bg: design, icon: PhBlueprint, desc: 'home.services.design' },
+   { bg: yard, icon: PhClockUser, desc: 'home.services.yard' },
+   { bg: freight, icon: PhGlobeHemisphereWest, desc: 'home.services.freight' },
+   { bg: freezone, icon: PhWarehouse, desc: 'home.services.freezone' },
+   { bg: customs, icon: PhListChecks, desc: 'home.services.customs' },
+];
 </script>
 
 <template>
@@ -69,7 +90,14 @@ const { t, lang } = useLang();
       <div
          class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
       >
-         <div class="flex flex-col items-center gap-4">
+         <Motion
+            :variants="positionYVariant"
+            initial="hidden"
+            in-view="visible"
+            :in-view-options="{ once: true }"
+            :transition="{ duration: 1, ease: 'easeOut' }"
+            class="flex flex-col items-center gap-4"
+         >
             <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
                {{ t('home.services.title') }}
             </Typography>
@@ -83,16 +111,59 @@ const { t, lang } = useLang();
                   <PhCaretRight :size="24" weight="bold" />
                </div>
             </RouterLink>
+         </Motion>
+
+         <div class="service-card-container">
+            <Motion
+               v-for="i in 4"
+               :variants="positionYVariant"
+               initial="hidden"
+               in-view="visible"
+               :in-view-options="{ once: true }"
+               :transition="{ duration: 1, ease: 'easeOut' }"
+               :key="'service-1-' + i"
+               class="service-card"
+               :style="{
+                  backgroundImage: `url(${servicesList[i - 1]?.bg})`,
+               }"
+            >
+               <div class="icon-container">
+                  <component
+                     :is="servicesList[i - 1]?.icon"
+                     class="mobile:size-8 size-10"
+                     weight="regular"
+                  />
+               </div>
+               <Typography
+                  variant="H5"
+                  mobile-variant="Body1"
+                  weight="semibold"
+                  class="text-white text-shadow-black/50 text-shadow-md"
+               >
+                  {{ t(servicesList[i - 1]?.desc ?? '') }}
+               </Typography>
+            </Motion>
          </div>
          <div class="service-card-container">
-            <div
+            <Motion
+               v-for="i in 3"
+               :variants="positionYVariant"
+               initial="hidden"
+               in-view="visible"
+               :in-view-options="{ once: true }"
+               :transition="{ duration: 1, ease: 'easeOut' }"
+               :key="'service-1-' + i"
                class="service-card"
                :style="{
-                  backgroundImage: `url(${trade})`,
+                  backgroundImage: `url(${servicesList[i + 3]?.bg})`,
                }"
             >
                <div class="icon-container">
-                  <PhHandshake class="mobile:size-8 size-10" weight="regular" />
+                  <component
+                     :is="servicesList[i + 3]?.icon"
+                     class="mobile:size-8 size-10"
+                     weight="regular"
+                  />
                </div>
                <Typography
                   variant="H5"
@@ -100,129 +171,27 @@ const { t, lang } = useLang();
                   weight="semibold"
                   class="text-white text-shadow-black/50 text-shadow-md"
                >
-                  {{ t('home.services.trade') }}
+                  {{ t(servicesList[i + 3]?.desc ?? '') }}
                </Typography>
-            </div>
-            <div
-               class="service-card"
-               :style="{
-                  backgroundImage: `url(${transport})`,
-               }"
-            >
-               <div class="icon-container">
-                  <PhTruckTrailer class="mobile:size-8 size-10" weight="regular" />
-               </div>
-               <Typography
-                  variant="H5"
-                  mobile-variant="Body1"
-                  weight="semibold"
-                  class="text-white text-shadow-black/50 text-shadow-md"
-               >
-                  {{ t('home.services.transport') }}
-               </Typography>
-            </div>
-            <div
-               class="service-card"
-               :style="{
-                  backgroundImage: `url(${design})`,
-               }"
-            >
-               <div class="icon-container">
-                  <PhBlueprint class="mobile:size-8 size-10" weight="regular" />
-               </div>
-               <Typography
-                  variant="H5"
-                  mobile-variant="Body1"
-                  weight="semibold"
-                  class="text-white text-shadow-black/50 text-shadow-md"
-               >
-                  {{ t('home.services.design') }}
-               </Typography>
-            </div>
-            <div
-               class="service-card mobile:!bg-top"
-               :style="{
-                  backgroundImage: `url(${yard})`,
-               }"
-            >
-               <div class="icon-container">
-                  <PhClockUser class="mobile:size-8 size-10" weight="regular" />
-               </div>
-               <Typography
-                  variant="H5"
-                  mobile-variant="Body1"
-                  weight="semibold"
-                  class="text-white text-shadow-black/50 text-shadow-md"
-               >
-                  {{ t('home.services.yard') }}
-               </Typography>
-            </div>
+            </Motion>
          </div>
-         <div class="service-card-container">
-            <div
-               class="service-card mobile:!bg-top"
-               :style="{
-                  backgroundImage: `url(${freight})`,
-               }"
-            >
-               <div class="icon-container">
-                  <PhGlobeHemisphereWest class="mobile:size-8 size-10" weight="regular" />
-               </div>
-               <Typography
-                  variant="H5"
-                  mobile-variant="Body1"
-                  weight="semibold"
-                  class="text-white text-shadow-black/50 text-shadow-md"
+         <Motion
+            :variants="positionYVariant"
+            initial="hidden"
+            in-view="visible"
+            :in-view-options="{ once: true }"
+            :transition="{ duration: 1, ease: 'easeOut' }"
+         >
+            <RouterLink to="/services" class="mobile:flex hidden w-full">
+               <div
+                  class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
                >
-                  {{ t('home.services.freight') }}
-               </Typography>
-            </div>
-            <div
-               class="service-card"
-               :style="{
-                  backgroundImage: `url(${freezone})`,
-               }"
-            >
-               <div class="icon-container">
-                  <PhWarehouse class="mobile:size-8 size-10" weight="regular" />
+                  <Typography variant="Body2" weight="semibold">
+                     {{ t('home.services.seeall') }}
+                  </Typography>
                </div>
-               <Typography
-                  variant="H5"
-                  mobile-variant="Body1"
-                  weight="semibold"
-                  class="text-white text-shadow-black/50 text-shadow-md"
-               >
-                  {{ t('home.services.freezone') }}
-               </Typography>
-            </div>
-            <div
-               class="service-card"
-               :style="{
-                  backgroundImage: `url(${customs})`,
-               }"
-            >
-               <div class="icon-container">
-                  <PhListChecks class="mobile:size-8 size-10" weight="regular" />
-               </div>
-               <Typography
-                  variant="H5"
-                  mobile-variant="Body1"
-                  weight="semibold"
-                  class="text-white text-shadow-black/50 text-shadow-md"
-               >
-                  {{ t('home.services.customs') }}
-               </Typography>
-            </div>
-         </div>
-         <RouterLink to="/services" class="mobile:flex hidden w-full">
-            <div
-               class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
-            >
-               <Typography variant="Body2" weight="semibold">
-                  {{ t('home.services.seeall') }}
-               </Typography>
-            </div>
-         </RouterLink>
+            </RouterLink>
+         </Motion>
       </div>
    </div>
    <!-- Products -->
@@ -230,7 +199,14 @@ const { t, lang } = useLang();
       <div
          class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
       >
-         <div class="flex w-full flex-col">
+         <Motion
+            :variants="positionYVariant"
+            initial="hidden"
+            in-view="visible"
+            :in-view-options="{ once: true }"
+            :transition="{ duration: 1, ease: 'easeOut' }"
+            class="flex w-full flex-col"
+         >
             <div class="flex w-full items-start justify-between">
                <Typography
                   variant="H3"
@@ -256,8 +232,13 @@ const { t, lang } = useLang();
                <br class="mobile:hidden" />
                {{ t('home.products.desc2') }}
             </Typography>
-         </div>
-         <div
+         </Motion>
+         <Motion
+            :variants="positionYVariant"
+            initial="hidden"
+            in-view="visible"
+            :in-view-options="{ once: true }"
+            :transition="{ duration: 1, ease: 'easeOut' }"
             class="mobile:overflow-y-auto scrollbar-none mobile:flex mobile:gap-4 grid w-full grid-cols-3 gap-10"
          >
             <RouterLink
@@ -280,24 +261,42 @@ const { t, lang } = useLang();
                   <PhCaretRight class="mobile:size-4 size-6" weight="bold" />
                </div>
             </RouterLink>
-         </div>
-         <RouterLink to="/products" class="mobile:flex hidden w-full">
-            <div
-               class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
-            >
-               <Typography variant="Body2" weight="semibold">
-                  {{ t('home.works.seeall') }}
-               </Typography>
-            </div>
-         </RouterLink>
+         </Motion>
+         <Motion
+            :variants="positionYVariant"
+            initial="hidden"
+            in-view="visible"
+            :in-view-options="{ once: true }"
+            :transition="{ duration: 1, ease: 'easeOut' }"
+         >
+            <RouterLink to="/products" class="mobile:flex hidden w-full">
+               <div
+                  class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
+               >
+                  <Typography variant="Body2" weight="semibold">
+                     {{ t('home.works.seeall') }}
+                  </Typography>
+               </div>
+            </RouterLink>
+         </Motion>
       </div>
    </div>
    <!-- Vision -->
    <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
-      <div
+      <Motion
+         :variants="{
+            visible: { opacity: 1, transition: { delayChildren: stagger(0.5) } },
+            hidden: { opacity: 0 },
+         }"
+         initial="hidden"
+         in-view="visible"
+         :in-view-options="{ once: true }"
+         :transition="{ duration: 1, ease: 'easeOut' }"
          class="mobile:gap-6 mobile:flex-col flex w-full max-w-[100rem] items-center justify-center gap-16"
       >
-         <div
+         <Motion
+            :variants="positionYVariant"
+            :transition="{ duration: 1, ease: 'easeOut' }"
             class="mobile:p-6 flex aspect-square w-full flex-col items-start justify-end rounded-4xl bg-cover bg-center bg-no-repeat p-10 text-white"
             :style="{
                backgroundImage: `url(${visionBg})`,
@@ -319,9 +318,19 @@ const { t, lang } = useLang();
             >
                {{ t('home.vision.desc') }}
             </Typography>
-         </div>
-         <div class="flex w-full flex-col">
-            <div class="mobile:gap-0 flex flex-col gap-4">
+         </Motion>
+         <Motion
+            :variants="{
+               visible: { opacity: 1, transition: { delayChildren: stagger(1) } },
+               hidden: { opacity: 0 },
+            }"
+            class="flex w-full flex-col"
+         >
+            <Motion
+               :variants="positionYVariant"
+               :transition="{ duration: 1, ease: 'easeOut' }"
+               class="mobile:gap-0 flex flex-col gap-4"
+            >
                <Typography variant="H4" mobile-variant="H5" weight="semibold">
                   {{ t('home.mission.title') }}
                </Typography>
@@ -333,24 +342,33 @@ const { t, lang } = useLang();
                >
                   {{ t('home.mission.desc') }}
                </Typography>
-            </div>
-            <Typography
-               variant="H3"
-               mobile-variant="H5"
-               weight="semibold"
-               class="text-brand-blue mobile:p-0 mobile:mt-12 py-20 text-center"
-            >
-               {{ t('home.about.quote') }}
-            </Typography>
-         </div>
-      </div>
+            </Motion>
+            <Motion :variants="positionYVariant" :transition="{ duration: 1, ease: 'easeOut' }">
+               <Typography
+                  variant="H3"
+                  mobile-variant="H5"
+                  weight="semibold"
+                  class="text-brand-blue mobile:p-0 mobile:mt-12 py-20 text-center"
+               >
+                  {{ t('home.about.quote') }}
+               </Typography>
+            </Motion>
+         </Motion>
+      </Motion>
    </div>
    <!-- Our Works -->
    <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
       <div
          class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
       >
-         <div class="flex w-full flex-col">
+         <Motion
+            :variants="positionYVariant"
+            initial="hidden"
+            in-view="visible"
+            :in-view-options="{ once: true }"
+            :transition="{ duration: 1, ease: 'easeOut' }"
+            class="flex w-full flex-col"
+         >
             <div class="flex w-full items-start justify-between">
                <Typography
                   variant="H3"
@@ -377,8 +395,13 @@ const { t, lang } = useLang();
                <br class="mobile:hidden" />
                {{ t('home.works.desc2') }}
             </Typography>
-         </div>
-         <div
+         </Motion>
+         <Motion
+            :variants="positionYVariant"
+            initial="hidden"
+            in-view="visible"
+            :in-view-options="{ once: true }"
+            :transition="{ duration: 1, ease: 'easeOut' }"
             class="mobile:overflow-y-auto scrollbar-none mobile:flex mobile:gap-4 grid w-full grid-cols-3 gap-10"
          >
             <RouterLink to="/works" class="relative flex flex-col items-end justify-end gap-6">
@@ -426,16 +449,24 @@ const { t, lang } = useLang();
                   <PhCaretRight class="mobile:size-4 size-6" weight="bold" />
                </div>
             </RouterLink>
-         </div>
-         <RouterLink to="/products" class="mobile:flex hidden w-full">
-            <div
-               class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
-            >
-               <Typography variant="Body2" weight="semibold">
-                  {{ t('home.works.seeall') }}
-               </Typography>
-            </div>
-         </RouterLink>
+         </Motion>
+         <Motion
+            :variants="positionYVariant"
+            initial="hidden"
+            in-view="visible"
+            :in-view-options="{ once: true }"
+            :transition="{ duration: 1, ease: 'easeOut' }"
+         >
+            <RouterLink to="/products" class="mobile:flex hidden w-full">
+               <div
+                  class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
+               >
+                  <Typography variant="Body2" weight="semibold">
+                     {{ t('home.works.seeall') }}
+                  </Typography>
+               </div>
+            </RouterLink>
+         </Motion>
       </div>
    </div>
    <!-- Review -->
@@ -445,48 +476,97 @@ const { t, lang } = useLang();
       <div
          class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
       >
-         <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
-            {{ t('home.review.title') }}
-         </Typography>
-         <div class="mobile:flex-col mobile:gap-4 flex w-full items-center justify-center gap-25">
-            <div class="mobile:gap-4 flex flex-col gap-12">
-               <div class="review-card">
+         <Motion
+            :variants="positionYVariant"
+            initial="hidden"
+            in-view="visible"
+            :in-view-options="{ once: true }"
+            :transition="{ duration: 1, ease: 'easeOut' }"
+         >
+            <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
+               {{ t('home.review.title') }}
+            </Typography>
+         </Motion>
+         <Motion
+            :variants="{
+               visible: { opacity: 1, transition: { delayChildren: stagger(2) } },
+               hidden: { opacity: 0 },
+            }"
+            initial="hidden"
+            in-view="visible"
+            :in-view-options="{ once: true }"
+            :transition="{ duration: 1, ease: 'easeOut' }"
+            class="mobile:flex-col mobile:gap-4 flex w-full items-center justify-center gap-25"
+         >
+            <Motion
+               :variants="{
+                  visible: { opacity: 1, transition: { delayChildren: stagger(0.5) } },
+                  hidden: { opacity: 0 },
+               }"
+               :transition="{ duration: 0.5, ease: 'easeOut' }"
+               class="mobile:gap-4 flex flex-col gap-12"
+            >
+               <Motion
+                  :variants="opacityVariant"
+                  :transition="{ duration: 0.5, ease: 'easeOut' }"
+                  class="review-card"
+               >
                   <Typography class="mobile:text-[16px] text-[28px]">
                      {{
                         '#รีวิวส่งตู้ #Update หน้างานลูกค้าให้ดูค่า เช้าฝนตก สายๆฟ้าเริ่มโปร่ง\nทางแคบแค่ไหนก็ไม่เป็นผลเลยย ขนส่งเราเก่งอยู่แล้วว'
                      }}
                   </Typography>
-               </div>
-               <div class="flex flex-col gap-4">
-                  <div class="review-card mobile:ml-8 ml-12">
-                     <Typography variant="H6" mobile-variant="Body2">
-                        {{
-                           '#รีวิวที่พัก ส่งมอบเรียบร้อยอีกหนึ่งออเดอร์ #บ้านพักคนงานจากตู้คอนเทนเนอร์\n2 ตู้ และตู้เปล่า #ตู้คอนเทนเนอร์เก็บของ\nฝนตกไม่มีฝนต่อการขนส่งและติดตั้งค่า ขอบคุณลูกค้าหน้างาน จังหวัดนนทบุรีมากๆเลยนะคะ'
-                        }}
-                     </Typography>
-                  </div>
-                  <div class="review-card mobile:ml-0 mobile:mr-8 ml-30">
-                     <Typography variant="H6" mobile-variant="Body2">
-                        {{
-                           '#ตู้คอนเทนเนอร์ บ้านพักคนงาน.. โอน 50% ที่เหลือ พร้อยยกตู้ขึ้นหางเลยค่า'
-                        }}
-                     </Typography>
-                  </div>
-                  <div class="review-card ml-12">
-                     <Typography variant="H6" mobile-variant="Body2">
-                        {{
-                           '#ตู้ใส่วัตถุมงคล Ep.1 ขนาด 20STD แบบประตูบานม้วน\n#Update หน้างานฉบับงานเร่งง !!'
-                        }}
-                     </Typography>
-                  </div>
-               </div>
-            </div>
-            <img :src="review" class="max-h-150 shrink-0 rounded-4xl shadow-md" />
-         </div>
+               </Motion>
+               <Motion
+                  :variants="opacityVariant"
+                  :transition="{ duration: 0.5, ease: 'easeOut' }"
+                  class="review-card mobile:ml-8 ml-12"
+               >
+                  <Typography variant="H6" mobile-variant="Body2">
+                     {{
+                        '#รีวิวที่พัก ส่งมอบเรียบร้อยอีกหนึ่งออเดอร์ #บ้านพักคนงานจากตู้คอนเทนเนอร์\n2 ตู้ และตู้เปล่า #ตู้คอนเทนเนอร์เก็บของ\nฝนตกไม่มีฝนต่อการขนส่งและติดตั้งค่า ขอบคุณลูกค้าหน้างาน จังหวัดนนทบุรีมากๆเลยนะคะ'
+                     }}
+                  </Typography>
+               </Motion>
+               <Motion
+                  :variants="opacityVariant"
+                  :transition="{ duration: 0.5, ease: 'easeOut' }"
+                  class="review-card mobile:ml-0 mobile:mr-8 ml-30"
+               >
+                  <Typography variant="H6" mobile-variant="Body2">
+                     {{ '#ตู้คอนเทนเนอร์ บ้านพักคนงาน.. โอน 50% ที่เหลือ พร้อยยกตู้ขึ้นหางเลยค่า' }}
+                  </Typography>
+               </Motion>
+               <Motion
+                  :variants="opacityVariant"
+                  :transition="{ duration: 0.5, ease: 'easeOut' }"
+                  class="review-card ml-12"
+               >
+                  <Typography variant="H6" mobile-variant="Body2">
+                     {{
+                        '#ตู้ใส่วัตถุมงคล Ep.1 ขนาด 20STD แบบประตูบานม้วน\n#Update หน้างานฉบับงานเร่งง !!'
+                     }}
+                  </Typography>
+               </Motion>
+            </Motion>
+            <motion.img
+               :variants="opacityVariant"
+               :transition="{ duration: 1, ease: 'easeOut' }"
+               :src="review"
+               class="max-h-150 shrink-0 rounded-4xl shadow-md"
+            />
+         </Motion>
       </div>
    </div>
    <!-- Contact -->
-   <div class="mobile:p-6 flex w-full flex-col items-center justify-center gap-16 px-8 py-16">
+   <Motion
+      :variants="positionYVariant"
+      initial="hidden"
+      in-view="visible"
+      :in-view-options="{ once: true }"
+      :transition="{ duration: 1, ease: 'easeOut' }"
+      class="mobile:p-6 flex w-full flex-col items-center justify-center gap-16 px-8 py-16"
+   >
       <div class="mobile:flex-col mobile:gap-4 flex w-full max-w-[100rem] gap-16">
          <div class="mobile:w-full mobile:aspect-square w-5/10">
             <div class="h-full w-full overflow-hidden rounded-2xl">
@@ -564,20 +644,20 @@ const { t, lang } = useLang();
             </div>
          </div>
       </div>
-   </div>
+   </Motion>
 </template>
 
 <style scoped>
 @import '#main.css';
 
 .service-card-container {
-   @apply mobile:flex-col mobile:gap-4 flex h-full w-full flex-1 items-center justify-center gap-10;
+   @apply mobile:flex-col mobile:gap-4 flex h-full w-full flex-wrap items-center justify-center gap-10;
 }
 
 .service-card {
    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
 
-   @apply bg-brand-blue mobile:p-4 mobile:flex-row mobile:min-w-0 mobile:m-0 mobile:text-start mobile:justify-start mobile:w-full mobile:rounded-2xl mobile:aspect-auto relative flex aspect-[3/2] w-95 flex-col items-center justify-center gap-4 rounded-4xl bg-cover bg-center bg-no-repeat p-6 text-center;
+   @apply bg-brand-blue mobile:p-4 mobile:flex-row mobile:min-w-0 mobile:m-0 mobile:text-start mobile:justify-start mobile:w-full mobile:rounded-2xl mobile:aspect-auto relative flex aspect-[3/2] w-92 flex-col items-center justify-center gap-4 rounded-4xl bg-cover bg-center bg-no-repeat p-6 text-center;
 }
 
 .icon-container {
