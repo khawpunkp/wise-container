@@ -26,20 +26,10 @@ import {
    PhWarehouse,
    PhListChecks,
 } from '@phosphor-icons/vue';
-import productList from '@/assets/product/product-list.json';
+import productList from '@/assets/data-list/products/product-list.json';
 import { motion, stagger } from 'motion-v';
 
 const { t, lang } = useLang();
-
-const opacityVariant = {
-   visible: { opacity: 1 },
-   hidden: { opacity: 0 },
-};
-
-const positionYVariant = {
-   visible: { opacity: 1, scale: 1, y: 0 },
-   hidden: { opacity: 0, scale: 1, y: 50 },
-};
 
 const servicesList = [
    { bg: trade, icon: PhHandshake, desc: 'home.services.trade' },
@@ -61,7 +51,7 @@ const servicesList = [
             backgroundImage: `url(${bannerBg})`,
          }"
       >
-         <div class="flex w-full max-w-[100rem] flex-col text-white">
+         <div class="flex w-full max-w-400 flex-col text-white">
             <Typography variant="H2" mobile-variant="H4" weight="bold" class="mobile:text-center">
                {{ t('home.banner.company-name') }}
             </Typography>
@@ -74,7 +64,7 @@ const servicesList = [
          :src="logoText"
          class="mobile:relative mobile:aspect-square mobile:size-full mobile:mt-6 mobile:p-0 pointer-events-none absolute right-0 bottom-0 size-180 shrink-0 object-contain p-20"
       />
-      <div class="mobile:p-6 flex w-full max-w-[100rem] flex-1 items-center justify-start">
+      <div class="mobile:p-6 flex w-full max-w-400 flex-1 items-center justify-start">
          <typography
             variant="H4"
             mobile-variant="H5"
@@ -87,15 +77,13 @@ const servicesList = [
    </div>
    <!-- Service -->
    <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
-      <div
-         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
-      >
+      <div class="mobile:gap-4 flex w-full max-w-400 flex-col items-center justify-center gap-10">
          <Motion
             :variants="positionYVariant"
             initial="hidden"
             in-view="visible"
             :in-view-options="{ once: true }"
-            :transition="{ duration: 1, ease: 'easeOut' }"
+            :transition="{ duration: 0.5, ease: 'easeOut' }"
             class="flex flex-col items-center gap-4"
          >
             <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
@@ -120,7 +108,7 @@ const servicesList = [
                initial="hidden"
                in-view="visible"
                :in-view-options="{ once: true }"
-               :transition="{ duration: 1, ease: 'easeOut' }"
+               :transition="{ duration: 0.5, ease: 'easeOut' }"
                :key="'service-1-' + i"
                class="service-card"
                :style="{
@@ -151,7 +139,7 @@ const servicesList = [
                initial="hidden"
                in-view="visible"
                :in-view-options="{ once: true }"
-               :transition="{ duration: 1, ease: 'easeOut' }"
+               :transition="{ duration: 0.5, ease: 'easeOut' }"
                :key="'service-1-' + i"
                class="service-card"
                :style="{
@@ -180,7 +168,7 @@ const servicesList = [
             initial="hidden"
             in-view="visible"
             :in-view-options="{ once: true }"
-            :transition="{ duration: 1, ease: 'easeOut' }"
+            :transition="{ duration: 0.5, ease: 'easeOut' }"
          >
             <RouterLink to="/services" class="mobile:flex hidden w-full">
                <div
@@ -196,15 +184,13 @@ const servicesList = [
    </div>
    <!-- Products -->
    <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
-      <div
-         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
-      >
+      <div class="mobile:gap-4 flex w-full max-w-400 flex-col items-center justify-center gap-10">
          <Motion
             :variants="positionYVariant"
             initial="hidden"
             in-view="visible"
             :in-view-options="{ once: true }"
-            :transition="{ duration: 1, ease: 'easeOut' }"
+            :transition="{ duration: 0.5, ease: 'easeOut' }"
             class="flex w-full flex-col"
          >
             <div class="flex w-full items-start justify-between">
@@ -238,7 +224,7 @@ const servicesList = [
             initial="hidden"
             in-view="visible"
             :in-view-options="{ once: true }"
-            :transition="{ duration: 1, ease: 'easeOut' }"
+            :transition="{ duration: 0.5, ease: 'easeOut' }"
             class="mobile:overflow-y-auto scrollbar-none mobile:flex mobile:gap-4 grid w-full grid-cols-3 gap-10"
          >
             <RouterLink
@@ -267,7 +253,7 @@ const servicesList = [
             initial="hidden"
             in-view="visible"
             :in-view-options="{ once: true }"
-            :transition="{ duration: 1, ease: 'easeOut' }"
+            :transition="{ duration: 0.5, ease: 'easeOut' }"
          >
             <RouterLink to="/products" class="mobile:flex hidden w-full">
                <div
@@ -285,18 +271,18 @@ const servicesList = [
    <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
       <Motion
          :variants="{
-            visible: { opacity: 1, transition: { delayChildren: stagger(0.5) } },
+            visible: { opacity: 1, transition: { delayChildren: stagger(0.5), duration: 1 } },
             hidden: { opacity: 0 },
          }"
          initial="hidden"
          in-view="visible"
          :in-view-options="{ once: true }"
-         :transition="{ duration: 1, ease: 'easeOut' }"
-         class="mobile:gap-6 mobile:flex-col flex w-full max-w-[100rem] items-center justify-center gap-16"
+         :transition="{ duration: 0.5, ease: 'easeOut' }"
+         class="mobile:gap-6 mobile:flex-col flex w-full max-w-400 items-center justify-center gap-16"
       >
          <Motion
             :variants="positionYVariant"
-            :transition="{ duration: 1, ease: 'easeOut' }"
+            :transition="{ duration: 0.5, ease: 'easeOut' }"
             class="mobile:p-6 flex aspect-square w-full flex-col items-start justify-end rounded-4xl bg-cover bg-center bg-no-repeat p-10 text-white"
             :style="{
                backgroundImage: `url(${visionBg})`,
@@ -322,13 +308,13 @@ const servicesList = [
          <Motion
             :variants="{
                visible: { opacity: 1, transition: { delayChildren: stagger(1) } },
-               hidden: { opacity: 0 },
+               hidden: { opacity: 1 },
             }"
             class="flex w-full flex-col"
          >
             <Motion
                :variants="positionYVariant"
-               :transition="{ duration: 1, ease: 'easeOut' }"
+               :transition="{ duration: 0.5, ease: 'easeOut', delay: 0.5 }"
                class="mobile:gap-0 flex flex-col gap-4"
             >
                <Typography variant="H4" mobile-variant="H5" weight="semibold">
@@ -343,7 +329,7 @@ const servicesList = [
                   {{ t('home.mission.desc') }}
                </Typography>
             </Motion>
-            <Motion :variants="positionYVariant" :transition="{ duration: 1, ease: 'easeOut' }">
+            <Motion :variants="positionYVariant" :transition="{ duration: 0.5, ease: 'easeOut' }">
                <Typography
                   variant="H3"
                   mobile-variant="H5"
@@ -358,15 +344,13 @@ const servicesList = [
    </div>
    <!-- Our Works -->
    <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
-      <div
-         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
-      >
+      <div class="mobile:gap-4 flex w-full max-w-400 flex-col items-center justify-center gap-10">
          <Motion
             :variants="positionYVariant"
             initial="hidden"
             in-view="visible"
             :in-view-options="{ once: true }"
-            :transition="{ duration: 1, ease: 'easeOut' }"
+            :transition="{ duration: 0.5, ease: 'easeOut' }"
             class="flex w-full flex-col"
          >
             <div class="flex w-full items-start justify-between">
@@ -401,7 +385,7 @@ const servicesList = [
             initial="hidden"
             in-view="visible"
             :in-view-options="{ once: true }"
-            :transition="{ duration: 1, ease: 'easeOut' }"
+            :transition="{ duration: 0.5, ease: 'easeOut' }"
             class="mobile:overflow-y-auto scrollbar-none mobile:flex mobile:gap-4 grid w-full grid-cols-3 gap-10"
          >
             <RouterLink to="/works" class="relative flex flex-col items-end justify-end gap-6">
@@ -455,7 +439,7 @@ const servicesList = [
             initial="hidden"
             in-view="visible"
             :in-view-options="{ once: true }"
-            :transition="{ duration: 1, ease: 'easeOut' }"
+            :transition="{ duration: 0.5, ease: 'easeOut' }"
          >
             <RouterLink to="/products" class="mobile:flex hidden w-full">
                <div
@@ -473,15 +457,13 @@ const servicesList = [
    <div
       class="bg-brand-light-blue relative flex min-h-[calc(100dvh-84px)] w-full items-center justify-center p-6"
    >
-      <div
-         class="mobile:gap-4 flex w-full max-w-[100rem] flex-col items-center justify-center gap-10"
-      >
+      <div class="mobile:gap-4 flex w-full max-w-400 flex-col items-center justify-center gap-10">
          <Motion
             :variants="positionYVariant"
             initial="hidden"
             in-view="visible"
             :in-view-options="{ once: true }"
-            :transition="{ duration: 1, ease: 'easeOut' }"
+            :transition="{ duration: 0.5, ease: 'easeOut' }"
          >
             <Typography variant="H3" mobile-variant="H5" weight="semibold" class="text-brand-blue">
                {{ t('home.review.title') }}
@@ -495,7 +477,7 @@ const servicesList = [
             initial="hidden"
             in-view="visible"
             :in-view-options="{ once: true }"
-            :transition="{ duration: 1, ease: 'easeOut' }"
+            :transition="{ duration: 0.5, ease: 'easeOut' }"
             class="mobile:flex-col mobile:gap-4 flex w-full items-center justify-center gap-25"
          >
             <Motion
@@ -551,7 +533,7 @@ const servicesList = [
             </Motion>
             <motion.img
                :variants="opacityVariant"
-               :transition="{ duration: 1, ease: 'easeOut' }"
+               :transition="{ duration: 0.5, ease: 'easeOut' }"
                :src="review"
                class="max-h-150 shrink-0 rounded-4xl shadow-md"
             />
@@ -560,14 +542,14 @@ const servicesList = [
    </div>
    <!-- Contact -->
    <Motion
-      :variants="positionYVariant"
+      :variants="opacityVariant"
       initial="hidden"
       in-view="visible"
       :in-view-options="{ once: true }"
-      :transition="{ duration: 1, ease: 'easeOut' }"
+      :transition="{ duration: 1.25, ease: 'easeOut' }"
       class="mobile:p-6 flex w-full flex-col items-center justify-center gap-16 px-8 py-16"
    >
-      <div class="mobile:flex-col mobile:gap-4 flex w-full max-w-[100rem] gap-16">
+      <div class="mobile:flex-col mobile:gap-4 flex w-full max-w-400 gap-16">
          <div class="mobile:w-full mobile:aspect-square w-5/10">
             <div class="h-full w-full overflow-hidden rounded-2xl">
                <iframe

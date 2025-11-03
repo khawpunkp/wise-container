@@ -61,10 +61,15 @@ const servicesList = [
    <div
       class="mobile:p-6 mobile:gap-10 flex w-full flex-1 flex-col items-center justify-start gap-16 px-8 py-16"
    >
-      <div
+      <Motion
          v-for="(item, index) in servicesList"
          :key="index"
-         class="flex w-full max-w-6xl flex-col gap-6"
+         :variants="positionYVariant"
+         initial="hidden"
+         in-view="visible"
+         :in-view-options="{ once: true }"
+         :transition="{ duration: 0.5, ease: 'easeOut' }"
+         class="flex w-full max-w-270 flex-col gap-6"
       >
          <div class="flex gap-4">
             <div class="bg-brand-orange w-1 self-stretch rounded-full" />
@@ -79,6 +84,6 @@ const servicesList = [
             />
             <Typography variant="H6" mobile-variant="Body1">{{ t(item.desc) }}</Typography>
          </div>
-      </div>
+      </Motion>
    </div>
 </template>

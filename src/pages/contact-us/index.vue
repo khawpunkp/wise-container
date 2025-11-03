@@ -70,7 +70,16 @@ const data = [
       </Typography>
    </div>
    <div class="mobile:p-6 flex w-full flex-col items-center justify-center gap-16 px-8 py-16">
-      <div v-for="(item, index) in data" :key="index" class="flex w-full max-w-7xl flex-col gap-6">
+      <Motion
+         :variants="opacityVariant"
+         initial="hidden"
+         in-view="visible"
+         :in-view-options="{ once: true }"
+         :transition="{ duration: 1.25, ease: 'easeOut' }"
+         v-for="(item, index) in data"
+         :key="index"
+         class="flex w-full max-w-7xl flex-col gap-6"
+      >
          <div class="flex gap-4">
             <div class="bg-brand-orange w-1 self-stretch rounded-full" />
             <Typography variant="H3" mobile-variant="H5" weight="bold" class="text-brand-blue">
@@ -142,7 +151,7 @@ const data = [
                </div>
             </div>
          </div>
-      </div>
+      </Motion>
    </div>
 </template>
 

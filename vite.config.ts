@@ -18,7 +18,7 @@ export default defineConfig({
       vue(),
       AutoImport({
          imports: ['vue', '@vueuse/core', VueRouterAutoImports],
-         dirs: ['src/lang/**', 'src/utils/**'],
+         dirs: ['src/lang/**', 'src/utils/**', 'src/@const/**'],
          vueTemplate: true,
          dts: true,
       }),

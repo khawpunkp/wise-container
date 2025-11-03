@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import bg from '@/assets/images/header-products.png';
-import productList from '@/assets/product/product-list.json';
+import productList from '@/assets/data-list/products/product-list.json';
 import { PhImageSquare } from '@phosphor-icons/vue';
 const { t, lang } = useLang();
 </script>
@@ -28,7 +28,7 @@ const { t, lang } = useLang();
          v-for="(itemCategory, index) in productList"
          :key="index"
          :id="itemCategory.ref"
-         class="flex w-full max-w-6xl flex-col gap-6"
+         class="flex w-full max-w-7xl flex-col gap-6"
       >
          <div class="flex gap-4">
             <div class="bg-brand-orange w-1 self-stretch rounded-full" />
@@ -41,7 +41,7 @@ const { t, lang } = useLang();
                v-for="(product, index) in itemCategory.children"
                :key="index"
                :id="product.ref"
-               class="mobile:gap-2 flex w-full max-w-6xl flex-col gap-4"
+               class="mobile:gap-2 flex w-full max-w-7xl flex-col gap-4"
             >
                <Typography variant="H4" mobile-variant="H6" weight="medium">
                   {{ t(product.label) }}

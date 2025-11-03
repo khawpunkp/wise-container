@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { PhList, PhX } from '@phosphor-icons/vue';
 import { AnimatePresence, motion } from 'motion-v';
-import productList from '@/assets/product/product-list.json';
+import productList from '@/assets/data-list/products/product-list.json';
 
 const route = useRoute();
 
