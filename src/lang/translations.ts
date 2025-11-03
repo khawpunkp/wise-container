@@ -92,6 +92,11 @@ export const messages: Record<Lang, Record<string, string>> = {
          'Our experienced customs specialists handle all import, export, and documentation procedures with precision and professionalism.\n\nWe focus on accuracy, speed, and transparency to ensure a smooth customs process for your shipments.',
 
       'works.title': 'Our Works',
+      'work1.title': 'Delivered 4 Container Houses',
+      'work2.title': 'Welcoming Customers to View Our Sample Container',
+      'work3.title': 'Container Houses in White with Blue Trims',
+      'work4.title': 'Four-room Container Houses with Full Electrical System',
+      'work5.title': '20-foot Container for Sacred Objects',
 
       'contact.yard0.title': 'Head Office',
       'contact.yard0.name': 'WISE CONTAINER CO., LTD.\n(Head Office)',
