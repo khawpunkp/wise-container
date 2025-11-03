@@ -1,26 +1,31 @@
 [
    {
       "title": "work1.title",
+      "ref": "work1",
       "desc": "",
       "images": 8
    },
    {
       "title": "work2.title",
+      "ref": "work2",
       "desc": "",
       "images": 3
    },
    {
       "title": "work3.title",
+      "ref": "work3",
       "desc": "",
       "images": 5
    },
    {
       "title": "work4.title",
+      "ref": "work4",
       "desc": "",
       "images": 5
    },
    {
       "title": "work5.title",
+      "ref": "work5",
       "desc": "",
       "images": 5
    }

@@ -27,6 +27,7 @@ import {
    PhListChecks,
 } from '@phosphor-icons/vue';
 import productList from '@/assets/data-list/products/product-list.json';
+import workList from '@/assets/data-list/works/works-list.json';
 import { motion, stagger } from 'motion-v';
 
 const { t, lang } = useLang();
@@ -388,47 +389,22 @@ const servicesList = [
             :transition="{ duration: 0.5, ease: 'easeOut' }"
             class="mobile:overflow-y-auto scrollbar-none mobile:flex mobile:gap-4 grid w-full grid-cols-3 gap-10"
          >
-            <RouterLink to="/works" class="relative flex flex-col items-end justify-end gap-6">
+            <RouterLink
+               v-for="(work, index) in workList.slice(0, 3)"
+               :key="index"
+               :to="{ path: '/works', hash: `#${work.ref}` }"
+               class="relative flex flex-col items-end justify-end gap-4"
+            >
+               <img
+                  :src="`/images/works/${index + 1}/1.jpg`"
+                  class="bg-brand-blue/50 mobile:min-w-65 flex aspect-[3/2] w-full items-center justify-center rounded-2xl text-white"
+               />
+
                <div
-                  class="bg-brand-blue/50 mobile:min-w-65 flex aspect-square w-full items-center justify-center rounded-2xl text-white"
-               >
-                  <PhImageSquare :size="32" />
-               </div>
-               <div
-                  class="text-brand-blue mobile:absolute mobile:right-2 mobile:bottom-2 mobile:text-white flex w-fit items-center gap-2"
-               >
-                  <Typography variant="H6" mobile-variant="Body2" weight="semibold" class="mt-0.5">
-                     ผลงานที่ 1
-                  </Typography>
-                  <PhCaretRight class="mobile:size-4 size-6" weight="bold" />
-               </div>
-            </RouterLink>
-            <RouterLink to="/works" class="relative flex flex-col items-end justify-end gap-6">
-               <div
-                  class="bg-brand-blue/50 mobile:min-w-65 flex aspect-square w-full items-center justify-center rounded-2xl text-white"
-               >
-                  <PhImageSquare :size="32" />
-               </div>
-               <div
-                  class="text-brand-blue mobile:absolute mobile:right-2 mobile:bottom-2 mobile:text-white flex w-fit items-center gap-2"
+                  class="text-brand-blue mobile:absolute mobile:right-2 mobile:bottom-2 mobile:text-white mobile:bg-black/40 mobile:py-0.5 mobile:px-2 mobile:rounded-full flex w-fit items-center gap-2"
                >
                   <Typography variant="H6" mobile-variant="Body2" weight="semibold" class="mt-0.5">
-                     ผลงานที่ 2
-                  </Typography>
-                  <PhCaretRight class="mobile:size-4 size-6" weight="bold" />
-               </div>
-            </RouterLink>
-            <RouterLink to="/works" class="relative flex flex-col items-end justify-end gap-6">
-               <div
-                  class="bg-brand-blue/50 mobile:min-w-65 flex aspect-square w-full items-center justify-center rounded-2xl text-white"
-               >
-                  <PhImageSquare :size="32" />
-               </div>
-               <div
-                  class="text-brand-blue mobile:absolute mobile:right-2 mobile:bottom-2 mobile:text-white flex w-fit items-center gap-2"
-               >
-                  <Typography variant="H6" mobile-variant="Body2" weight="semibold" class="mt-0.5">
-                     ผลงานที่ 3
+                     {{ t('home.seemore') }}
                   </Typography>
                   <PhCaretRight class="mobile:size-4 size-6" weight="bold" />
                </div>

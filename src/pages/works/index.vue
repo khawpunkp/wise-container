@@ -27,6 +27,7 @@ const { t } = useLang();
       <div
          v-for="(work, workIndex) in workList"
          :key="workIndex"
+         :id="work.ref"
          class="flex w-full max-w-400 flex-col gap-6"
       >
          <Motion
@@ -51,7 +52,7 @@ const { t } = useLang();
                in-view="visible"
                :in-view-options="{ once: true }"
                :transition="{ duration: 0.5, ease: 'easeOut' }"
-               class="bg-brand-blue/50 flex items-center justify-center overflow-hidden rounded-2xl text-white"
+               class="bg-brand-blue/50 flex aspect-[3/2] items-center justify-center overflow-hidden rounded-2xl text-white"
             >
                <Image :src="`/images/works/${workIndex + 1}/${imageIndex}.jpg`" preview />
             </Motion>
