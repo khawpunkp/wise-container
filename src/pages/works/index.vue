@@ -3,6 +3,17 @@ import Image from 'primevue/image';
 import bg from '@/assets/images/header-works.png';
 import workList from '@/assets/data-list/works/works-list.json';
 const { t } = useLang();
+
+const seemoreButtonRef = ref<HTMLAnchorElement | null>(null);
+
+const handleClick = () => {
+   seemoreButtonRef.value?.classList.add('active');
+
+   setTimeout(() => {
+      seemoreButtonRef.value?.classList.remove('active');
+      window.open('https://www.facebook.com/61575234320876', '_blank', 'noopener noreferrer');
+   }, 300);
+};
 </script>
 
 <template>
@@ -58,5 +69,258 @@ const { t } = useLang();
             </Motion>
          </div>
       </div>
+      <a
+         href="https://www.facebook.com/61575234320876"
+         class="see-more mobile:w-[190px] mobile:h-[44px] bg-brand-orange relative flex h-[60px] w-[250px] cursor-pointer items-center justify-center rounded-full text-white"
+         ref="seemoreButtonRef"
+         @click.prevent="handleClick"
+      >
+         <Typography variant="H5" mobile-variant="Body1" weight="bold">
+            {{ t('home.seemore') }}
+         </Typography>
+         <span className="shape">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+         </span>
+      </a>
    </div>
 </template>
+
+<style scoped>
+/* let's shape */
+.see-more span.shape {
+   height: 60px;
+   width: 250px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   @media (max-width: 600px) {
+      height: 44px;
+      width: 190px;
+   }
+}
+
+.see-more span span {
+   content: '';
+   position: absolute;
+   margin: auto;
+   height: 8px;
+   width: 2px;
+   background: #002c7e;
+   opacity: 0;
+}
+
+.see-more span span:nth-of-type(1) {
+   top: -10px;
+   left: 0;
+   right: 0;
+}
+
+.see-more span span:nth-of-type(2) {
+   bottom: -10px;
+   left: 0;
+   right: 0;
+}
+
+.see-more span span:nth-of-type(3) {
+   top: 0;
+   bottom: 0;
+   left: -5px;
+}
+
+.see-more span span:nth-of-type(4) {
+   top: 0;
+   bottom: 0;
+   right: -5px;
+}
+
+.see-more span span:nth-of-type(5) {
+   top: -10px;
+   left: -70%;
+   right: 0;
+   transform: rotate(-30deg);
+}
+
+.see-more span span:nth-of-type(6) {
+   top: -10px;
+   left: 0;
+   right: -70%;
+   transform: rotate(30deg);
+}
+
+.see-more span span:nth-of-type(7) {
+   bottom: -10px;
+   right: 0;
+   left: -70%;
+   transform: rotate(30deg);
+}
+
+.see-more span span:nth-of-type(8) {
+   bottom: -10px;
+   left: 0;
+   right: -70%;
+   transform: rotate(-30deg);
+}
+
+/* let's animate this */
+@keyframes bounce {
+   0% {
+      transform: scale(1);
+   }
+   50% {
+      transform: scale(1.1);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+.see-more.active {
+   animation: bounce 0.3s ease-out 1;
+}
+
+.see-more.active span span:nth-of-type(1) {
+   animation: anim1 0.4s ease-out 1;
+}
+.see-more.active span span:nth-of-type(2) {
+   animation: anim2 0.4s ease-out 1;
+}
+.see-more.active span span:nth-of-type(3) {
+   animation: anim3 0.4s ease-out 1;
+}
+.see-more.active span span:nth-of-type(4) {
+   animation: anim4 0.4s ease-out 1;
+}
+.see-more.active span span:nth-of-type(5) {
+   animation: anim5 0.4s ease-out 1;
+}
+.see-more.active span span:nth-of-type(6) {
+   animation: anim6 0.4s ease-out 1;
+}
+.see-more.active span span:nth-of-type(7) {
+   animation: anim7 0.4s ease-out 1;
+}
+.see-more.active span span:nth-of-type(8) {
+   animation: anim8 0.4s ease-out 1;
+}
+
+@keyframes anim1 {
+   0% {
+      transform: scaleY(0.5);
+      opacity: 0;
+   }
+   50% {
+      transform: translateY(-10px) scaleY(1.4);
+      opacity: 1;
+   }
+   100% {
+      transform: translateY(-20px) scaleY(0.5);
+      opacity: 0;
+   }
+}
+@keyframes anim2 {
+   0% {
+      transform: scaleY(1);
+      opacity: 0;
+   }
+   50% {
+      transform: translateY(10px) scaleY(1.4);
+      opacity: 1;
+   }
+   100% {
+      transform: translateY(20px) scaleY(0.5);
+      opacity: 0;
+   }
+}
+@keyframes anim3 {
+   0% {
+      transform: rotate(90deg) scaleX(0.5);
+      opacity: 0;
+   }
+   50% {
+      transform: rotate(90deg) translateY(10px) scaleX(1.4);
+      opacity: 1;
+   }
+   100% {
+      transform: rotate(90deg) translateY(20px) scaleX(0.5);
+      opacity: 0;
+   }
+}
+@keyframes anim4 {
+   0% {
+      transform: rotate(90deg) scaleX(0.5);
+      opacity: 0;
+   }
+   50% {
+      transform: rotate(90deg) translateY(-10px) scaleX(1.4);
+      opacity: 1;
+   }
+
+   100% {
+      transform: rotate(90deg) translateY(-20px) scaleX(0.5);
+      opacity: 0;
+   }
+}
+@keyframes anim5 {
+   0% {
+      transform: rotate(-30deg) scaleY(0.5);
+      opacity: 0;
+   }
+   50% {
+      transform: rotate(-30deg) translateY(-8px) scaleY(1.4);
+      opacity: 1;
+   }
+   100% {
+      transform: rotate(-30deg) translateY(-16px) scaleY(0.5);
+      opacity: 0;
+   }
+}
+@keyframes anim6 {
+   0% {
+      transform: rotate(30deg) scaleY(0.5);
+      opacity: 0;
+   }
+   50% {
+      transform: rotate(30deg) translateY(-8px) scaleY(1.4);
+      opacity: 1;
+   }
+   100% {
+      transform: rotate(30deg) translateY(-16px) scaleY(0.5);
+      opacity: 0;
+   }
+}
+@keyframes anim7 {
+   0% {
+      transform: rotate(30deg) scaleY(0.5);
+      opacity: 0;
+   }
+   50% {
+      transform: rotate(30deg) translateY(8px) scaleY(1.4);
+      opacity: 1;
+   }
+   100% {
+      transform: rotate(30deg) translateY(16px) scaleY(0.5);
+      opacity: 0;
+   }
+}
+@keyframes anim8 {
+   0% {
+      transform: rotate(-30deg) scaleY(0.5);
+      opacity: 0;
+   }
+   50% {
+      transform: rotate(-30deg) translateY(8px) scaleY(1.4);
+      opacity: 1;
+   }
+   100% {
+      transform: rotate(-30deg) translateY(16px) scaleY(0.5);
+      opacity: 0;
+   }
+}
+</style>

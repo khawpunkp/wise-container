@@ -32,7 +32,7 @@ const { t, lang } = useLang();
       >
          <div class="flex gap-4">
             <div class="bg-brand-orange w-1 self-stretch rounded-full" />
-            <Typography variant="H3" mobile-variant="H5" weight="bold" class="text-brand-blue">
+            <Typography variant="H4" mobile-variant="H5" weight="bold" class="text-brand-blue">
                {{ t(itemCategory.label) }}
             </Typography>
          </div>
@@ -43,7 +43,7 @@ const { t, lang } = useLang();
                :id="product.ref"
                class="mobile:gap-2 flex w-full max-w-7xl flex-col gap-4"
             >
-               <Typography variant="H4" mobile-variant="H6" weight="medium">
+               <Typography variant="H5" mobile-variant="H6" weight="medium">
                   {{ t(product.label) }}
                   <Typography variant="Body1" mobile-variant="Body2" weight="medium">
                      <template v-if="lang === 'th'">
