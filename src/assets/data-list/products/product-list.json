@@ -7,7 +7,7 @@
             "label": "product.worker.40-5",
             "ref": "worker-40-5",
             "price": 125000,
-            "children": [
+            "images": [
                {
                   "imagesLength": 3
                }
@@ -17,7 +17,7 @@
             "label": "product.worker.40-4",
             "ref": "worker-40-4",
             "price": 120000,
-            "children": [
+            "images": [
                {
                   "imagesLength": 7
                },
@@ -30,7 +30,7 @@
             "label": "product.worker.40-3",
             "ref": "worker-40-3",
             "price": 115000,
-            "children": [
+            "images": [
                {
                   "imagesLength": 6
                }
@@ -40,7 +40,7 @@
             "label": "product.worker.40-2",
             "ref": "worker-40-2",
             "price": 110000,
-            "children": [
+            "images": [
                {
                   "imagesLength": 8
                },
@@ -54,7 +54,7 @@
             "label": "product.worker.20-2",
             "ref": "worker-20-2",
             "price": 85000,
-            "children": [
+            "images": [
                {
                   "imagesLength": 8
                }
@@ -64,7 +64,7 @@
             "label": "product.worker.20-1",
             "ref": "worker-20-1",
             "price": 79000,
-            "children": [
+            "images": [
                {
                   "imagesLength": 8
                },
@@ -86,7 +86,7 @@
             "label": "product.office.40-4",
             "ref": "office-40-4",
             "price": 120000,
-            "children": [
+            "images": [
                {
                   "imagesLength": 6
                }
@@ -96,7 +96,7 @@
             "label": "product.office.40-2",
             "ref": "office-40-2",
             "price": 110000,
-            "children": [
+            "images": [
                {
                   "imagesLength": 8
                }
@@ -106,7 +106,7 @@
             "label": "product.office.20-2",
             "ref": "office-20-2",
             "price": 85000,
-            "children": [
+            "images": [
                {
                   "imagesLength": 6
                }
@@ -116,7 +116,7 @@
             "label": "product.office.20-1",
             "ref": "office-20-1",
             "price": 79000,
-            "children": [
+            "images": [
                {
                   "imagesLength": 6
                },
@@ -138,7 +138,7 @@
             "label": "product.restroom.3",
             "ref": "restroom-3",
             "price": 89000,
-            "children": [
+            "images": [
                {
                   "imagesLength": 7
                }
@@ -148,7 +148,7 @@
             "label": "product.restroom.2",
             "ref": "restroom-2",
             "price": 59000,
-            "children": [
+            "images": [
                {
                   "imagesLength": 6
                }
@@ -158,7 +158,7 @@
             "label": "product.restroom.1",
             "ref": "restroom-1",
             "price": 35000,
-            "children": [
+            "images": [
                {
                   "imagesLength": 9
                }

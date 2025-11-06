@@ -79,7 +79,7 @@ const { t, lang } = useLang();
                   </Typography>
                </Motion>
                <HorizontalScrollContainer
-                  v-for="(child, childIndex) in product.children"
+                  v-for="(child, childIndex) in product.images"
                   :key="`${product.ref}-${childIndex}`"
                   :variants="positionYVariant"
                   initial="hidden"
