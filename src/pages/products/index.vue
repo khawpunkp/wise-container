@@ -49,7 +49,7 @@ const { t, lang } = useLang();
                v-for="(product, productIndex) in category.children"
                :key="productIndex"
                :id="product.ref"
-               class="mobile:gap-2 flex w-full max-w-7xl flex-col gap-4"
+               class="flex w-full max-w-7xl flex-col gap-4"
             >
                <Motion
                   :variants="positionYVariant"

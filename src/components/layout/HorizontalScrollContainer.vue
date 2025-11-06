@@ -57,7 +57,7 @@ watch(
          ref="scrollContainerRef"
          :class="
             cn(
-               'scrollbar-none mobile:gap-4 relative z-0 flex flex-row gap-6 overflow-x-auto whitespace-nowrap',
+               'scrollbar-none relative z-0 flex flex-row gap-4 overflow-x-auto whitespace-nowrap',
                props.class,
             )
          "
