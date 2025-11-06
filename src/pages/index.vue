@@ -185,7 +185,7 @@ const servicesList = [
    </div>
    <!-- Products -->
    <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
-      <div class="mobile:gap-4 flex w-full max-w-400 flex-col items-center justify-center gap-10">
+      <div class="mobile:gap-4 flex w-full max-w-400 flex-col gap-10">
          <Motion
             :variants="positionYVariant"
             initial="hidden"
@@ -220,48 +220,44 @@ const servicesList = [
                {{ t('home.products.desc2') }}
             </Typography>
          </Motion>
-         <Motion
-            :variants="positionYVariant"
-            initial="hidden"
-            in-view="visible"
-            :in-view-options="{ once: true }"
-            :transition="{ duration: 0.5, ease: 'easeOut' }"
-            class="mobile:overflow-y-auto scrollbar-none mobile:flex mobile:gap-4 grid w-full grid-cols-3 gap-10"
+         <HorizontalScrollContainer
+            class="scrollbar-none mobile:flex mobile:gap-4 grid w-full grid-cols-3 gap-10"
          >
             <RouterLink
-               v-for="(item, index) in productList"
+               v-for="(category, index) in productList"
                :key="index"
-               :to="{ path: '/products', hash: `#${item.ref}` }"
-               class="relative flex flex-col items-end justify-end gap-6"
+               :to="{ path: '/products', hash: `#${category.ref}` }"
+               class="mobile:min-w-65 relative flex flex-col items-end justify-end gap-4"
             >
+               <img
+                  :src="`/images/products/${category.ref}/home.jpg`"
+                  class="bg-brand-blue/50 flex aspect-square w-full items-center justify-center rounded-2xl text-white"
+               />
+
                <div
-                  class="bg-brand-blue/50 mobile:min-w-65 flex aspect-square w-full items-center justify-center rounded-2xl text-white"
-               >
-                  <PhImageSquare :size="32" />
-               </div>
-               <div
-                  class="text-brand-blue mobile:absolute mobile:right-2 mobile:bottom-2 mobile:text-white flex w-fit items-center gap-2"
+                  class="text-brand-blue mobile:absolute mobile:right-2 mobile:bottom-2 mobile:text-white mobile:bg-black/40 mobile:py-0.5 mobile:px-2 mobile:rounded-full flex w-fit items-center gap-2"
                >
                   <Typography variant="H6" mobile-variant="Body2" weight="semibold" class="mt-0.5">
-                     {{ t(item.label) }}
+                     {{ t(category.label) }}
                   </Typography>
                   <PhCaretRight class="mobile:size-4 size-6" weight="bold" />
                </div>
             </RouterLink>
-         </Motion>
+         </HorizontalScrollContainer>
          <Motion
             :variants="positionYVariant"
             initial="hidden"
             in-view="visible"
             :in-view-options="{ once: true }"
             :transition="{ duration: 0.5, ease: 'easeOut' }"
+            class="flex justify-center"
          >
-            <RouterLink to="/products" class="mobile:flex hidden w-full">
+            <RouterLink to="/products" class="mobile:flex hidden w-fit">
                <div
                   class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
                >
                   <Typography variant="Body2" weight="semibold">
-                     {{ t('home.works.seeall') }}
+                     {{ t('home.products.seeall') }}
                   </Typography>
                </div>
             </RouterLink>
@@ -344,8 +340,8 @@ const servicesList = [
       </Motion>
    </div>
    <!-- Our Works -->
-   <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
-      <div class="mobile:gap-4 flex w-full max-w-400 flex-col items-center justify-center gap-10">
+   <div class="mobile:p-6 flex w-full items-center justify-center px-8 py-16">
+      <div class="mobile:gap-4 flex w-full max-w-400 flex-col gap-10">
          <Motion
             :variants="positionYVariant"
             initial="hidden"
@@ -381,23 +377,18 @@ const servicesList = [
                {{ t('home.works.desc2') }}
             </Typography>
          </Motion>
-         <Motion
-            :variants="positionYVariant"
-            initial="hidden"
-            in-view="visible"
-            :in-view-options="{ once: true }"
-            :transition="{ duration: 0.5, ease: 'easeOut' }"
-            class="mobile:overflow-y-auto scrollbar-none mobile:flex mobile:gap-4 grid w-full grid-cols-3 gap-10"
+         <HorizontalScrollContainer
+            class="scrollbar-none mobile:flex mobile:gap-4 grid w-full grid-cols-3 gap-10"
          >
             <RouterLink
                v-for="(work, index) in workList.slice(0, 3)"
                :key="index"
                :to="{ path: '/works', hash: `#${work.ref}` }"
-               class="relative flex flex-col items-end justify-end gap-4"
+               class="mobile:min-w-65 relative flex flex-col items-end justify-end gap-4"
             >
                <img
                   :src="`/images/works/${work.ref}/1.jpg`"
-                  class="bg-brand-blue/50 mobile:min-w-65 flex aspect-[3/2] w-full items-center justify-center rounded-2xl text-white"
+                  class="bg-brand-blue/50 flex aspect-[3/2] w-full items-center justify-center rounded-2xl text-white"
                />
 
                <div
@@ -409,15 +400,16 @@ const servicesList = [
                   <PhCaretRight class="mobile:size-4 size-6" weight="bold" />
                </div>
             </RouterLink>
-         </Motion>
+         </HorizontalScrollContainer>
          <Motion
             :variants="positionYVariant"
             initial="hidden"
             in-view="visible"
             :in-view-options="{ once: true }"
             :transition="{ duration: 0.5, ease: 'easeOut' }"
+            class="flex justify-center"
          >
-            <RouterLink to="/products" class="mobile:flex hidden w-full">
+            <RouterLink to="/works" class="mobile:flex hidden w-fit">
                <div
                   class="bg-brand-orange relative flex w-full items-center justify-center gap-2 rounded-full border px-6 py-2 text-white"
                >

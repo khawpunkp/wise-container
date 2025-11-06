@@ -4,40 +4,77 @@
       "ref": "worker",
       "children": [
          {
-            "label": "product.worker.5-40",
-            "ref": "worker-5-40",
+            "label": "product.worker.40-5",
+            "ref": "worker-40-5",
             "price": 125000,
-            "images": ["", "", "", ""]
+            "children": [
+               {
+                  "imagesLength": 3
+               }
+            ]
          },
          {
-            "label": "product.worker.4-40",
-            "ref": "worker-4-40",
+            "label": "product.worker.40-4",
+            "ref": "worker-40-4",
             "price": 120000,
-            "images": ["", "", "", "", "", ""]
+            "children": [
+               {
+                  "imagesLength": 7
+               },
+               {
+                  "imagesLength": 5
+               }
+            ]
          },
          {
-            "label": "product.worker.3-40",
-            "ref": "worker-3-40",
+            "label": "product.worker.40-3",
+            "ref": "worker-40-3",
             "price": 115000,
-            "images": ["", ""]
+            "children": [
+               {
+                  "imagesLength": 6
+               }
+            ]
          },
          {
-            "label": "product.worker.2-40",
-            "ref": "worker-2-40",
+            "label": "product.worker.40-2",
+            "ref": "worker-40-2",
             "price": 110000,
-            "images": ["", "", ""]
+            "children": [
+               {
+                  "imagesLength": 8
+               },
+
+               {
+                  "imagesLength": 8
+               }
+            ]
          },
          {
-            "label": "product.worker.2-20",
-            "ref": "worker-2-20",
+            "label": "product.worker.20-2",
+            "ref": "worker-20-2",
             "price": 85000,
-            "images": ["", "", "", ""]
+            "children": [
+               {
+                  "imagesLength": 8
+               }
+            ]
          },
          {
-            "label": "product.worker.1-20",
-            "ref": "worker-1-20",
+            "label": "product.worker.20-1",
+            "ref": "worker-20-1",
             "price": 79000,
-            "images": ["", "", ""]
+            "children": [
+               {
+                  "imagesLength": 8
+               },
+               {
+                  "imagesLength": 9
+               },
+               {
+                  "imagesLength": 3
+               }
+            ]
          }
       ]
    },
@@ -46,46 +83,87 @@
       "ref": "office",
       "children": [
          {
-            "label": "product.office.5-40",
-            "ref": "office-5-40",
-            "price": 125000,
-            "images": ["", "", ""]
-         },
-         {
-            "label": "product.office.4-40",
-            "ref": "office-4-40",
+            "label": "product.office.40-4",
+            "ref": "office-40-4",
             "price": 120000,
-            "images": ["", "", "", ""]
+            "children": [
+               {
+                  "imagesLength": 6
+               }
+            ]
          },
          {
-            "label": "product.office.3-40",
-            "ref": "office-3-40",
-            "price": 115000,
-            "images": ["", "", ""]
-         },
-         {
-            "label": "product.office.2-40",
-            "ref": "office-2-40",
+            "label": "product.office.40-2",
+            "ref": "office-40-2",
             "price": 110000,
-            "images": ["", "", "", "", "", ""]
+            "children": [
+               {
+                  "imagesLength": 8
+               }
+            ]
          },
          {
-            "label": "product.office.2-20",
-            "ref": "office-2-20",
+            "label": "product.office.20-2",
+            "ref": "office-20-2",
             "price": 85000,
-            "images": ["", "", "", ""]
+            "children": [
+               {
+                  "imagesLength": 6
+               }
+            ]
          },
          {
-            "label": "product.office.1-20",
-            "ref": "office-1-20",
+            "label": "product.office.20-1",
+            "ref": "office-20-1",
             "price": 79000,
-            "images": ["", "", "", ""]
+            "children": [
+               {
+                  "imagesLength": 6
+               },
+               {
+                  "imagesLength": 7
+               },
+               {
+                  "imagesLength": 9
+               }
+            ]
          }
       ]
    },
    {
-      "label": "product.toilet",
-      "ref": "toilet",
-      "images": ["", "", "", "", "", "", "", ""]
+      "label": "product.restroom",
+      "ref": "restroom",
+      "children": [
+         {
+            "label": "product.restroom.3",
+            "ref": "restroom-3",
+            "price": 89000,
+            "children": [
+               {
+                  "imagesLength": 7
+               }
+            ]
+         },
+         {
+            "label": "product.restroom.2",
+            "ref": "restroom-2",
+            "price": 59000,
+            "children": [
+               {
+                  "imagesLength": 6
+               }
+            ]
+         },
+         {
+            "label": "product.restroom.1",
+            "ref": "restroom-1",
+            "price": 35000,
+            "children": [
+               {
+                  "imagesLength": 9
+               }
+            ]
+         }
+      ]
    }
 ]

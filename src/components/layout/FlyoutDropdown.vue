@@ -145,17 +145,19 @@ onUnmounted(() => {
                      <Transition name="submenu">
                         <div
                            v-if="openChildIndex === i"
-                           class="absolute -top-1 left-[calc(100%+8px)] z-50 w-65 rounded-xl bg-white p-1 shadow-lg"
+                           class="absolute -top-1 left-[calc(100%+8px)] z-50 w-auto rounded-xl bg-white p-1 shadow-lg"
                            role="menu"
                         >
                            <ul class="flex flex-col">
                               <li v-for="grand in child.children" :key="grand.label">
                                  <RouterLink
                                     :to="buildTo(grand)"
-                                    class="block rounded-lg px-3 py-2.5 text-sm whitespace-nowrap text-gray-800 hover:bg-gray-100"
+                                    class="block rounded-lg px-3 py-2.5 text-gray-800 hover:bg-gray-100"
                                     @click="onSelect"
                                  >
-                                    <Typography variant="Body1">{{ t(grand.label) }}</Typography>
+                                    <Typography variant="Body1" class="whitespace-nowrap">
+                                       {{ t(grand.label) }}
+                                    </Typography>
                                  </RouterLink>
                               </li>
                            </ul>

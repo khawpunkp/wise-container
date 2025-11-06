@@ -10,6 +10,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     FlyoutDropdown: typeof import('./src/components/layout/FlyoutDropdown.vue')['default']
     Footer: typeof import('./src/components/layout/Footer.vue')['default']
+    HorizontalScrollContainer: typeof import('./src/components/layout/HorizontalScrollContainer.vue')['default']
     LangSelect: typeof import('./src/components/layout/LangSelect.vue')['default']
     LogoWithText: typeof import('./src/components/layout/LogoWithText.vue')['default']
     MobileListMenu: typeof import('./src/components/layout/MobileListMenu.vue')['default']

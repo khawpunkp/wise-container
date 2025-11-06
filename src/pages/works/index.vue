@@ -63,7 +63,7 @@ const handleClick = () => {
                in-view="visible"
                :in-view-options="{ once: true }"
                :transition="{ duration: 0.5, ease: 'easeOut' }"
-               class="bg-brand-blue/50 flex aspect-[3/2] items-center justify-center overflow-hidden rounded-2xl text-white"
+               class="bg-brand-blue/50 flex aspect-[3/2] items-center justify-center overflow-hidden rounded-2xl"
             >
                <Image :src="`/images/works/${work.ref}/${imageIndex}.jpg`" preview />
             </Motion>
