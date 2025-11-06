@@ -120,7 +120,7 @@ const { t, lang } = useLang();
                      :numVisible="4"
                      :numScroll="2"
                      :show-indicators="false"
-                     :class="{ 'no-nav-buttons': imagesSet.imagesLength < 4 }"
+                     :class="{ 'no-nav-buttons': imagesSet.imagesLength <= 4 }"
                   >
                      <template #item="{ index: imageIndex }">
                         <div
