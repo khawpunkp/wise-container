@@ -33,7 +33,9 @@ watchEffect(() => {
       :class="[route.path === '/' && !scrolled && !menuOpen ? 'bg-brand-blue/0' : 'bg-brand-blue']"
    >
       <div class="flex w-full items-center justify-between">
-         <LogoWithText class="mobile:hidden flex" />
+         <RouterLink to="/" class="mobile:hidden flex cursor-pointer">
+            <LogoWithText />
+         </RouterLink>
          <LogoWithText size="sm" class="mobile:flex hidden" />
          <div class="mobile:hidden flex items-center gap-4">
             <FlyoutDropdown v-for="(item, index) in menuList" :key="index" :item="item" />
