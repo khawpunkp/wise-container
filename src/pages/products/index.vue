@@ -87,11 +87,12 @@ const { t, lang } = useLang();
                   :in-view-options="{ once: true }"
                   :transition="{ duration: 0.5, ease: 'easeOut' }"
                   v-dragscroll
+                  container-class="mobile:flex hidden"
                >
                   <div
                      v-for="imageIndex in child.imagesLength"
                      :key="product.ref + imageIndex"
-                     class="bg-brand-blue/50 mobile:max-w-65 flex aspect-square w-80 shrink-0 snap-center items-center justify-center overflow-hidden rounded-2xl"
+                     class="bg-brand-blue/50 flex aspect-square w-65 shrink-0 snap-center items-center justify-center overflow-hidden rounded-2xl"
                   >
                      <Image
                         :src="`/images/products/${category.ref}/${product.ref}/${childIndex + 1}/${imageIndex}.jpg`"
@@ -102,8 +103,54 @@ const { t, lang } = useLang();
                      />
                   </div>
                </HorizontalScrollContainer>
+               <Motion
+                  v-for="(imagesSet, imagesSetIndex) in product.images"
+                  :key="`${product.ref}-${imagesSetIndex}`"
+                  :variants="positionYVariant"
+                  initial="hidden"
+                  in-view="visible"
+                  :in-view-options="{ once: true }"
+                  :transition="{ duration: 0.5, ease: 'easeOut' }"
+                  class="mobile:hidden -mx-12 flex"
+               >
+                  <Carousel
+                     :value="Array(imagesSet.imagesLength < 4 ? 4 : imagesSet.imagesLength)"
+                     contentClass="flex gap-4"
+                     :numVisible="4"
+                     :numScroll="2"
+                     :show-indicators="false"
+                     :class="{ 'no-nav-buttons': imagesSet.imagesLength < 4 }"
+                  >
+                     <template #item="{ index: imageIndex }">
+                        <div
+                           v-if="imageIndex < imagesSet.imagesLength"
+                           class="bg-brand-blue/50 mx-2 flex aspect-square shrink-0 items-center justify-center overflow-hidden rounded-2xl"
+                        >
+                           <Image
+                              :src="`/images/products/${category.ref}/${product.ref}/${imagesSetIndex + 1}/${imageIndex + 1}.jpg`"
+                              preview
+                              class="size-full"
+                              image-class="object-cover aspect-square"
+                              :alt="`${product.label} - set ${imagesSetIndex + 1} - image ${imageIndex + 1}`"
+                           />
+                        </div>
+                     </template>
+                  </Carousel>
+               </Motion>
             </div>
          </div>
       </div>
    </div>
 </template>
+
+<style scoped>
+:deep(.p-button) {
+   --p-button-text-secondary-hover-background: transparent;
+   --p-button-text-secondary-active-background: transparent;
+}
+
+:deep(.no-nav-buttons .p-button),
+:deep(.no-nav-buttons .p-button) {
+   color: transparent !important;
+}
+</style>
