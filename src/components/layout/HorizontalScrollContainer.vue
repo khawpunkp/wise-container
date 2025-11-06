@@ -57,11 +57,10 @@ watch(
          ref="scrollContainerRef"
          :class="
             cn(
-               'scrollbar-none relative z-0 flex flex-row gap-4 overflow-x-auto whitespace-nowrap',
+               'scrollbar-none relative z-0 flex flex-row gap-4 overflow-x-auto overflow-y-hidden whitespace-nowrap',
                props.class,
             )
          "
-         v-dragscroll
       >
          <slot />
       </div>

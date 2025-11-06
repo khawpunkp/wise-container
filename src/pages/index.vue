@@ -579,9 +579,11 @@ const servicesList = [
             <div
                class="mobile:gap-4 mobile:flex-col-reverse mobile:mt-2 mobile:items-center flex w-full items-end gap-10"
             >
-               <div
-                  class="mobile:w-full flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3 transition-all duration-300 hover:scale-102"
-                  @click="clickLine"
+               <a
+                  href="https://line.me/ti/p/%40wisecontainer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mobile:w-full flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3"
                >
                   <img :src="line" class="size-10" />
                   <div class="flex min-h-8 items-center">
@@ -589,7 +591,7 @@ const servicesList = [
                         {{ t('contact.line') }} {{ '@wisecontainer' }}
                      </Typography>
                   </div>
-               </div>
+               </a>
                <img :src="qrCode" class="size-50 rounded-2xl border-2" />
             </div>
          </div>

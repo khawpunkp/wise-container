@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import bg from '@/assets/images/header-products.png';
 import productList from '@/assets/data-list/products/product-list.json';
-import { PhImageSquare } from '@phosphor-icons/vue';
 import { Image, Carousel } from 'primevue';
+import line from '@/assets/images/socials/line.png';
+import facebook from '@/assets/images/socials/facebook.png';
 const { t, lang } = useLang();
 </script>
 
@@ -140,6 +141,44 @@ const { t, lang } = useLang();
             </div>
          </div>
       </div>
+      <Motion
+         :variants="positionYVariant"
+         initial="hidden"
+         in-view="visible"
+         :in-view-options="{ once: true }"
+         :transition="{ duration: 0.5, ease: 'easeOut' }"
+         class="flex w-full flex-col items-center justify-center gap-4"
+      >
+         <Typography variant="H4" weight="bold">สอบถามรายละเอียดสินค้าเพิ่มเติม</Typography>
+         <div class="flex gap-6">
+            <a
+               href="https://line.me/ti/p/%40wisecontainer"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3"
+            >
+               <img :src="line" class="size-10" />
+               <div class="flex min-h-8 items-center">
+                  <Typography variant="H6" weight="bold" class="text-white">
+                     {{ t('contact.line') }}
+                  </Typography>
+               </div>
+            </a>
+            <a
+               href="https://www.facebook.com/61575234320876"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#0866ff] pr-6 pl-3"
+            >
+               <img :src="facebook" class="size-6.5" />
+               <div class="flex min-h-8 items-center">
+                  <Typography variant="H6" weight="bold" class="text-white">
+                     {{ t('contact.facebook') }}
+                  </Typography>
+               </div>
+            </a>
+         </div>
+      </Motion>
    </div>
 </template>
 

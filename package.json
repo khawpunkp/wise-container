@@ -29,7 +29,6 @@
       "tailwind-merge": "^3.3.1",
       "tailwindcss": "^4.1.13",
       "vue": "^3.5.21",
-      "vue-dragscroll": "^4.0.6",
       "vue-router": "^4.5.0"
    },
    "devDependencies": {

@@ -2,18 +2,8 @@
 import Image from 'primevue/image';
 import bg from '@/assets/images/header-works.png';
 import workList from '@/assets/data-list/works/works-list.json';
+import facebook from '@/assets/images/socials/facebook.png';
 const { t } = useLang();
-
-const seemoreButtonRef = ref<HTMLAnchorElement | null>(null);
-
-const handleClick = () => {
-   seemoreButtonRef.value?.classList.add('active');
-
-   setTimeout(() => {
-      seemoreButtonRef.value?.classList.remove('active');
-      window.open('https://www.facebook.com/61575234320876', '_blank', 'noopener noreferrer');
-   }, 300);
-};
 </script>
 
 <template>
@@ -71,23 +61,16 @@ const handleClick = () => {
       </div>
       <a
          href="https://www.facebook.com/61575234320876"
-         class="see-more mobile:w-[190px] mobile:h-[44px] bg-brand-orange relative flex h-[60px] w-[250px] cursor-pointer items-center justify-center rounded-full text-white"
-         ref="seemoreButtonRef"
-         @click.prevent="handleClick"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#0866ff] pr-6 pl-3"
       >
-         <Typography variant="H5" mobile-variant="Body1" weight="bold">
-            {{ t('home.seemore') }}
-         </Typography>
-         <span className="shape">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-         </span>
+         <img :src="facebook" class="size-6" />
+         <div class="flex min-h-8 items-center">
+            <Typography variant="H6" weight="bold" class="text-white">
+               {{ t('works.seemore') }}
+            </Typography>
+         </div>
       </a>
    </div>
 </template>

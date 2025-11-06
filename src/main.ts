@@ -6,7 +6,6 @@ import App from './App.vue';
 import router from './router';
 import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura';
-import VueDragscroll from 'vue-dragscroll';
 
 const app = createApp(App);
 
@@ -16,6 +15,5 @@ app.use(PrimeVue, {
       preset: Aura,
    },
 });
-app.use(VueDragscroll);
 
 app.mount('#app');
