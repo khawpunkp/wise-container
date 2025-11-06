@@ -56,7 +56,7 @@ const handleClick = () => {
          </Motion>
          <div class="mobile:grid-cols-1 mobile:gap-4 grid grid-cols-3 gap-6">
             <Motion
-               v-for="imageIndex in work.images"
+               v-for="imageIndex in work.imagesLength"
                :key="workIndex + '-' + imageIndex"
                :variants="positionYVariant"
                initial="hidden"
@@ -65,7 +65,7 @@ const handleClick = () => {
                :transition="{ duration: 0.5, ease: 'easeOut' }"
                class="bg-brand-blue/50 flex aspect-[3/2] items-center justify-center overflow-hidden rounded-2xl text-white"
             >
-               <Image :src="`/images/works/${workIndex + 1}/${imageIndex}.jpg`" preview />
+               <Image :src="`/images/works/${work.ref}/${imageIndex}.jpg`" preview />
             </Motion>
          </div>
       </div>

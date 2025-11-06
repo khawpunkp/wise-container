@@ -3,60 +3,60 @@
       "title": "work1.title",
       "ref": "work1",
       "desc": "",
-      "images": 8
+      "imagesLength": 8
    },
    {
       "title": "work2.title",
       "ref": "work2",
       "desc": "",
-      "images": 3
+      "imagesLength": 3
    },
    {
       "title": "work3.title",
       "ref": "work3",
       "desc": "",
-      "images": 5
+      "imagesLength": 5
    },
    {
       "title": "work4.title",
       "ref": "work4",
       "desc": "",
-      "images": 5
+      "imagesLength": 5
    },
    {
       "title": "work5.title",
       "ref": "work5",
       "desc": "",
-      "images": 5
+      "imagesLength": 5
    },
    {
       "title": "work6.title",
       "ref": "work6",
       "desc": "",
-      "images": 6
+      "imagesLength": 6
    },
    {
       "title": "work7.title",
       "ref": "work7",
       "desc": "",
-      "images": 5
+      "imagesLength": 5
    },
    {
       "title": "work8.title",
       "ref": "work8",
       "desc": "",
-      "images": 6
+      "imagesLength": 6
    },
    {
       "title": "work9.title",
       "ref": "work9",
       "desc": "",
-      "images": 8
+      "imagesLength": 8
    },
    {
       "title": "work10.title",
       "ref": "work10",
       "desc": "",
-      "images": 5
+      "imagesLength": 5
    }
 ]

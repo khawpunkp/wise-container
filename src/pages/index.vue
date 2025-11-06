@@ -396,7 +396,7 @@ const servicesList = [
                class="relative flex flex-col items-end justify-end gap-4"
             >
                <img
-                  :src="`/images/works/${index + 1}/1.jpg`"
+                  :src="`/images/works/${work.ref}/1.jpg`"
                   class="bg-brand-blue/50 mobile:min-w-65 flex aspect-[3/2] w-full items-center justify-center rounded-2xl text-white"
                />
 
