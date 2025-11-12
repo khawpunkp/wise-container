@@ -27,6 +27,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'home.services.freight': 'Comprehensive International\nFreight Services',
       'home.services.freezone': 'Free Zone Facilities for\nImport & Export Goods',
       'home.services.customs': 'Professional Customs\nClearance Assistance',
+      'home.services.agentyard': 'Agent Container Depot\nAvailable 24 Hours',
       'home.services.seeall': 'See All Services',
 
       'home.vision.title': 'Vision',
@@ -79,6 +80,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'services.freight.title': 'Comprehensive International Freight Services',
       'services.freezone.title': 'Free Zone Facilities for Import & Export Goods',
       'services.customs.title': 'Professional Customs Clearance Assistance',
+      'services.agentyard.title': '24-Hour Agent Container Depot',
       'services.trade.desc':
          'We offer a full range of container services — including sales, rental (short or long term), and professional maintenance and repair.\n\nWise Container provides high-quality containers in various sizes and types, suitable for every purpose such as cargo transport, storage, or custom modifications.',
       'services.transport.desc':
@@ -93,6 +95,8 @@ export const messages: Record<Lang, Record<string, string>> = {
          'Our Free Zone area provides secure storage for goods prior to import or export, helping businesses manage costs and customs duties efficiently.\n\nThe facility is equipped with high-standard management systems and offers smooth cross-border cargo handling.',
       'services.customs.desc':
          'Our experienced customs specialists handle all import, export, and documentation procedures with precision and professionalism.\n\nWe focus on accuracy, speed, and transparency to ensure a smooth customs process for your shipments.',
+      'services.agentyard.desc':
+         'We provide a 24-hour container depot service for leading shipping lines including Hapag-Lloyd, Maersk, ONE, CMA CGM, and PIL.\n\nWith our standardized management system and experienced team, we ensure fast, safe, and accurate operations—making your container return and release process smooth and reliable around the clock.',
 
       'works.title': 'Our Works',
       'work1.title': 'Delivered 4 Container Houses',
@@ -171,6 +175,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'home.services.freight': 'บริการขนส่งสินค้า\nระหว่างประเทศครบวงจร',
       'home.services.freezone': 'พื้นที่เขตปลอดอากรสำหรับ\nสินค้าก่อนนำเข้า-ส่งออก',
       'home.services.customs': 'ให้บริการด้านพิธีการศุลกากร\nอย่างมืออาชีพ',
+      'home.services.agentyard': 'มีลานรับคืนตู้เอเย่นที่เปิด\nให้บริการตลอด 24 ชั่วโมง',
 
       'home.services.seeall': 'ดูบริการทั้งหมด',
 
@@ -223,6 +228,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'services.freight.title': 'บริการขนส่งสินค้าระหว่างประเทศครบวงจร',
       'services.freezone.title': 'พื้นที่เขตปลอดอากรสำหรับสินค้าก่อนนำเข้า-ส่งออก',
       'services.customs.title': 'ให้บริการด้านพิธีการศุลกากรอย่างมืออาชีพ',
+      'services.agentyard.title': 'มีลานรับคืนตู้เอเย่นที่เปิดให้บริการตลอด 24 ชั่วโมง',
       'services.trade.desc':
          'เรามีบริการครบวงจรด้านตู้คอนเทนเนอร์ ไม่ว่าจะเป็นการซื้อ-ขาย ให้เช่าระยะสั้นหรือระยะยาว รวมถึงบริการซ่อมบำรุงโดยทีมช่างผู้เชี่ยวชาญ เพื่อให้ตู้ของคุณพร้อมใช้งานอยู่เสมอ\n\nไวซ์ คอนเทนเนอร์คัดสรรตู้คุณภาพดี หลากหลายขนาดและประเภท เพื่อรองรับทุกการใช้งานของธุรกิจ ไม่ว่าจะใช้ขนส่งสินค้า เก็บของ หรือดัดแปลงเป็นออฟฟิศและที่พัก',
       'services.transport.desc':
@@ -237,6 +243,8 @@ export const messages: Record<Lang, Record<string, string>> = {
          'เรามีพื้นที่เขตปลอดอากร (Free Zone) สำหรับเก็บสินค้าก่อนดำเนินการนำเข้า-ส่งออก เหมาะสำหรับธุรกิจที่ต้องการบริหารต้นทุนและภาษีอย่างมีประสิทธิภาพ\n\nพื้นที่ของเรามีระบบจัดการมาตรฐานสูง ปลอดภัย และสามารถรองรับการเคลื่อนย้ายสินค้าข้ามประเทศได้อย่างสะดวก',
       'services.customs.desc':
          'เรามีทีมงานผู้เชี่ยวชาญด้านพิธีการศุลกากรที่พร้อมดูแลและให้คำปรึกษาในทุกขั้นตอน ทั้งการนำเข้า ส่งออก และการดำเนินเอกสารต่าง\n\nไวซ์ คอนเทนเนอร์มุ่งเน้นความถูกต้อง รวดเร็ว และโปร่งใส เพื่อให้การดำเนินงานของคุณเป็นไปอย่างราบรื่นไร้ปัญหา',
+      'services.agentyard.desc':
+         'เรามีลานรับ–คืนตู้เอเย่นที่เปิดให้บริการตลอด 24 ชั่วโมง รองรับสายเรือชั้นนำอย่าง Hapag-Lloyd, Maersk, ONE, CMA CGM และ PIL\n\nด้วยระบบจัดการที่ได้มาตรฐานสากลและทีมงานมืออาชีพ เราดูแลทุกขั้นตอนอย่างรวดเร็ว ปลอดภัย และแม่นยำ เพื่อให้การรับ–คืนตู้ของคุณเป็นไปอย่างราบรื่นตลอดทุกช่วงเวลา',
 
       'works.title': 'ผลงานของเรา',
       'work1.title': 'ส่งตู้บ้านพักคนงาน ทั้งหมด 4 ตู้',

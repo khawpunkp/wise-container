@@ -39,6 +39,11 @@ const servicesList = [
       imgSrc: '/images/services/customs.png',
       desc: 'services.customs.desc',
    },
+   {
+      title: 'services.agentyard.title',
+      imgSrc: '/images/services/agentyard.png',
+      desc: 'services.agentyard.desc',
+   },
 ];
 </script>
 

@@ -10,6 +10,7 @@ import yard from '@/assets/images/home/service/yard.png';
 import freezone from '@/assets/images/home/service/freezone.png';
 import freight from '@/assets/images/home/service/freight.png';
 import customs from '@/assets/images/home/service/customs.png';
+import agentyard from '@/assets/images/home/service/agentyard.png';
 import qrCode from '@/assets/images/qr.png';
 import line from '@/assets/images/socials/line.png';
 import {
@@ -21,10 +22,10 @@ import {
    PhEnvelope,
    PhMapPin,
    PhPhone,
-   PhImageSquare,
    PhGlobeHemisphereWest,
    PhWarehouse,
    PhListChecks,
+   PhShippingContainer,
 } from '@phosphor-icons/vue';
 import productList from '@/assets/data-list/products/product-list.json';
 import workList from '@/assets/data-list/works/works-list.json';
@@ -37,6 +38,7 @@ const servicesList = [
    { bg: transport, icon: PhTruckTrailer, desc: 'home.services.transport' },
    { bg: design, icon: PhBlueprint, desc: 'home.services.design' },
    { bg: yard, icon: PhClockUser, desc: 'home.services.yard' },
+   { bg: agentyard, icon: PhShippingContainer, desc: 'home.services.agentyard' },
    { bg: freight, icon: PhGlobeHemisphereWest, desc: 'home.services.freight' },
    { bg: freezone, icon: PhWarehouse, desc: 'home.services.freezone' },
    { bg: customs, icon: PhListChecks, desc: 'home.services.customs' },
@@ -104,7 +106,7 @@ const servicesList = [
 
          <div class="service-card-container">
             <Motion
-               v-for="i in 4"
+               v-for="i in 3"
                :variants="positionYVariant"
                initial="hidden"
                in-view="visible"
@@ -135,7 +137,7 @@ const servicesList = [
          </div>
          <div class="service-card-container">
             <Motion
-               v-for="i in 3"
+               v-for="i in 2"
                :variants="positionYVariant"
                initial="hidden"
                in-view="visible"
@@ -144,12 +146,12 @@ const servicesList = [
                :key="'service-1-' + i"
                class="service-card"
                :style="{
-                  backgroundImage: `url(${servicesList[i + 3]?.bg})`,
+                  backgroundImage: `url(${servicesList[i + 2]?.bg})`,
                }"
             >
                <div class="icon-container">
                   <component
-                     :is="servicesList[i + 3]?.icon"
+                     :is="servicesList[i + 2]?.icon"
                      class="mobile:size-8 size-10"
                      weight="regular"
                   />
@@ -160,7 +162,38 @@ const servicesList = [
                   weight="semibold"
                   class="text-white text-shadow-black/50 text-shadow-md"
                >
-                  {{ t(servicesList[i + 3]?.desc ?? '') }}
+                  {{ t(servicesList[i + 2]?.desc ?? '') }}
+               </Typography>
+            </Motion>
+         </div>
+         <div class="service-card-container">
+            <Motion
+               v-for="i in 3"
+               :variants="positionYVariant"
+               initial="hidden"
+               in-view="visible"
+               :in-view-options="{ once: true }"
+               :transition="{ duration: 0.5, ease: 'easeOut' }"
+               :key="'service-1-' + i"
+               class="service-card"
+               :style="{
+                  backgroundImage: `url(${servicesList[i + 4]?.bg})`,
+               }"
+            >
+               <div class="icon-container">
+                  <component
+                     :is="servicesList[i + 4]?.icon"
+                     class="mobile:size-8 size-10"
+                     weight="regular"
+                  />
+               </div>
+               <Typography
+                  variant="H5"
+                  mobile-variant="Body1"
+                  weight="semibold"
+                  class="text-white text-shadow-black/50 text-shadow-md"
+               >
+                  {{ t(servicesList[i + 4]?.desc ?? '') }}
                </Typography>
             </Motion>
          </div>
