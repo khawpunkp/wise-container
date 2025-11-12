@@ -104,98 +104,100 @@ const servicesList = [
             </RouterLink>
          </Motion>
 
-         <div class="service-card-container">
-            <Motion
-               v-for="i in 3"
-               :variants="positionYVariant"
-               initial="hidden"
-               in-view="visible"
-               :in-view-options="{ once: true }"
-               :transition="{ duration: 0.5, ease: 'easeOut' }"
-               :key="'service-1-' + i"
-               class="service-card"
-               :style="{
-                  backgroundImage: `url(${servicesList[i - 1]?.bg})`,
-               }"
-            >
-               <div class="icon-container">
-                  <component
-                     :is="servicesList[i - 1]?.icon"
-                     class="mobile:size-8 size-10"
-                     weight="regular"
-                  />
-               </div>
-               <Typography
-                  variant="H5"
-                  mobile-variant="Body1"
-                  weight="semibold"
-                  class="text-white text-shadow-black/50 text-shadow-md"
+         <div class="mobile:gap-4 flex w-full max-w-400 flex-col items-center justify-center gap-6">
+            <div class="service-card-container">
+               <Motion
+                  v-for="i in 3"
+                  :variants="positionYVariant"
+                  initial="hidden"
+                  in-view="visible"
+                  :in-view-options="{ once: true }"
+                  :transition="{ duration: 0.5, ease: 'easeOut' }"
+                  :key="'service-1-' + i"
+                  class="service-card"
+                  :style="{
+                     backgroundImage: `url(${servicesList[i - 1]?.bg})`,
+                  }"
                >
-                  {{ t(servicesList[i - 1]?.desc ?? '') }}
-               </Typography>
-            </Motion>
-         </div>
-         <div class="service-card-container">
-            <Motion
-               v-for="i in 2"
-               :variants="positionYVariant"
-               initial="hidden"
-               in-view="visible"
-               :in-view-options="{ once: true }"
-               :transition="{ duration: 0.5, ease: 'easeOut' }"
-               :key="'service-1-' + i"
-               class="service-card"
-               :style="{
-                  backgroundImage: `url(${servicesList[i + 2]?.bg})`,
-               }"
-            >
-               <div class="icon-container">
-                  <component
-                     :is="servicesList[i + 2]?.icon"
-                     class="mobile:size-8 size-10"
-                     weight="regular"
-                  />
-               </div>
-               <Typography
-                  variant="H5"
-                  mobile-variant="Body1"
-                  weight="semibold"
-                  class="text-white text-shadow-black/50 text-shadow-md"
+                  <div class="icon-container">
+                     <component
+                        :is="servicesList[i - 1]?.icon"
+                        class="mobile:size-8 size-10"
+                        weight="regular"
+                     />
+                  </div>
+                  <Typography
+                     variant="H5"
+                     mobile-variant="Body1"
+                     weight="semibold"
+                     class="text-white text-shadow-black/50 text-shadow-md"
+                  >
+                     {{ t(servicesList[i - 1]?.desc ?? '') }}
+                  </Typography>
+               </Motion>
+            </div>
+            <div class="service-card-container">
+               <Motion
+                  v-for="i in 2"
+                  :variants="positionYVariant"
+                  initial="hidden"
+                  in-view="visible"
+                  :in-view-options="{ once: true }"
+                  :transition="{ duration: 0.5, ease: 'easeOut' }"
+                  :key="'service-1-' + i"
+                  class="service-card"
+                  :style="{
+                     backgroundImage: `url(${servicesList[i + 2]?.bg})`,
+                  }"
                >
-                  {{ t(servicesList[i + 2]?.desc ?? '') }}
-               </Typography>
-            </Motion>
-         </div>
-         <div class="service-card-container">
-            <Motion
-               v-for="i in 3"
-               :variants="positionYVariant"
-               initial="hidden"
-               in-view="visible"
-               :in-view-options="{ once: true }"
-               :transition="{ duration: 0.5, ease: 'easeOut' }"
-               :key="'service-1-' + i"
-               class="service-card"
-               :style="{
-                  backgroundImage: `url(${servicesList[i + 4]?.bg})`,
-               }"
-            >
-               <div class="icon-container">
-                  <component
-                     :is="servicesList[i + 4]?.icon"
-                     class="mobile:size-8 size-10"
-                     weight="regular"
-                  />
-               </div>
-               <Typography
-                  variant="H5"
-                  mobile-variant="Body1"
-                  weight="semibold"
-                  class="text-white text-shadow-black/50 text-shadow-md"
+                  <div class="icon-container">
+                     <component
+                        :is="servicesList[i + 2]?.icon"
+                        class="mobile:size-8 size-10"
+                        weight="regular"
+                     />
+                  </div>
+                  <Typography
+                     variant="H5"
+                     mobile-variant="Body1"
+                     weight="semibold"
+                     class="text-white text-shadow-black/50 text-shadow-md"
+                  >
+                     {{ t(servicesList[i + 2]?.desc ?? '') }}
+                  </Typography>
+               </Motion>
+            </div>
+            <div class="service-card-container">
+               <Motion
+                  v-for="i in 3"
+                  :variants="positionYVariant"
+                  initial="hidden"
+                  in-view="visible"
+                  :in-view-options="{ once: true }"
+                  :transition="{ duration: 0.5, ease: 'easeOut' }"
+                  :key="'service-1-' + i"
+                  class="service-card"
+                  :style="{
+                     backgroundImage: `url(${servicesList[i + 4]?.bg})`,
+                  }"
                >
-                  {{ t(servicesList[i + 4]?.desc ?? '') }}
-               </Typography>
-            </Motion>
+                  <div class="icon-container">
+                     <component
+                        :is="servicesList[i + 4]?.icon"
+                        class="mobile:size-8 size-10"
+                        weight="regular"
+                     />
+                  </div>
+                  <Typography
+                     variant="H5"
+                     mobile-variant="Body1"
+                     weight="semibold"
+                     class="text-white text-shadow-black/50 text-shadow-md"
+                  >
+                     {{ t(servicesList[i + 4]?.desc ?? '') }}
+                  </Typography>
+               </Motion>
+            </div>
          </div>
          <Motion
             :variants="positionYVariant"
@@ -636,7 +638,7 @@ const servicesList = [
 @import '#main.css';
 
 .service-card-container {
-   @apply mobile:flex-col mobile:gap-4 flex h-full w-full flex-wrap items-center justify-center gap-10;
+   @apply mobile:flex-col mobile:gap-4 flex h-full w-full flex-wrap items-center justify-center gap-6;
 }
 
 .service-card {

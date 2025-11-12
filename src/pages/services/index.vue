@@ -25,6 +25,11 @@ const servicesList = [
       desc: 'services.yard.desc',
    },
    {
+      title: 'services.agentyard.title',
+      imgSrc: '/images/services/agentyard.png',
+      desc: 'services.agentyard.desc',
+   },
+   {
       title: 'services.freight.title',
       imgSrc: '/images/services/freight.png',
       desc: 'services.freight.desc',
@@ -38,11 +43,6 @@ const servicesList = [
       title: 'services.customs.title',
       imgSrc: '/images/services/customs.png',
       desc: 'services.customs.desc',
-   },
-   {
-      title: 'services.agentyard.title',
-      imgSrc: '/images/services/agentyard.png',
-      desc: 'services.agentyard.desc',
    },
 ];
 </script>
