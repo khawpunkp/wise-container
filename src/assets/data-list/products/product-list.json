@@ -9,7 +9,7 @@
             "price": 125000,
             "images": [
                {
-                  "imagesLength": 4
+                  "imagesLength": 5
                }
             ]
          },
@@ -85,7 +85,7 @@
             "price": 120000,
             "images": [
                {
-                  "imagesLength": 6
+                  "imagesLength": 7
                }
             ]
          },
@@ -95,7 +95,7 @@
             "price": 110000,
             "images": [
                {
-                  "imagesLength": 8
+                  "imagesLength": 9
                }
             ]
          },
@@ -105,7 +105,7 @@
             "price": 85000,
             "images": [
                {
-                  "imagesLength": 4
+                  "imagesLength": 5
                }
             ]
          },
@@ -147,7 +147,7 @@
             "price": 59000,
             "images": [
                {
-                  "imagesLength": 4
+                  "imagesLength": 5
                }
             ]
          },
