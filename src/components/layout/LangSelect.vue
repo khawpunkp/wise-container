@@ -1,21 +1,30 @@
 <script setup lang="ts">
 const { setLang, lang } = useLang();
+
+const delaySetLang = (lang: 'th' | 'en') => {
+   setTimeout(() => {
+      setLang(lang);
+   }, 300);
+};
 </script>
 
 <template>
-   <div class="ml-2 flex h-fit items-center gap-0.5 rounded-sm bg-white p-1">
+   <div class="relative ml-2 flex h-fit items-center rounded-sm bg-white p-1">
+      <div
+         class="bg-brand-orange absolute z-0 size-8 rounded transition-all duration-300"
+         :class="[lang === 'th' ? 'left-1' : 'left-9']"
+      />
       <button
-         class="h-8 w-8 cursor-pointer rounded transition-all duration-500"
-         :class="{ 'bg-brand-orange text-white': lang === 'th' }"
-         @click="setLang('th')"
+         class="z-10 size-8 cursor-pointer transition-all duration-300"
+         :class="{ 'text-white': lang === 'th' }"
+         @click="delaySetLang('th')"
       >
          <Typography variant="Body1" weight="bold" class="mt-px">TH</Typography>
       </button>
-      <p>|</p>
       <button
-         class="h-8 w-8 cursor-pointer rounded transition-all duration-500"
-         :class="{ 'bg-brand-orange text-white': lang === 'en' }"
-         @click="setLang('en')"
+         class="z-10 size-8 cursor-pointer transition-all duration-300"
+         :class="{ 'text-white': lang === 'en' }"
+         @click="delaySetLang('en')"
       >
          <Typography variant="Body1" weight="bold" class="mt-px">EN</Typography>
       </button>
