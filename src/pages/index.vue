@@ -266,7 +266,7 @@ const servicesList = [
             >
                <img
                   :src="`/images/products/${category.ref}/home.jpg`"
-                  class="bg-brand-blue/50 flex aspect-square w-full items-center justify-center rounded-2xl text-white"
+                  class="bg-brand-blue/50 flex aspect-square w-full items-center justify-center rounded-2xl object-cover text-white"
                />
 
                <div

@@ -137,7 +137,7 @@
             "price": 89000,
             "images": [
                {
-                  "imagesLength": 7
+                  "imagesLength": 4
                }
             ]
          },
@@ -147,7 +147,7 @@
             "price": 59000,
             "images": [
                {
-                  "imagesLength": 6
+                  "imagesLength": 4
                }
             ]
          },
@@ -157,7 +157,7 @@
             "price": 35000,
             "images": [
                {
-                  "imagesLength": 9
+                  "imagesLength": 7
                }
             ]
          }
