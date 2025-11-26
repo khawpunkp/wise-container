@@ -3,7 +3,6 @@ import { routes } from 'vue-router/auto-routes';
 
 function scrollToEl(selector: string, offset = 0) {
    const el = document.querySelector<HTMLElement>(selector);
-   console.log(el);
    if (!el) return false;
 
    const top = el.getBoundingClientRect().top + window.scrollY - offset;
@@ -27,9 +26,8 @@ const scrollBehavior: RouterScrollBehavior = async (to, from, savedPosition) => 
    if (savedPosition) return savedPosition;
 
    if (to.hash) {
-      console.log(to.hash);
       await waitForEl(to.hash);
-      return false; // prevent default instant jump
+      return false;
    }
 
    return { left: 0, top: 0 };
