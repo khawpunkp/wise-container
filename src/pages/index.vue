@@ -10,6 +10,7 @@ import yard from '@/assets/images/home/service/yard.png';
 import freezone from '@/assets/images/home/service/freezone.png';
 import freight from '@/assets/images/home/service/freight.png';
 import customs from '@/assets/images/home/service/customs.png';
+import construct from '@/assets/images/home/service/construct.png';
 import agentyard from '@/assets/images/home/service/agentyard.png';
 import qrCode from '@/assets/images/qr.png';
 import line from '@/assets/images/socials/line.png';
@@ -26,6 +27,7 @@ import {
    PhWarehouse,
    PhListChecks,
    PhShippingContainer,
+   PhHardHat,
 } from '@phosphor-icons/vue';
 import productList from '@/assets/data-list/products/product-list.json';
 import workList from '@/assets/data-list/works/works-list.json';
@@ -42,6 +44,7 @@ const servicesList = [
    { bg: freight, icon: PhGlobeHemisphereWest, desc: 'home.services.freight' },
    { bg: freezone, icon: PhWarehouse, desc: 'home.services.freezone' },
    { bg: customs, icon: PhListChecks, desc: 'home.services.customs' },
+   { bg: construct, icon: PhHardHat, desc: 'home.services.construct' },
 ];
 </script>
 
@@ -138,7 +141,7 @@ const servicesList = [
             </div>
             <div class="service-card-container">
                <Motion
-                  v-for="i in 2"
+                  v-for="i in 3"
                   :variants="positionYVariant"
                   initial="hidden"
                   in-view="visible"
@@ -178,12 +181,12 @@ const servicesList = [
                   :key="'service-1-' + i"
                   class="service-card"
                   :style="{
-                     backgroundImage: `url(${servicesList[i + 4]?.bg})`,
+                     backgroundImage: `url(${servicesList[i + 5]?.bg})`,
                   }"
                >
                   <div class="icon-container">
                      <component
-                        :is="servicesList[i + 4]?.icon"
+                        :is="servicesList[i + 5]?.icon"
                         class="mobile:size-8 size-10"
                         weight="regular"
                      />
@@ -194,7 +197,7 @@ const servicesList = [
                      weight="semibold"
                      class="text-white text-shadow-black/50 text-shadow-md"
                   >
-                     {{ t(servicesList[i + 4]?.desc ?? '') }}
+                     {{ t(servicesList[i + 5]?.desc ?? '') }}
                   </Typography>
                </Motion>
             </div>

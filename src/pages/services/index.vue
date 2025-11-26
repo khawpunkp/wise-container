@@ -44,6 +44,11 @@ const servicesList = [
       imgSrc: '/images/services/customs.png',
       desc: 'services.customs.desc',
    },
+   {
+      title: 'services.construct.title',
+      imgSrc: '/images/services/construct.png',
+      desc: 'services.construct.desc',
+   },
 ];
 </script>
 
