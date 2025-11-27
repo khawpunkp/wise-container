@@ -8,7 +8,7 @@ const { t } = useLang();
 
 <template>
    <div
-      class="bg-brand-orange/80 mobile:aspect-[450/100] flex aspect-[1900/200] w-full items-center justify-center bg-cover bg-bottom bg-no-repeat"
+      class="bg-brand-orange/80 mobile:aspect-450/100 flex aspect-1900/200 w-full items-center justify-center bg-cover bg-bottom bg-no-repeat"
       :style="{
          backgroundImage: `url(${bg})`,
       }"
@@ -23,7 +23,7 @@ const { t } = useLang();
       </Typography>
    </div>
    <div
-      class="mobile:p-6 mobile:gap-10 flex w-full flex-1 flex-col items-center justify-start gap-16 px-8 py-16"
+      class="mobile:p-5 mobile:gap-10 flex w-full flex-1 flex-col items-center justify-start gap-16 px-8 py-16"
    >
       <div
          v-for="(work, workIndex) in workList"
@@ -53,7 +53,7 @@ const { t } = useLang();
                in-view="visible"
                :in-view-options="{ once: true }"
                :transition="{ duration: 0.5, ease: 'easeOut' }"
-               class="bg-brand-blue/50 flex aspect-[3/2] items-center justify-center overflow-hidden rounded-2xl"
+               class="bg-brand-blue/50 flex aspect-3/2 items-center justify-center overflow-hidden rounded-2xl"
             >
                <Image :src="`/images/works/${work.ref}/${imageIndex}.jpg`" preview />
             </Motion>
@@ -63,11 +63,11 @@ const { t } = useLang();
          href="https://www.facebook.com/61575234320876"
          target="_blank"
          rel="noopener noreferrer"
-         class="flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#0866ff] pr-6 pl-3"
+         class="mobile:pr-3 mobile:h-12 flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#0866ff] pr-6 pl-3"
       >
          <img :src="facebook" class="size-6" />
          <div class="flex min-h-8 items-center">
-            <Typography variant="H6" weight="bold" class="text-white">
+            <Typography variant="H6" mobile-variant="Body1" weight="bold" class="text-white">
                {{ t('works.seemore') }}
             </Typography>
          </div>

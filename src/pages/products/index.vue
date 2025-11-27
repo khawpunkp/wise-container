@@ -9,7 +9,7 @@ const { t, lang } = useLang();
 
 <template>
    <div
-      class="bg-brand-orange/80 mobile:aspect-[450/100] flex aspect-[1900/200] w-full items-center justify-center bg-cover bg-bottom bg-no-repeat"
+      class="bg-brand-orange/80 mobile:aspect-450/100 flex aspect-1900/200 w-full items-center justify-center bg-cover bg-bottom bg-no-repeat"
       :style="{
          backgroundImage: `url(${bg})`,
       }"
@@ -24,7 +24,7 @@ const { t, lang } = useLang();
       </Typography>
    </div>
    <div
-      class="mobile:p-6 mobile:gap-10 flex w-full flex-1 flex-col items-center justify-start gap-16 px-8 py-16"
+      class="mobile:p-5 mobile:gap-10 flex w-full flex-1 flex-col items-center justify-start gap-16 px-8 py-16"
    >
       <div
          v-for="(category, index) in productList"
@@ -149,18 +149,23 @@ const { t, lang } = useLang();
          :transition="{ duration: 0.5, ease: 'easeOut' }"
          class="flex w-full flex-col items-center justify-center gap-4"
       >
-         <Typography variant="H4" weight="bold">สอบถามรายละเอียดสินค้าเพิ่มเติม</Typography>
-         <div class="flex gap-6">
+         <Typography variant="H4" mobile-variant="H5" weight="bold" class="text-center">
+            สอบถามรายละเอียดสินค้าเพิ่มเติม
+         </Typography>
+         <div class="mobile:gap-2 flex w-full flex-row items-center justify-center gap-6">
             <a
                href="https://line.me/ti/p/%40wisecontainer"
                target="_blank"
                rel="noopener noreferrer"
-               class="flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3"
+               class="mobile:flex-1 mobile:w-full mobile:pr-2 mobile:h-12 flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3"
             >
-               <img :src="line" class="size-10" />
-               <div class="flex min-h-8 items-center">
-                  <Typography variant="H6" weight="bold" class="text-white">
+               <img :src="line" class="size-7" />
+               <div class="flex min-h-8 items-center text-white">
+                  <Typography variant="H6" weight="bold" class="mobile:hidden flex">
                      {{ t('contact.line') }}
+                  </Typography>
+                  <Typography variant="Body1" weight="bold" class="mobile:flex hidden">
+                     ผ่าน LINE
                   </Typography>
                </div>
             </a>
@@ -168,12 +173,15 @@ const { t, lang } = useLang();
                href="https://www.facebook.com/61575234320876"
                target="_blank"
                rel="noopener noreferrer"
-               class="flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#0866ff] pr-6 pl-3"
+               class="mobile:flex-1 mobile:w-full mobile:pr-3 mobile:h-12 flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#0866ff] pr-6 pl-3"
             >
-               <img :src="facebook" class="size-6.5" />
-               <div class="flex min-h-8 items-center">
-                  <Typography variant="H6" weight="bold" class="text-white">
+               <img :src="facebook" class="size-7" />
+               <div class="flex min-h-8 items-center text-white">
+                  <Typography variant="H6" weight="bold" class="mobile:hidden e flex">
                      {{ t('contact.facebook') }}
+                  </Typography>
+                  <Typography variant="Body1" weight="bold" class="mobile:flex hidden">
+                     ผ่าน Facebook
                   </Typography>
                </div>
             </a>

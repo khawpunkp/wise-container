@@ -55,7 +55,7 @@ const data = [
 
 <template>
    <div
-      class="bg-brand-orange/80 mobile:aspect-[450/100] flex aspect-[1900/200] w-full items-center justify-center bg-cover bg-bottom bg-no-repeat"
+      class="bg-brand-orange/80 mobile:aspect-450/100 flex aspect-1900/200 w-full items-center justify-center bg-cover bg-bottom bg-no-repeat"
       :style="{
          backgroundImage: `url(${bg})`,
       }"
@@ -69,7 +69,7 @@ const data = [
          {{ t('nav.contact') }}
       </Typography>
    </div>
-   <div class="mobile:p-6 flex w-full flex-col items-center justify-center gap-16 px-8 py-16">
+   <div class="mobile:p-5 flex w-full flex-col items-center justify-center gap-16 px-8 py-16">
       <Motion
          :variants="opacityVariant"
          initial="hidden"
@@ -87,7 +87,7 @@ const data = [
             </Typography>
          </div>
          <div class="mobile:flex-col mobile:min-h-0 flex min-h-125 w-full gap-6">
-            <div class="mobile:w-full mobile:aspect-square aspect-[4/3] w-5/10">
+            <div class="mobile:w-full mobile:aspect-square aspect-4/3 w-5/10">
                <div class="h-full w-full overflow-hidden rounded-2xl">
                   <iframe
                      :src="t(item.map)"
@@ -140,9 +140,9 @@ const data = [
                      href="https://line.me/ti/p/%40wisecontainer"
                      target="_blank"
                      rel="noopener noreferrer"
-                     class="flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3"
+                     class="mobile:pr-3 mobile:h-12 flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3"
                   >
-                     <img :src="line" class="size-10" />
+                     <img :src="line" class="size-7" />
                      <div class="flex min-h-8 items-center">
                         <Typography weight="bold" class="text-white">
                            {{ t('contact.line') }} {{ '@wisecontainer' }}

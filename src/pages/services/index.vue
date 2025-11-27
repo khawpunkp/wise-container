@@ -54,7 +54,7 @@ const servicesList = [
 
 <template>
    <div
-      class="bg-brand-orange/80 mobile:aspect-[450/100] flex aspect-[1900/200] w-full items-center justify-center bg-cover bg-bottom bg-no-repeat"
+      class="bg-brand-orange/80 mobile:aspect-450/100 flex aspect-1900/200 w-full items-center justify-center bg-cover bg-bottom bg-no-repeat"
       :style="{
          backgroundImage: `url(${bg})`,
       }"
@@ -69,7 +69,7 @@ const servicesList = [
       </Typography>
    </div>
    <div
-      class="mobile:p-6 mobile:gap-10 flex w-full flex-1 flex-col items-center justify-start gap-16 px-8 py-16"
+      class="mobile:p-5 mobile:gap-10 flex w-full flex-1 flex-col items-center justify-start gap-16 px-8 py-16"
    >
       <Motion
          v-for="(item, index) in servicesList"

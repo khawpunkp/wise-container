@@ -45,7 +45,7 @@ watch(
       in-view="visible"
       :in-view-options="{ once: true }"
       :transition="{ duration: 0.5, ease: 'easeOut' }"
-      :class="cn('relative -m-4 rounded-[16px] p-4', containerClass)"
+      :class="cn('relative -m-4 rounded-2xl p-4', containerClass)"
    >
       <div
          class="absolute top-0 -left-0.5 z-10 h-full w-8 bg-linear-to-r from-white via-white via-60% to-transparent transition-all duration-100"

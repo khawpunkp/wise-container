@@ -298,7 +298,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'contact.yard4.map':
          'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.5658651482718!2d101.0069228!3d13.1266662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102c900567f2593%3A0x99f11664a582edf!2z4Lia4Lij4Li04Lip4Lix4LiXIOC5hOC4p-C4i-C5jCDguITguK3guJnguYDguJfguJnguYDguJnguK3guKPguYwg4LiI4Liz4LiB4Lix4LiUICjguKXguLLguJk0KQ!5e0!3m2!1sth!2sth!4v1760628194456!5m2!1sth!2sth',
 
-      'contact.line': 'ติดต่อผ่าน Line ',
+      'contact.line': 'ติดต่อผ่าน LINE ',
       'contact.facebook': 'ติดต่อผ่าน Facebook ',
       'contact.opening.normal': 'เปิด จันทร์ - เสาร์ 08.30-17.30 น. (หยุด อาทิตย์)',
       'contact.opening.24': 'เปิด 24 ชม.',

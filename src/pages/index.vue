@@ -52,7 +52,7 @@ const servicesList = [
    <!-- Banner -->
    <div class="mobile:h-auto relative flex h-dvh w-full flex-col items-center justify-center">
       <div
-         class="mobile:p-6 flex aspect-square max-h-160 w-full items-center justify-center bg-cover bg-bottom bg-no-repeat"
+         class="mobile:p-5 flex aspect-square max-h-160 w-full items-center justify-center bg-cover bg-bottom bg-no-repeat"
          :style="{
             backgroundImage: `url(${bannerBg})`,
          }"
@@ -70,7 +70,7 @@ const servicesList = [
          :src="logoText"
          class="mobile:relative mobile:aspect-square mobile:size-full mobile:mt-6 mobile:p-0 pointer-events-none absolute right-0 bottom-0 size-180 shrink-0 object-contain p-20"
       />
-      <div class="mobile:p-6 flex w-full max-w-400 flex-1 items-center justify-start">
+      <div class="mobile:p-5 flex w-full max-w-400 flex-1 items-center justify-start">
          <typography
             variant="H4"
             mobile-variant="H5"
@@ -82,7 +82,7 @@ const servicesList = [
       </div>
    </div>
    <!-- Service -->
-   <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
+   <div class="mobile:p-5 relative flex w-full items-center justify-center px-8 py-16">
       <div class="mobile:gap-4 flex w-full max-w-400 flex-col items-center justify-center gap-10">
          <Motion
             :variants="positionYVariant"
@@ -222,7 +222,7 @@ const servicesList = [
       </div>
    </div>
    <!-- Products -->
-   <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
+   <div class="mobile:p-5 relative flex w-full items-center justify-center px-8 py-16">
       <div class="mobile:gap-4 flex w-full max-w-400 flex-col gap-10">
          <Motion
             :variants="positionYVariant"
@@ -303,7 +303,7 @@ const servicesList = [
       </div>
    </div>
    <!-- Vision -->
-   <div class="mobile:p-6 relative flex w-full items-center justify-center px-8 py-16">
+   <div class="mobile:p-5 relative flex w-full items-center justify-center px-8 py-16">
       <Motion
          :variants="{
             visible: { opacity: 1, transition: { delayChildren: stagger(0.5), duration: 1 } },
@@ -318,7 +318,7 @@ const servicesList = [
          <Motion
             :variants="positionYVariant"
             :transition="{ duration: 0.5, ease: 'easeOut' }"
-            class="mobile:p-6 flex aspect-square w-full flex-col items-start justify-end rounded-4xl bg-cover bg-center bg-no-repeat p-10 text-white"
+            class="mobile:p-5 flex aspect-square w-full flex-col items-start justify-end rounded-4xl bg-cover bg-center bg-no-repeat p-10 text-white"
             :style="{
                backgroundImage: `url(${visionBg})`,
             }"
@@ -378,7 +378,7 @@ const servicesList = [
       </Motion>
    </div>
    <!-- Our Works -->
-   <div class="mobile:p-6 flex w-full items-center justify-center px-8 py-16">
+   <div class="mobile:p-5 flex w-full items-center justify-center px-8 py-16">
       <div class="mobile:gap-4 flex w-full max-w-400 flex-col gap-10">
          <Motion
             :variants="positionYVariant"
@@ -426,7 +426,7 @@ const servicesList = [
             >
                <img
                   :src="`/images/works/${work.ref}/1.jpg`"
-                  class="bg-brand-blue/50 flex aspect-[3/2] w-full items-center justify-center rounded-2xl text-white"
+                  class="bg-brand-blue/50 flex aspect-3/2 w-full items-center justify-center rounded-2xl text-white"
                />
 
                <div
@@ -553,7 +553,7 @@ const servicesList = [
       in-view="visible"
       :in-view-options="{ once: true }"
       :transition="{ duration: 1.25, ease: 'easeOut' }"
-      class="mobile:p-6 flex w-full flex-col items-center justify-center gap-16 px-8 py-16"
+      class="mobile:p-5 flex w-full flex-col items-center justify-center gap-16 px-8 py-16"
    >
       <div class="mobile:flex-col mobile:gap-4 flex w-full max-w-400 gap-16">
          <div class="mobile:w-full mobile:aspect-square w-5/10">
@@ -579,7 +579,7 @@ const servicesList = [
                <Typography
                   variant="Body1"
                   mobile-variant="Body2"
-                  class="break-words text-[#606D85]"
+                  class="wrap-break-word text-[#606D85]"
                >
                   <template v-if="lang === 'th'">
                      มีสำนักงานใหญ่ตั้งอยู่ที่จังหวัดชลบุรี
@@ -621,9 +621,9 @@ const servicesList = [
                   href="https://line.me/ti/p/%40wisecontainer"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="mobile:w-full flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3"
+                  class="mobile:pr-3 mobile:h-12 flex h-14 w-fit cursor-pointer items-center gap-3 rounded-2xl bg-[#06c755] pr-6 pl-3"
                >
-                  <img :src="line" class="size-10" />
+                  <img :src="line" class="size-7" />
                   <div class="flex min-h-8 items-center">
                      <Typography weight="bold" class="text-white">
                         {{ t('contact.line') }} {{ '@wisecontainer' }}
@@ -647,7 +647,7 @@ const servicesList = [
 .service-card {
    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
 
-   @apply bg-brand-blue mobile:p-4 mobile:flex-row mobile:min-w-0 mobile:m-0 mobile:text-start mobile:justify-start mobile:w-full mobile:rounded-2xl mobile:aspect-auto relative flex aspect-[3/2] w-92 flex-col items-center justify-center gap-4 rounded-4xl bg-cover bg-center bg-no-repeat p-6 text-center;
+   @apply bg-brand-blue mobile:p-4 mobile:flex-row mobile:min-w-0 mobile:m-0 mobile:text-start mobile:justify-start mobile:w-full mobile:rounded-2xl mobile:aspect-auto relative flex aspect-3/2 w-92 flex-col items-center justify-center gap-4 rounded-4xl bg-cover bg-center bg-no-repeat p-6 text-center;
 }
 
 .icon-container {
